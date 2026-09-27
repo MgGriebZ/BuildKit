@@ -1,10 +1,10 @@
 # PRD L: session-first launch site and manual delivery
 
-Revision 0.4 · Product specification. Requirements/PRD repository publication is authorized; site deployment and changes to public visibility are not.
+Revision 0.5 · Product specification. Requirements/PRD repository publication is authorized; site deployment and changes to public visibility are not.
 
 ## Goal and audience
 
-Help an adult decide whether a personalized one-to-one seminar fits their project, understand the proposed terms, and inquire. Explain the full-hour guided presentation, Mermaid visuals, prepared working demo, learner-chosen focused refinement, and reusable Build Kit. It is not an unstructured debugging session or a promise to build a full game live. Distinguish inquiry from confirmed booking and payment.
+Help an adult understand the seminar-led 60-minute teaching offer, review its proposed terms and inquire. Lead with the standalone bedroom-inspired Cozy Room and its public follow-along. The example teaches through visual explanation, a prepared working lamp interaction and one bounded refinement. Distinguish the free public follow-along from personalized seminar service. Inquiry is not a confirmed booking or payment.
 
 ## Launch page specification
 
@@ -12,8 +12,8 @@ The initial site can be a single accessible page with these sections, in order:
 
 1. **Outcome and call to action:** “Bring one small project. Work on a realistic next step together and leave with your project files, the prompts and follow-along material we used, and personal next steps.” Primary action: send an inquiry through the owner-confirmed contact route. Do not imply a booking is available until the owner confirms fit and a slot.
 2. **How it works:** inquiry → scope/fit → choose a slot → pay → work together → handoff/follow-up. State that project and outcome are agreed before payment.
-3. **What may fit:** Playroom room/game/toy; gamer portfolio/guide; or a conditional Riot API lesson. Use fixtures by default for Riot examples. Live API work requires the learner to meet key and applicable policy prerequisites; never request or expose key details.
-4. **What is included:** one full 60-minute seminar; personalized visual presentation with Mermaid diagrams; working product demo prepared in advance; one focused learner-chosen refinement; reusable Build Kit; prompts/files, checks and personal next steps. Adapt pacing by track. Do not suggest a full game will be built during the hour.
+3. **Cozy Room example:** a standalone, child-friendly bedroom-inspired play room built with Blazor WebAssembly, C#, HTML, CSS and SVG. Baseline: lamp cycles two styles and persists its selection. The taught refinement adds a third style and gentle feedback. Preserve mouse, touch, keyboard and reduced-motion support. Link to the public follow-along when ready; do not put a course or sales CTA in the room. Seminar learners and marketing are adult-facing. PocketPlayroom is the full product/reference; do not imply this standalone example is its full source or publish private dependencies.
+4. **What the seminar teaches:** one 60-minute session with visual explanation, a prepared working example, a focused learner-chosen refinement and next steps. For personalized sessions, agree any included Build Kit, project files, prompts and checks in scope before payment. Do not suggest a full game will be built during the hour.
 5. **Limits and no-fit policy:** an hour is not a promise of a finished application. Production readiness, security review, ongoing maintenance, broad debugging, and unapproved extra work are excluded. If a request is not suitable, say so before payment. Show owner-approved cancellation/refund and no-result terms before checkout.
 6. **Price/status:** if shown, label “Proposed pilot: $75 for 60 minutes; final price and availability to be confirmed.” This is a proposal, not an approved offer. No standalone course price or unsupported value comparison. Until price is accepted, site copy should say “Ask about a session” without a purchasable price.
 7. **Prerequisites and privacy:** state the tested device/browser/tools once known, any account or cost requirements, and what the learner should not share. Do not claim that a tool or plan is required until a path is tested.
@@ -21,7 +21,7 @@ The initial site can be a single accessible page with these sections, in order:
 9. **FAQ/contact:** response expectation only after owner confirms capacity; explain that inquiry is not a booking and give the confirmed support/contact route.
 10. **Free community classes:** describe the one-hour public/event format, shared demonstration and public takeaway. Secondary action: "Ask about hosting a free class," through the confirmed inquiry route with host intent distinguished from personal-session intent. No confirmed dates, partnerships or unlimited availability claims. Make clear that free group attendance does not include a private customized seminar.
 
-The page should use one working contact destination with a primary personal-session inquiry and a secondary free-class host inquiry, plus a complete public worksheet when ready. A future course can be omitted. Remove unfinished public-policy placeholders and unsupported activity claims. The supplied logo/runtime are staged and statically inspected in [asset review](../asset-review.md); appearance and browser behavior remain untested. Use a normal static React/Vite frontend; the Design Canvas support runtime is reference-only, with no production dependency on it. No API, database or login is needed for inquiry-first delivery.
+The initial marketing shell may use plain static HTML/CSS/JS. The linked Blazor Cozy Room demo is a separate output; no parallel React/Vite app is required. The page can link the public follow-along when ready. Use one working contact destination for personal-session and free-class host inquiries. A generic worksheet is optional and not a dependency for the room pipeline. Remove unfinished policy placeholders and unsupported activity claims. No API, database or login is needed for inquiry-first delivery.
 
 ## Session operations
 

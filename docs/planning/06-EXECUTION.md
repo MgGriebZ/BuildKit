@@ -1,6 +1,8 @@
 # Execution queue and compute discipline
 
-Revision 0.4. Owner authorized refinement and push of public-safe requirements for personalized one-hour seminars with included materials. Price, policies and operating facts remain open. Product implementation, actual seminar production and site release are subsequent milestones. No recurring autonomous loop is scheduled.
+Revision 0.5. Owner authorized requirements refinement around a PocketPlayroom/Blazor room seminar and selected private BuildWithGriebZ for authoring. [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md) is the current room execution sequence and contains ready-to-use Luna/Sol goals. The broader launch queue below remains supporting context. No recurring autonomous loop is scheduled.
+
+Immediate work order: Luna L1 private seminar draft can run beside Sol R1 independent room baseline; then Sol R2 refinement, Luna L2 public guide and Luna L3 final presenter kit, followed by human rehearsal. See [PRD R](13-PRD-COZY-ROOM.md). The first room and private home are resolved. Price, host/date and commercial policies remain open without blocking these local preparation slices.
 
 ## Compute routing
 
@@ -24,21 +26,21 @@ Maximum two independent Luna workers initially; relevant files only, one pass pl
 | H0 / owner | Confirm price/duration, booking windows, business identity and policies | Read 07 and 10 | Record choices without putting identifiers in public docs |
 | H1 / owner | Three discovery conversations; private notes and anonymous findings | Session-first framing ready | Real desired outcomes/setup barriers recorded |
 | A1 / Luna | Cleared brand/ copies, responsive logo and isolated Z usage | P2; selected assets appropriate for intended use | Aspect ratio/transparency, small-size and reduced-motion readability checked |
-| A2 / Luna | lessons/free/one-page-spec.md from prepared sample | P3 | Original example, prompt/recovery/done check; human usability separately recorded |
+| A2 / Luna | lessons/free/one-page-spec.md | Completed on PR #2, awaiting review | Generic event worksheet; print/learner checks remain; optional resource independent of the room pipeline |
 | A3 / Luna; Sol if blocked | site/ local static session-first page | Approved direction, A1/A2 | Primary personal-session and secondary free-class host inquiry share one contact route; included materials, explicit unconfirmed settings, mobile/keyboard checks; no live checkout until ready |
 | H2 / owner, agent read-only verification when account context supplied | Seller/tax/payment/contact/calendar/private handoff setup | H0 and operations checklist | Actual account readiness and support capacity established |
-| S1 / Luna content preparation + owner presentation | Private reusable seminar core, Mermaid sources/fallbacks, prepared demo/checkpoints and client-kit templates | Chosen private home, [seminar PRD](11-PRD-SEMINAR.md), selected initial track | Owner rehearses full hour, one bounded refinement and offline fallback; clearly identify untested parts |
+| S1 / split L1, R1/R2, L2/L3 | Private seminar kit plus public independent room and guide | Private BuildWithGriebZ and Cozy Room selected; see 13/14 | Luna authors materials; Sol implements/checks demo; owner rehearses the actual hour |
 | A4 / Luna + owner tester | Private fictional rehearsal and handoff; public summary of results only | S1/P3 and selected delivery tools | Rehearse scope -> sandbox payment -> seminar -> handoff plus exceptions; fresh-folder opening works |
 | H3 / owner | First two paid sessions, then third paid-session review | H0/H2, A4, qualified clients | Agreed outcomes/handoffs delivered; costs, time, support and remedies logged |
 | A5 / Luna when directed | Confirmed payment-link configuration and publication checklist | Final terms, sandbox passed, provider ready | Pending/cancel/duplicate/refund paths handled; public build excludes private data |
 | H4 / owner/agent when directed | Public release and selected personal invitations | H2, A3/A5 for new site; existing contact can serve direct sessions | Verified destinations, policies and capacity |
-| A6 / Luna + owner | Free one-hour class adaptation, public takeaway and host checklist | Selected reusable core from S1, A2; not paid demand | Timed rehearsal, readable demo/fallback, no purchase/sign-up needed; host-specific needs documented; no outreach sent |
+| A6 / fulfilled through L3 + owner | Free one-hour room-class adaptation, public takeaway and host checklist | Checked Cozy Room core and public guide; not A2 or paid demand | Timed rehearsal, readable demo/fallback, no purchase/sign-up needed; host-specific needs documented; no outreach sent |
 | H5 / owner | First free public/community class and review | A6, host/audience readiness, owner-authorized outreach and event agreement | Deliver useful hour and public takeaway; record learning/host feedback, total time and voluntary inquiries separately; no checkout dependency |
 | F1 / later, owner/planner | Evaluate standalone course, paid group workshop or Blender extension | Three delivered paid sessions and recurring need | Evidence justifies one next investment; free classes are already in scope, no automatic course launch |
 
 First paid-seminar path: H0 + H2 + S1 + A4 + qualified lead -> H3. A new website, six-lesson course, dashboard and Blender setup are not universal prerequisites. The selected seminar DOES need a prepared working example and tested refinement. Use a cleared existing example where feasible; don't require building an entire new room or API service for every booking.
 
-Parallel community path: select first audience/theme and private teaching home -> S1 shared core + A2 public takeaway -> A6 class rehearsal + host readiness -> H5 when authorized. Free classes do not wait for H3, payment setup or a new website. Build one reusable core and adapt it to the two formats; do not run two independent curriculum projects.
+Parallel community path: L1 + R1/R2 -> L2/L3 -> class rehearsal and host readiness -> H5 when authorized. The room theme and private home are selected. Free classes do not wait for H3, payment setup, A2 or a new website. Build one reusable core and adapt it to both formats.
 
 ## Time and handoff
 
@@ -60,10 +62,10 @@ Before paid demand, cap owner landing-page polish at two hours; use a confirmed 
 
 ## Ready-to-dispatch prompts
 
-**A2:** "Use the free sample in docs/planning/09-SESSION-PREP.md and requirements in 03-PRD-COURSE.md. Write only lessons/free/one-page-spec.md. Include an original fictional event-page example, interview prompt, expected output, scope-creep recovery and observable done-when. No customer data, paid curriculum or installs. Return checks and outstanding human testing."
+**A2 status:** Implemented in [PR #2](https://github.com/MgGriebZ/BuildKit/pull/2). Do not regenerate or merge it as a prerequisite for the room work. For the current room goals, use file 14.
 
 **A3:** "Implement a local session-first page from docs/planning/02-PRD-LAUNCH.md. Write only site/. Primary CTA is an inquiry about one agreed milestone; secondary CTA asks about hosting a free one-hour class using the same confirmed contact route with distinct intent. Distinguish public class takeaways from personalized paid handoffs; describe included files/prompts/guide without a dollar-value bonus or standalone course checkout. Use cleared assets and support keyboard/mobile/reduced-motion. Keep unconfirmed contact/price/policies explicit in local preview and disable live payment until readiness passes. No backend, account changes, publishing or purchases."
 
-**A6:** "Use docs/planning/04-PRD-COMMUNITY.md and the approved shared seminar core. Adapt one free 60-minute class in the verified private teaching workspace and prepare a separately cleared public worksheet/demo subset. Include group refinement, learning check, offline fallback and host/accessibility/travel checklist. No payment or marketing signup needed for promised takeaways. Report artifact checks separately from owner rehearsal and host confirmation. No outreach, event booking, private-code redistribution or publication."
+**A6 / current L3:** Use the Luna L3 goal in [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md) after the checked room and public guide exist. Confirm host readiness separately before arranging an event.
 
-**S1/A4:** "Use docs/planning/09-SESSION-PREP.md and 11-PRD-SEMINAR.md. Author the actual presenter script, Mermaid sources, demo/checkpoints and blank handoff templates only in the selected verified private teaching workspace. Fill one fictional example. Never put client data or exclusive curriculum in public Git. Verify kit opening; report actual timed rehearsal/payment tests separately from prepared instructions. No purchases, public release or routine credit accounting."
+**S1 / current L1 + R1/R2 + L2/L3:** Use the per-repository goals in file 14. Public original demo/guide and private presenter notes have distinct output paths. A4's paid-client operational rehearsal remains separate from the room build and free-class rehearsal.

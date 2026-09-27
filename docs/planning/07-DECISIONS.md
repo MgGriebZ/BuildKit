@@ -1,17 +1,22 @@
 # Decision register
 
-Revision 0.4 · September 27, 2026. “Accepted direction” records the user's steering. Requirements/PRD push is authorized; proposed customer terms are not approved for sales.
+Revision 0.5 · September 27, 2026. “Accepted direction” records the user's steering. Requirements/PRD push is authorized; proposed customer terms are not approved for sales.
 
 ## Accepted direction
 
 - The primary initial offer is one-to-one build sessions.
 - Relevant course/follow-along material is included in the session, with project files, prompts, and personal next steps in the handoff.
 - The hour is a personalized seminar with Mermaid visual explanations, a prepared working product and a bounded refinement chosen around the participant's interests. See [seminar PRD](11-PRD-SEMINAR.md).
-- Playroom room/toy, gamer portfolio/guide and a conditional Riot API example are candidate tracks, not promises to build any requested product in an hour.
+- PocketPlayroom room refinement is the first track. The independent follow-along product is Cozy Room using Blazor WebAssembly; gamer portfolio/guide and Riot API tracks are later alternatives.
 - Measured credits-to-result examples may be part of teaching; routine credit counting/reporting for our work is no longer requested.
-- Refine and push public-safe requirements now. Private course storage/BuildKit visibility remains a decision; no visibility mutation has been requested.
+- Refine and push requirements now. The owner-created private `MgGriebZ/BuildWithGriebZ` is the selected presenter/authoring home, verified private with admin access. BuildKit holds public requirements and original free examples; full PocketPlayroom source visibility remains unchanged.
 - Free one-hour public/community-event classes are a core early outreach and service activity, sharing the teaching core with paid personal seminars. Become more selective with events as demand and calendar commitments grow; no host or cadence is yet confirmed.
 - Start from a 5–10-hour/week minimum planning commitment range, expandable as the business progresses. Five hours is not a ceiling and two sessions is not a fixed weekly cap. Actual booking windows and spending authority remain separate decisions.
+- A standalone playable room with a public follow-along is now part of the first seminar path. This does not establish a paid standalone course or LMS. Actual application implementation follows the bounded goals in [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md).
+
+## Implementation choices for this revision
+
+The owner selected the PocketPlayroom/Blazor direction. The planner resolves the first slice to a bedroom-inspired Cozy Room, two-style lamp baseline and a third-style/gentle-feedback refinement with saved choice. Use original example code/art under BuildKit, .NET 10 and a small isolated save record. PocketPlayroom already uses Blazor/.NET 9; its upgrade and later integration are separate. These bounded implementation defaults can be revised after the first runnable proof without reopening the business direction. See [PRD R](13-PRD-COZY-ROOM.md).
 
 ## Working recommendations for this revision
 
@@ -31,12 +36,14 @@ The following implement that direction as proposals; the owner has not approved 
 | D1 | Exact pilot price | One-hour seminar format accepted; $75 remains proposed. Review price against reusable content development, personalization, delivery and support time. |
 | D2 | Initial audience and session fit | Adults with a small personal, community, or work project are a working hypothesis. Learn from relevant inquiries and conversations; do not claim validated demand. |
 | D3 | Weekly time and cash available | Starting 5–10-hour/week commitment range with room to grow accepted September 27, 2026. Confirm actual booking windows and count prep, travel/setup, delivery and follow-up before committing to dates. Discretionary spending limit remains unconfirmed. |
-| D4 | Included material and content handling | Public preparation requirements are in [09-SESSION-PREP.md](09-SESSION-PREP.md); detailed draft retained privately outside Git. Choose a private teaching home and client handoff storage using [repository boundary](12-REPOSITORY-BOUNDARY.md). |
+| D4 | Included material and content handling | Private authoring home resolved: owner-created BuildWithGriebZ, private/admin verified September 27. Public example/guide in BuildKit; client handoff storage remains separate. See [repository boundary](12-REPOSITORY-BOUNDARY.md). |
 | D5 | Business identity, operational and tax readiness | Unconfirmed. [10-READINESS.md](10-READINESS.md) names owners and evidence required. Obtain appropriate advice for actual obligations; this register makes no individual legal/tax determination. |
 | D6 | Cancellation, refund, no-fit/no-result and support terms | Proposed boundaries in [01-BUSINESS.md](01-BUSINESS.md); owner must approve exact terms before use. Honor any discovered prior customer promises. |
 | D7 | Site/contact/payment details | Contact route, provider/account, policies, and any payment flow are unconfirmed. Inquiry-first site spec in [02-PRD-LAUNCH.md](02-PRD-LAUNCH.md); live payment and publishing need separate authorization/readiness. |
 | D8 | Community and acquisition channels | Free one-hour public/event classes accepted as a core early channel September 27, 2026. First audience/theme, host, event date and cadence remain open; no partnership, audience access or outreach is confirmed. |
 | D9 | Standalone course | On hold. Revisit only if repeated session demand supports independent learning and a complete path can pass separate usability/support gates. Price is undecided. |
+| D10 | First demo and stack | PocketPlayroom room/Blazor direction selected. Planner's first proof is Cozy Room's two-to-three lamp styles, feedback and persistence; standalone .NET 10. See PRD R; other tracks deferred. |
+| D11 | Public example release | Original room/source and guide are intended public outputs. Redistribution license and actual hosting destination must be chosen before promoting downloads/deploying. Full PocketPlayroom source remains private; upstream changes need their own scope. |
 
 ## First review gates
 

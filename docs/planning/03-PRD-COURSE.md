@@ -1,12 +1,12 @@
 # PRD C: learner material included in build sessions
 
-Revision 0.4 · This specification covers the reusable Build Kit included with the one-hour seminar. A standalone course is on hold.
+Revision 0.5 · This specification covers the public Cozy Room follow-along and materials used in the seminar. Paid standalone course/LMS remains deferred.
 
 ## Purpose and scope
 
-Give each learner a reusable Build Kit that supports the personalized, seminar-like hour: guided presentation with Mermaid visuals, a prepared working demo, and one focused learner-chosen refinement. The kit carries the work forward; it does not imply that a complete game or app will be built live. A six-lesson standalone curriculum is not required.
+Teach one bounded project path through the standalone bedroom-inspired Cozy Room and its public follow-along. The example uses Blazor WebAssembly, C#, HTML, CSS and SVG. Learners first inspect a working lamp that cycles two styles and persists selection, then follow a refinement that adds a third style and gentle feedback. Preserve mouse, touch, keyboard and reduced-motion behavior. This public learning path is now in scope; it is not a paid standalone course or a promise to build a complete game live.
 
-The kit should support these example tracks: Playroom room/game/toy; gamer portfolio/guide; and a conditional Riot API lesson. Use fixtures by default for Riot API teaching. Actual API use requires the learner to satisfy key and policy prerequisites; never request, copy, display, or store key details. Select relevant briefing, scope/non-goal, safe tool-use, diagram, worked example, refinement, check, prompt, and handoff materials.
+The first public learning path is the Cozy Room described above. Keep the room child-friendly as a play experience; seminar learners and marketing remain adult-facing, and the room itself has no course or sales call to action. Select relevant briefing, scope/non-goal, safe tool-use, visual explanation, worked example, refinement, check, prompt and follow-along materials.
 
 ## Minimum client handoff
 
@@ -33,7 +33,7 @@ The starter pack is ready for pilot use when:
 6. A person who was not present can open the provided files and understand how to resume from the documented checkpoint.
 7. The owner has reviewed the prompts and examples for factual accuracy, privacy, source rights, and clarity.
 
-These criteria establish useful session support, not beginner-course readiness or a claim of independent completion.
+The public follow-along has its own completion/readability checks in [the Cozy Room specification](13-PRD-COZY-ROOM.md) and L2 in [the execution handoff](14-EXECUTION-HANDOFF.md). These kit criteria cover personalized seminar support; they do not substitute for public example verification.
 
 ## Later optional course gate
 

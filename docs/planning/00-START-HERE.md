@@ -1,18 +1,18 @@
 # Build with GriebZ: practical AI build sessions
 
-Planning revision 0.4 · September 27, 2026 · Owner review draft
+Planning revision 0.5 · September 27, 2026 · Owner review draft
 
 ## Direction
 
-The accepted format is one full hour: a personalized, seminar-like guided presentation with Mermaid visuals, a prepared working product demonstration, and a focused refinement chosen by the learner. It includes a reusable Build Kit, relevant prompts and project files, and personal next steps. It is not an unstructured hour of debugging. The proposed $75 price, availability, and final policies remain unapproved.
+The accepted format is seminar-led 60-minute teaching: visual explanation, a prepared working example, one bounded learner-chosen refinement and a practical take-home. The first example is a standalone bedroom-inspired Cozy Room in Blazor WebAssembly, C#, HTML, CSS and SVG. Its baseline lamp cycles two styles and persists selection; the taught refinement adds a third style and gentle feedback. Mouse, touch and keyboard operation plus reduced-motion support remain requirements. A public follow-along is in scope. This is focused teaching, not an unstructured debugging hour. The proposed $75 price, availability and final policies remain unapproved.
 
-Prepare the working demo beforehand; do not promise to build a complete game or arbitrary app during the hour. Screen for fit and agree the learner's refinement. Example tracks: Playroom room/game/toy, gamer portfolio/guide, or a fixture-backed Riot API lesson; only live API access needs the appropriate key and policy prerequisites. Track-dependent timing adapts the agenda in [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md). Custom presentation preparation is tracked separately from ordinary session prep; bound extra personalized prep or re-scope and quote it before selling. A standalone course remains deferred.
+Prepare the working demo beforehand; do not promise to build a complete game or arbitrary app during the hour. The first pipeline is Cozy Room, with future public output paths `examples/cozy-room` and `lessons/free/cozy-room`; no app exists yet. The canonical specification and bounded handoff are [13-PRD-COZY-ROOM.md](13-PRD-COZY-ROOM.md) and [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md). PocketPlayroom remains the full product/reference; the independent example avoids private source dependencies. Gamer portfolio/guide and Riot API tracks are deferred beyond the first room. Custom presentation preparation is tracked separately from ordinary session prep; bound extra personalized prep or re-scope and quote it before selling. Paid standalone course/LMS remains deferred.
 
 Free one-hour classes for public/community events are an accepted early outreach and service activity, not an optional afterthought or a reward unlocked by paid demand. Reuse the teaching core, provide a useful public takeaway, and offer an optional route to personalized paid help without requiring a purchase. Start time planning at 5–10 owner hours/week as a minimum initial commitment range, expandable as the business develops; actual bookable windows remain to be set.
 
 ## Evidence and limits
 
-The repository contains project work, course drafts, a sales-page prototype, a three-color Z identity, and animation assets. These are candidates for demonstrations and teaching material, subject to the source review. They do not establish paying customers or novice completion. The supplied `support.js` and logo are staged and hash-verified; static runtime inspection is complete, while rendering remains unverified. See [asset review](../asset-review.md).
+PocketPlayroom is the full product/reference, not a source to publish as part of this example. The standalone room must use independently authored or cleared content and avoid private source dependencies. Existing brand assets remain subject to source review and do not establish paying customers or novice completion. See [asset review](../asset-review.md) and [08-SOURCE-REVIEW.md](08-SOURCE-REVIEW.md).
 
 No revenue forecast is supported. The plan tests whether people will pay for focused help and whether delivery time is workable, while keeping spending controlled.
 
@@ -30,6 +30,8 @@ No revenue forecast is supported. The plan tests whether people will pay for foc
 10. [10-READINESS.md](10-READINESS.md): outstanding launch items, owners and next actions.
 11. [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md): seminar format, demo and Build Kit requirements.
 12. [12-REPOSITORY-BOUNDARY.md](12-REPOSITORY-BOUNDARY.md): repository and publication boundaries.
+13. [13-PRD-COZY-ROOM.md](13-PRD-COZY-ROOM.md): room behavior, stack, visual polish and acceptance evidence.
+14. [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md): bounded Luna/Sol goals, output paths and sequencing.
 
 ## Initial validation
 
@@ -37,4 +39,4 @@ Keep the first milestone narrow: prepare a usable session worksheet and learner 
 
 In parallel, prepare and rehearse the first free class for a suitable host. It needs host/audience approval, a checked demo and public takeaway, not checkout or paid bookings. Review participant learning and useful next steps separately from paid inquiries.
 
-The exact price, booking windows, discretionary spending limit, business identity, public contact route, and final support/refund wording remain open. Documentation/requirements publication to this repository is authorized; this does not authorize site deployment, outreach, payment setup, or changes to public visibility.
+The first event host, pilot price, actual booking windows, discretionary spending limit and final customer policies remain open. The private presenter/business authoring home is resolved as `MgGriebZ/BuildWithGriebZ`, verified PRIVATE with ADMIN access; future seminar materials belong under `seminars/cozy-room`. Client sharing remains separate. A plain static HTML/CSS/JS marketing shell is allowed as supporting work; the linked Blazor demo is a separate output and no parallel React app is required. PR2 A2's free-event worksheet remains open and optional, not a room-pipeline dependency. Documentation/requirements publication is authorized; it does not authorize deployment, outreach, payment setup or repository visibility changes.

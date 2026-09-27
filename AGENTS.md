@@ -2,7 +2,7 @@
 
 Read `docs/planning/00-START-HERE.md`, `docs/planning/07-DECISIONS.md`, and only the PRD needed for the assigned ticket. Owner instructions take precedence. The original PRD is historical input, including its locked decisions.
 
-Current milestone: personalized one-hour seminars with visual explanations, a working example, one bounded refinement and an included Build Kit. The user authorized refining and pushing the requirements/PRDs. Price, policies and availability remain proposals. Application implementation, site deployment, visibility changes and account setup remain separate milestones. See `11-PRD-SEMINAR.md` and `12-REPOSITORY-BOUNDARY.md` under docs/planning.
+Current milestone: personalized one-hour seminars with visual explanations, a working example, one bounded refinement and an included Build Kit, alongside free one-hour public/community classes using a shared teaching core. The user authorized refining and pushing the requirements/PRDs and a starting time commitment of 5–10 hours/week with room to grow, not a ceiling. Price, policies and actual booking windows remain open. Application implementation, site deployment, visibility changes and account setup remain separate milestones. See `04-PRD-COMMUNITY.md`, `11-PRD-SEMINAR.md` and `12-REPOSITORY-BOUNDARY.md` under docs/planning.
 
 Do not routinely count or report credits for ordinary work. An explicitly chosen seminar case study may report measured usage, with baseline/preparation/retries and measurement limits disclosed.
 

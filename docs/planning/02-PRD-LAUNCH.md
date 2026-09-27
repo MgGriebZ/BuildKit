@@ -19,8 +19,9 @@ The initial site can be a single accessible page with these sections, in order:
 7. **Prerequisites and privacy:** state the tested device/browser/tools once known, any account or cost requirements, and what the learner should not share. Do not claim that a tool or plan is required until a path is tested.
 8. **About and evidence:** owner introduction based on verified experience. Demonstrations must use cleared assets and fictional data. Do not use customer claims, testimonials, counts, or outcomes without evidence and permission.
 9. **FAQ/contact:** response expectation only after owner confirms capacity; explain that inquiry is not a booking and give the confirmed support/contact route.
+10. **Free community classes:** describe the one-hour public/event format, shared demonstration and public takeaway. Secondary action: "Ask about hosting a free class," through the confirmed inquiry route with host intent distinguished from personal-session intent. No confirmed dates, partnerships or unlimited availability claims. Make clear that free group attendance does not include a private customized seminar.
 
-The page should initially offer one working inquiry action and, optionally, one complete free sample worksheet. A future course can be omitted. Remove unfinished public-policy placeholders and unsupported activity claims. The supplied logo/runtime are staged and statically inspected in [asset review](../asset-review.md); appearance and browser behavior remain untested. Use a normal static React/Vite frontend; the Design Canvas support runtime is reference-only, with no production dependency on it. No API, database or login is needed for inquiry-first delivery.
+The page should use one working contact destination with a primary personal-session inquiry and a secondary free-class host inquiry, plus a complete public worksheet when ready. A future course can be omitted. Remove unfinished public-policy placeholders and unsupported activity claims. The supplied logo/runtime are staged and statically inspected in [asset review](../asset-review.md); appearance and browser behavior remain untested. Use a normal static React/Vite frontend; the Design Canvas support runtime is reference-only, with no production dependency on it. No API, database or login is needed for inquiry-first delivery.
 
 ## Session operations
 
@@ -41,6 +42,7 @@ Session success is the agreed outcome plus a usable handoff—not necessarily a 
 ## Product acceptance criteria for a future implementation
 
 - A first-time visitor can explain the inquiry-to-handoff sequence and identify that inquiry is not confirmation.
+- A visitor can distinguish the free group class/public takeaway from the paid personalized seminar/tailored kit and can select the appropriate inquiry intent.
 - The session promise, limits, proposed price status, fit process, contact method, and owner-approved policies are consistent across page and messages.
 - All buttons and links work on phone and desktop; keyboard access, labels, contrast, and reduced-motion behavior are checked.
 - No false urgency, unsupported valuation, fabricated evidence, or misleading “finished in an hour” promise appears.

@@ -18,7 +18,7 @@ No-fit/no-result proposal: screen project fit before accepting payment. If the r
 
 Standalone self-serve course: on hold. Do not advertise a ~$50 value, “normally $50,” or any comparable valuation. Reconsider only after session clients repeatedly request independent access and material can pass its own completion and support gates. The six-lesson curriculum is future work, not a paid-session dependency.
 
-Free community introduction: optional; useful without a purchase and within an owner-set time budget. It is a discovery and service activity, not a required launch product.
+Free one-hour community/public-event classes: a core early service and outreach activity. Share the prepared demonstration foundation with paid seminars, teach one understandable refinement, and provide a cleared public worksheet/demo takeaway useful without buying anything. Paid sessions add individual scoping, personalization and a tailored handoff; free attendees do not owe a sales conversation. A first free class can precede paid demand or a new website. Confirm host/audience and delivery readiness before committing to an event.
 
 ## Funnel and evidence
 
@@ -31,7 +31,8 @@ Ask what the person was trying to make, where they got stuck, what they have tri
 | Fit | At least 5 relevant conversations; identify recurring needs and requests the session cannot serve. Refine scope before expanding. |
 | First two paid sessions | Complete two paid, scoped sessions and record total owner time, actual handoff, client-reported ability to continue, and unresolved issues. Review price, scope, and support before pursuing volume. |
 | Delivery quality | After each session, verify the agreed handoff exists, disclose what was and was not tested, and ask whether the next step is clear. Repair worksheet/material defects. |
-| Third-session review | After three delivered sessions, review repeated needs, total time, material usefulness and support burden; adjust the offer or test one extension. No automatic course or community launch follows. |
+| Community pilot | After the first free class, review what participants understood/could repeat, host feedback, total preparation/delivery time and voluntary inquiries separately. A useful class is a community outcome, not proof of paid demand. |
+| Third paid-session review | After three delivered paid sessions, review repeated needs, total time, material usefulness and support burden; adjust the offer or test one extension. No automatic standalone course launch follows. |
 
 If no one books, distinguish an incomplete test from a rejected offer: record the number of qualified inquiries/offers, objections, and fit. After 10 genuinely relevant offers without a booking, review the wording, audience, scope, and price before building more product. This threshold is a proposed decision aid, not a demand forecast.
 
@@ -41,8 +42,8 @@ The $75/60-minute figure is a proposed pilot price only. Do not present a simpli
 
 Stripe currently lists US domestic card pricing as 2.9% + $0.30; verify the actual account, payment method, and applicable costs before use ([Stripe pricing](https://stripe.com/us/pricing)). Fees and tax treatment vary. No sales volume, conversion rate, household contribution, tax conclusion, or legal conclusion is assumed here.
 
-Spending, time availability, and required business setup are unconfirmed. Before taking payment, resolve the relevant readiness items in `10-READINESS.md` and [05-OPERATIONS.md](05-OPERATIONS.md). Do not commit to a weekly slot cap until actual capacity is confirmed. Track preparation, delivery, follow-up, acquisition, refunds, and out-of-pocket costs separately.
+The owner intends to start with at least a 5–10-hour/week planning range and can expand as the business develops; this is not a five-hour cap or a fixed limit of two sessions. Actual booking windows, discretionary spending and required business setup remain unconfirmed. Before taking payment, resolve the relevant readiness items in `10-READINESS.md` and [05-OPERATIONS.md](05-OPERATIONS.md). Track reusable preparation, personalized prep, delivery, travel/setup, follow-up, acquisition, refunds and out-of-pocket costs separately. Allocate time to free classes deliberately; increase commitments based on real availability and delivery experience, without treating free attendance as revenue.
 
 ## Expansion conditions
 
-First make the session repeatable and the handoff useful. Create or deepen shared learner material in response to actual session needs. Revisit a standalone course only after repeated independent-learning demand and a completed, tested learner path. A group workshop needs a host or several people with the same need; custom work needs its own written scope. Do not infer any of these from social reach alone.
+Make the shared teaching core repeatable and both public and personalized handoffs useful. Create or deepen shared learner material in response to actual needs. Free classes are already in launch scope; later paid group workshops and custom engagements need their own scope and demand evidence. Revisit a standalone course only after repeated independent-learning demand and a completed, tested learner path. As interest grows, review which free events best serve the community and fit the calendar rather than promising unlimited availability. Do not infer paying demand from social reach alone.

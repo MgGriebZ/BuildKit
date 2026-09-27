@@ -8,6 +8,8 @@ The participant chooses a small project direction before the appointment. The pr
 
 Working copy: "Your idea, a working example, and a clear way forward. A personal AI-building seminar with a guided refinement and your take-home Build Kit included."
 
+The same reusable core also supports free one-hour public/community classes, an accepted early launch activity. Adapt to one group-selected change and a cleared public takeaway; reserve individualized scope and tailored handoffs for the personal format. The community path has its own host/rehearsal gates and does not wait for paid demand. See [04-PRD-COMMUNITY.md](04-PRD-COMMUNITY.md).
+
 ## Reusable hour
 
 | Minutes | Presenter/participant activity | Visible result |

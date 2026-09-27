@@ -10,6 +10,7 @@ Revision 0.4 · September 27, 2026. Public requirements are approved for push. L
 - Personalized hour, Mermaid visuals, working-demo/refinement tracks and measured usage-case requirements in [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md).
 - Supplied logo/runtime staged and statically reviewed; hashes and runtime findings in [asset review](../asset-review.md). Availability is distinct from a successful browser preview.
 - Revised decisions, source notes and execution queue, with explicit owners and gates.
+- Free one-hour community classes as a parallel launch path, with host-readiness checks and separate community/paid-demand measures; 5–10 starting owner hours/week with room to grow, not a ceiling.
 
 ## Outstanding before a paid session
 
@@ -18,7 +19,7 @@ Revision 0.4 · September 27, 2026. Public requirements are approved for push. L
 | Pilot price | You | Accept/amend proposed $75 for the accepted one-hour format | Public price, payment product |
 | Private teaching home | You, then agent verification | Choose private BuildKit or separate private authoring home; see [boundary](12-REPOSITORY-BOUNDARY.md) | Private seminar authoring/push |
 | Prepared seminar core | Owner + Luna | Choose first track; produce readable diagrams, working baseline/refinement and kit in private workspace | Rehearsal and credible offer |
-| Weekly capacity | You | Real available hours, bookable windows/timezone, cash ceiling | Slots and delivery/support promise |
+| Weekly capacity | You | Starting 5–10-hour/week range accepted; confirm actual bookable windows/timezone, prep/travel/support allocation and discretionary spending limit | Slots and delivery/support promise |
 | Seller identity and operations | You, accountant/appropriate adviser | Existing business/DBA/EIN situation, location, applicable registration and tax handling for session plus included materials | Taking payment under the chosen identity |
 | Customer policies | You | Cancellation/no-show rule, remedy choice, handoff/support response windows | Sale terms |
 | Contact, scheduling and delivery | You, then agent verification | Working business contact and calendar, private handoff location and access | Inquiry-to-handoff rehearsal |
@@ -28,19 +29,25 @@ Revision 0.4 · September 27, 2026. Public requirements are approved for push. L
 
 The exact client milestone is chosen at intake. Completing a six-lesson course, teaching Blender or building a toy from scratch is not required for a spec/event-page/organizer session that has its own agreed scope.
 
+## Outstanding before the first free community class
+
+Choose the initial theme/audience and a prospective host. Prepare the shared core, one group refinement, a public takeaway and offline fallback; rehearse the hour. Confirm host agreement, audience suitability, accessibility, equipment, venue requirements and setup/travel time. Student-facing events need a separate age-appropriate plan and host requirements; the first draft is adult-facing. Agree how participants can request personal help voluntarily without collecting unnecessary data or making access conditional on a sales signup.
+
+No paid bookings, checkout setup or new website are prerequisites for this route. Outreach and event scheduling still need the owner's task authorization. See [community PRD](04-PRD-COMMUNITY.md) and A6/H5 in the execution queue.
+
 ## Outstanding only for a new public website
 
-Luna can implement the approved local landing-page ticket next. The supplied Design Canvas runtime still needs an optional isolated preview if the original export is to be used as a visual reference; production should use the specified ordinary frontend. Verify logo appearance against light/dark backgrounds and mobile sizes, plus the Z animation's reduced-motion behavior. These tests have not been performed during static asset inspection.
+When implementation is authorized, Luna can execute the specified local landing-page ticket. The supplied Design Canvas runtime still needs an optional isolated preview if the original export is to be used as a visual reference; production should use the specified ordinary frontend. Verify logo appearance against light/dark backgrounds and mobile sizes, plus the Z animation's reduced-motion behavior. These tests have not been performed during static asset inspection.
 
 Confirm actual DNS/Azure hosting access, quotas and the public contact destination before deploying. Check final copy, all actions, mobile/keyboard behavior, policy pages and the public build contents. A new site is useful but is not necessary to have a discovery conversation or deliver a correctly arranged session.
 
 ## Deferred deliberately
 
-Standalone course pricing and checkout, complete six-lesson authoring, paid content login, synced progress, database/API, automated fulfillment, Blender/Godot expansion and a multi-platform media pipeline. Revisit after three delivered sessions: what repeated, what people completed, total support time, and whether a reusable guide or group workshop would help. Separate demand for a paid standalone course must be demonstrated before promoting it.
+Standalone course pricing and checkout, complete six-lesson authoring, paid content login, synced progress, database/API, automated fulfillment, Blender/Godot expansion and a multi-platform media pipeline. Revisit after three delivered paid sessions: what repeated, what people completed, total support time, and whether a reusable guide or paid group workshop would help. Free community classes are already in scope. Separate demand for a paid standalone course must be demonstrated before promoting it.
 
 ## Minimum reply that unblocks the next launch decisions
 
-Confirm/amend "$75 for 60 minutes," state your realistic weekly hours and preferred booking windows, and say whether you already operate through a registered business/trading name. Share actual tax identifiers, credentials and customer information only through appropriate private channels, not this document. Other decisions can be resolved when their dependent task begins.
+Choose the private teaching home and first class/seminar theme so content production can begin. Before offering paid slots, confirm/amend "$75 for 60 minutes," give preferred booking windows within your expandable 5–10-hour starting commitment, and say whether you already operate through a registered business/trading name. For the community route, identify the first audience/prospective host. Share actual tax identifiers, credentials and customer information only through appropriate private channels, not this document. Other decisions can be resolved when their dependent task begins.
 
 ## Verification scope
 

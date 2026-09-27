@@ -1,5 +1,7 @@
 # BuildKit — PRD & Handoff
 
+> Historical draft: on September 27, 2026 the owner reopened all business/product decisions. See [the current planning packet](docs/planning/00-START-HERE.md) and its decision register. The original text below is retained for provenance; its "locked" labels and instructions do not override the owner's latest direction.
+
 > git init for **MgGriebZ/BuildKit**. Single source for a fresh Claude Code / Codex session. Exported 2026-09-27 from the design project. Visual references (HTML mocks) are optional; everything needed to build is in this file.
 
 ---

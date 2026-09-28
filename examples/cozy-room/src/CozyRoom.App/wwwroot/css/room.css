@@ -34,6 +34,17 @@ h1 span { color: #a88a5a; }
 .lamp-art { width: 100%; height: 100%; overflow: visible; display: block; }
 .style-0 .lamp-shade { fill: #dfb569; }
 .style-1 .lamp-shade { fill: #a6c4ab; }
+.style-2 .lamp-shade { fill: #d8a9b3; }
+.style-acknowledgement {
+    position: absolute; left: 10%; top: 12%; width: 80%; height: 48%;
+    border: 2px solid #8b765a; border-radius: 50%; opacity: 0;
+    pointer-events: none; animation: lamp-acknowledge 480ms ease-out;
+}
+@keyframes lamp-acknowledge {
+    0% { opacity: 0; transform: scale(.94); }
+    35% { opacity: .45; }
+    100% { opacity: 0; transform: scale(1.08); }
+}
 .room-caption { display: flex; align-items: center; gap: 13px; padding: 24px 2px 21px; }
 .caption-symbol { font-size: 22px; color: #849576; }
 .room-caption p { margin: 0; color: #777561; font: italic 16px Georgia, serif; }
@@ -68,5 +79,6 @@ h1 span { color: #a88a5a; }
     .care-panel { max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
+    .style-acknowledgement { display: none; }
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

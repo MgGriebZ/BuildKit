@@ -1,4 +1,6 @@
-# R1 validation record
+# Cozy Room validation record
+
+The R1 sections below preserve historical baseline evidence. The appended R2 section records checks on the current uncommitted refinement; it does not assign a finished revision or claim an independent finished export.
 
 Observed September 27, 2026 on Windows. These are local development results, not a deployment, physical-device check, child-suitability assessment or seminar rehearsal.
 
@@ -67,3 +69,43 @@ Exported only `examples/cozy-room/` with `git archive` and extracted into a fres
 - The owner still needs to choose the original-source redistribution license and approve the release destination before public-release promotion.
 
 See [README.md](README.md) for reproducible setup, storage recovery and the scoped export boundary.
+
+## R2 working-tree validation — September 27, 2026
+
+Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. No commit was created for R2; `checkpoint.json` has a null finished commit and an explicit pending status. After owner review/commit, record the full R2 source SHA in a subsequent metadata commit before L2 uses it.
+
+The existing toolchain was used: SDK **10.0.302**, Node **22.12.0**, npm **10.9.0**, locked Playwright **1.62.1**, installed headless Microsoft Edge **154.0.4258.37**. Package pins and lockfiles were unchanged. Commands run from this subtree:
+
+```powershell
+dotnet restore CozyRoom.slnx --locked-mode
+dotnet build CozyRoom.slnx --no-restore
+dotnet test CozyRoom.slnx --no-build --no-restore
+dotnet publish src/CozyRoom.App/CozyRoom.App.csproj -c Release -o artifacts/publish --no-restore
+npm ci --ignore-scripts --no-fund --no-audit
+npm run test:browser
+```
+
+Locked restore, build, Release publish and npm setup succeeded. Debug build reported **0 warnings and 0 errors**; rules passed **25/25 cases**. Publish used the existing environment without the optional `wasm-tools` workload or native AOT. The browser harness served `artifacts/publish/wwwroot` over local HTTP and passed **12/12 scenarios**, with **no unhandled page exceptions or external runtime requests**.
+
+Rules explicitly load literal R1 version-1 records for styles 0 and 1, retain their choice and exact serialized format, and permit continued cycling. All three choices roundtrip. The cycle visits 1 → 2 → 0. Value 3 is invalid, defaults to 0 for this visit and grants no autosave permission; invalid in-memory value 3 cannot be written or cycled. Existing schema/malformed/future/oversize checks remain covered.
+
+| Browser scenario | Actual observation |
+|---|---|
+| Desktop 1280 × 900 | Mouse/Enter/Space three-style cycling; third-style serialization/reload; accessible Rose diamonds name and diamond SVG path; keyboard focus remains on the lamp; visible outline; target/layout/storage isolation |
+| Tablet 1024 × 768 | Three-style cycle with emulated touch, style 2 reload, target inside scene and at least 44 × 44 CSS pixels, no horizontal overflow |
+| Narrow 390 × 844 | Same emulated touch cycle/reload/target checks with stacked adult controls |
+| Reduced motion | Style 2 persists/reloads; actual acknowledgement element is hidden, computed animation is `none`, and there are no animation objects; changing preference during feedback also disables it |
+| Malformed / future / style 3 / missing fields (4 scenarios) | Exact raw save retained with no writes through third-style play, reload and reset cancellation; only confirmed reset replaces the example save |
+| Original R1 styles 0 and 1 (2 scenarios) | Initial load/reload keep the raw value with no write; later activation saves the next style using version 1 and restores it after reload |
+| Write failure | Third-style play continues; previous valid save remains exact; failed confirmed reset preserves it and reload restores it |
+| Denied reads/writes | Third-style play and a confirmed temporary reset remain usable, with accurate persistence notices |
+
+Normal acknowledgement was checked on the rendered element: CSS animation `lamp-acknowledge` lasts **480 ms**, reaches visible opacity above 0.4 at 168 ms, then completes at opacity 0 with no remaining animation. The harness paused that same animation only to capture its visible peak, then resumed it and checked completion. Initial load/reload does not create a feedback element. The native lamp button remains mounted while a keyed decorative span restarts feedback for each activation; no game or animation logic was added to JavaScript.
+
+Generated evidence remains under ignored `artifacts/`: `browser-results.json` and `screenshots/desktop.png`, `tablet.png`, `narrow.png`, `acknowledgement.png`. All four captures were visually inspected. Rose diamonds is distinct from stripes/dots at all three dimensions, the lamp remains on the bedside surface, and the ring is restrained around the shade. The desktop shows the retained keyboard outline. No scene clipping, target overlap or horizontal overflow was observed. Tablet may scroll vertically; narrow retains the complete room and adult controls below it.
+
+### R2 remaining evidence and handoff
+
+There is no implementation/check blocker. R2 remains uncommitted for owner review, and its finished SHA is pending. No push, PR creation, merge or deployment occurred. The earlier R1 standalone-export check remains historical evidence for R1 only; an independent finished export/reopening check and the public follow-along await the R2 commit and L2.
+
+Physical phone/tablet input, browser diversity, screen-reader use, human accessibility review, adult learner repeat/explain-back, timed seminar rehearsal and child-suitability observations remain unperformed. Offline/PWA reload, native AOT, network-performance and hosting checks remain outside this evidence. Original-source license and release destination are still owner decisions.

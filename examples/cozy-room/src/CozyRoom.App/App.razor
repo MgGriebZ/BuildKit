@@ -19,6 +19,10 @@
                     disabled="@(!_ready)" aria-busy="@(_busy ? "true" : "false")" data-testid="lamp"
                     data-style="@_state.LampStyle" data-busy="@(_busy ? "true" : "false")" @onclick="ChangeStyleAsync">
                 <LampArt Style="@_state.LampStyle" />
+                @if (_acknowledgement > 0)
+                {
+                    <span @key="_acknowledgement" class="style-acknowledgement" aria-hidden="true" data-testid="style-acknowledgement"></span>
+                }
             </button>
         </div>
     </section>
@@ -55,7 +59,13 @@
     private RoomState _state = new();
     private bool _ready, _busy, _mayWrite, _confirmReset;
     private string _notice = "Opening your room…";
-    private string StyleName => _state.LampStyle == 0 ? "Honey stripes" : "Mint dots";
+    private long _acknowledgement;
+    private string StyleName => _state.LampStyle switch
+    {
+        0 => "Honey stripes",
+        1 => "Mint dots",
+        _ => "Rose diamonds"
+    };
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -84,6 +94,7 @@
         try
         {
             _state = RoomRules.NextStyle(_state);
+            _acknowledgement++;
             if (_mayWrite)
             {
                 if (await Store.WriteAsync(_state)) _notice = "Your lamp choice is remembered in this browser.";
@@ -107,6 +118,7 @@
         try
         {
             _state = new();
+            _acknowledgement = 0;
             _mayWrite = await Store.WriteAsync(_state);
             _notice = _mayWrite
                 ? "A fresh room is remembered in this browser."

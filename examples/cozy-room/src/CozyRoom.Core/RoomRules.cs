@@ -13,7 +13,7 @@ public sealed record SaveRead(SaveStatus Status, RoomState State)
 public static class RoomRules
 {
     public const int SaveVersion = 1;
-    public const int StyleCount = 2;
+    public const int StyleCount = 3;
     public const string RoomId = "cozy-room";
     public const string LampId = "lamp";
     public const string StorageKey = "buildwithgriebz.cozy-room.baseline.v1";

@@ -68,49 +68,103 @@ try {
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'No horizontal overflow');
     }
 
+    async function checkAcknowledgement(page, reduced = false) {
+        const cue = page.getByTestId('style-acknowledgement');
+        await cue.waitFor({ state: 'attached' });
+        const observation = await cue.evaluate(el => ({
+            display: getComputedStyle(el).display,
+            animation: getComputedStyle(el).animationName,
+            animations: el.getAnimations().map(a => ({ name: a.animationName, duration: a.effect.getTiming().duration }))
+        }));
+        if (reduced) {
+            assert.equal(observation.display, 'none');
+            assert.equal(observation.animation, 'none');
+            assert.deepEqual(observation.animations, []);
+        } else {
+            assert.equal(observation.animation, 'lamp-acknowledge');
+            assert(observation.animations.some(a => a.name === 'lamp-acknowledge' && a.duration === 480));
+            // Sample the actual rendered cue at its peak, then allow it to finish.
+            await cue.evaluate(el => {
+                const animation = el.getAnimations()[0];
+                animation.pause(); animation.currentTime = 168;
+            });
+            assert(await cue.evaluate(el => Number(getComputedStyle(el).opacity) > .4));
+            await page.screenshot({ path: 'artifacts/screenshots/acknowledgement.png', fullPage: true });
+            await cue.evaluate(el => el.getAnimations()[0].play());
+            await page.waitForFunction(() => {
+                const el = document.querySelector('[data-testid="style-acknowledgement"]');
+                return el && el.getAnimations().length === 0 && getComputedStyle(el).opacity === '0';
+            });
+        }
+    }
+
     {
         const { context, page } = await open({ viewport: { width: 1280, height: 900 } });
         await style(page, 0);
         await page.getByTestId('lamp').click(); await style(page, 1);
         assert.equal(JSON.parse(await raw(page)).lampStyle, 1);
-        await page.reload(); await style(page, 1);
+        await checkAcknowledgement(page);
+        await page.getByTestId('lamp').click(); await style(page, 2);
+        assert.equal(JSON.parse(await raw(page)).lampStyle, 2);
+        assert.match(await page.getByTestId('lamp').getAttribute('aria-label'), /Rose diamonds/);
+        assert.equal(await page.locator('#shade-pattern path').getAttribute('d'), 'M9 2l6 7-6 7-6-7z');
+        await page.reload(); await style(page, 2);
+        assert.equal(await page.getByTestId('style-acknowledgement').count(), 0, 'Reload does not animate');
         assert.match(await page.getByTestId('save-status').innerText(), /Welcome back/);
         await page.getByTestId('lamp').focus();
         await page.keyboard.press('Enter'); await style(page, 0);
+        assert(await page.getByTestId('lamp').evaluate(el => el === document.activeElement));
         await page.keyboard.press('Space'); await style(page, 1);
+        assert(await page.getByTestId('lamp').evaluate(el => el === document.activeElement));
+        await page.keyboard.press('Space'); await style(page, 2);
+        await page.waitForFunction(() => document.querySelector('[data-testid="style-acknowledgement"]').getAnimations().length === 0);
         assert.notEqual(await page.getByTestId('lamp').evaluate(el => getComputedStyle(el).outlineStyle), 'none');
         await checkIsolation(page); await checkLayout(page);
         await page.screenshot({ path: 'artifacts/screenshots/desktop.png', fullPage: true });
-        results.push('Desktop: mouse + two-style cycle + reload + Enter/Space + focus + isolated writes');
+        results.push('Desktop: three-style mouse/keyboard cycle, third-style save/reload, diamond cue, retained focus, calm 480ms acknowledgement and isolated writes');
         await context.close();
     }
     for (const [name, viewport] of [['tablet', { width: 1024, height: 768 }], ['narrow', { width: 390, height: 844 }]]) {
         const { context, page } = await open({ viewport, hasTouch: true });
         await page.getByTestId('lamp').tap(); await style(page, 1);
-        await page.reload(); await style(page, 1);
+        await page.getByTestId('lamp').tap(); await style(page, 2);
+        await page.reload(); await style(page, 2);
         await checkLayout(page);
         await page.screenshot({ path: `artifacts/screenshots/${name}.png`, fullPage: true });
-        results.push(`${name}: emulated touch + reload + target and layout checks`);
+        await page.getByTestId('lamp').tap(); await style(page, 0);
+        await checkIsolation(page);
+        results.push(`${name}: three-style emulated touch cycle + third-style reload + target and layout checks`);
         await context.close();
     }
     {
         const { context, page } = await open({ reducedMotion: 'reduce', viewport: { width: 1024, height: 768 } });
         await page.getByTestId('lamp').click(); await style(page, 1);
+        await checkAcknowledgement(page, true);
+        await page.getByTestId('lamp').click(); await style(page, 2);
+        await checkAcknowledgement(page, true);
         assert(await page.evaluate(() => matchMedia('(prefers-reduced-motion: reduce)').matches));
         assert.equal(await page.getByTestId('lamp').evaluate(el => getComputedStyle(el).transitionDuration), '0s');
-        await page.reload(); await style(page, 1);
-        results.push('Reduced motion: activation and remembered state, no transition');
+        await page.reload(); await style(page, 2);
+        await page.emulateMedia({ reducedMotion: 'no-preference' });
+        await page.getByTestId('lamp').click(); await style(page, 0);
+        await page.emulateMedia({ reducedMotion: 'reduce' });
+        await checkAcknowledgement(page, true);
+        results.push('Reduced motion: third style saves/reloads; actual cue hidden with no animation, including preference change during feedback');
         await context.close();
     }
     for (const [name, seed, message] of [
         ['malformed', 'broken{', /couldn't be read/],
         ['future-version', '{"version":99,"unknown":"keep"}', /newer version/],
-        ['unknown-style', saved(2), /couldn't be read/],
+        ['unknown-style-3', saved(3), /couldn't be read/],
         ['missing-fields', '{"version":1}', /couldn't be read/]
     ]) {
         const { context, page } = await open({}, seed);
         assert.match(await page.getByTestId('save-status').innerText(), message);
         await page.getByTestId('lamp').click(); await style(page, 1);
+        await page.getByTestId('lamp').click(); await style(page, 2);
+        assert.equal(await raw(page), seed);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), []);
+        await page.reload(); await style(page, 0);
         assert.equal(await raw(page), seed);
         await page.getByText('Room care', { exact: true }).click();
         await page.getByTestId('reset-request').click();
@@ -125,19 +179,42 @@ try {
         results.push(`${name}: raw save preserved during play/cancel; explicit reset replaces only example save`);
         await context.close();
     }
+    for (const originalStyle of [0, 1]) {
+        const originalSave = saved(originalStyle);
+        const { context, page } = await open({}, originalSave);
+        await style(page, originalStyle);
+        assert.equal(await raw(page), originalSave);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), [], 'Loading an R1 save must not rewrite it');
+        await page.reload(); await style(page, originalStyle);
+        await page.getByTestId('lamp').click(); await style(page, originalStyle + 1);
+        assert.equal(JSON.parse(await raw(page)).version, 1);
+        assert.equal(JSON.parse(await raw(page)).lampStyle, originalStyle + 1);
+        await page.reload(); await style(page, originalStyle + 1);
+        await checkIsolation(page);
+        results.push(`Original R1 v1 style ${originalStyle}: unchanged load/reload, continued cycling and v1 roundtrip`);
+        await context.close();
+    }
     {
         const { context, page } = await open({}, saved(0), 'write-fails');
         await page.getByTestId('lamp').click(); await style(page, 1);
         assert.match(await page.getByTestId('save-status').innerText(), /couldn't save/);
         assert.equal(await raw(page), saved(0));
-        await page.getByTestId('lamp').click(); await style(page, 0);
-        results.push('Write failure: play continues and earlier save remains intact');
+        await page.getByTestId('lamp').click(); await style(page, 2);
+        assert.equal(await raw(page), saved(0));
+        await page.getByText('Room care', { exact: true }).click();
+        await page.getByTestId('reset-request').click();
+        await page.getByTestId('reset-confirm-button').click(); await style(page, 0);
+        assert.equal(await raw(page), saved(0));
+        await page.reload(); await style(page, 0);
+        await checkIsolation(page);
+        results.push('Write failure: third-style play and failed reset preserve earlier save; reload restores it');
         await context.close();
     }
     {
         const { context, page } = await open({}, null, 'denied');
         assert.match(await page.getByTestId('save-status').innerText(), /can't remember/);
         await page.getByTestId('lamp').click(); await style(page, 1);
+        await page.getByTestId('lamp').click(); await style(page, 2);
         await page.getByText('Room care', { exact: true }).click();
         await page.getByTestId('reset-request').click();
         await page.getByTestId('reset-confirm-button').click(); await style(page, 0);
@@ -147,7 +224,7 @@ try {
     }
     assert.deepEqual(errors, [], 'No unhandled browser exceptions');
     assert.deepEqual(externalRequests, [], 'No external runtime requests');
-    const report = { browser: browser.version(), channel: channel || 'chromium', results, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'PWA/offline reload and the R2 third style are outside R1.'] };
+    const report = { slice: 'R2 three-style validation', browser: browser.version(), channel: channel || 'chromium', results, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'PWA/offline reload and timed rehearsal remain untested.'] };
     await writeFile('artifacts/browser-results.json', JSON.stringify(report, null, 2));
     console.log(JSON.stringify(report, null, 2));
 } finally {

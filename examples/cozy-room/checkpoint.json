@@ -9,7 +9,15 @@
     "saveVersion": 1,
     "storageKey": "buildwithgriebz.cozy-room.baseline.v1"
   },
-  "finished": null,
+  "r2Base": "15d24cfa060f8cd0b45084426aba7c2eaebce4c1",
+  "finished": {
+    "commit": "91eab16835aac4cfd80a7f51017ac62f5cc6b9bd",
+    "revisionStatus": "Immutable R2 runtime/test source checkpoint; the later review tree also includes its validated manifest and instructions.",
+    "label": "R2 three-style Cozy Room with calm acknowledgement",
+    "styleCount": 3,
+    "saveVersion": 1,
+    "storageKey": "buildwithgriebz.cozy-room.baseline.v1"
+  },
   "commands": {
     "restore": "dotnet restore CozyRoom.slnx --locked-mode",
     "build": "dotnet build CozyRoom.slnx --no-restore",
@@ -22,7 +30,7 @@
   "sourceLicense": "Owner decision pending; not a redistribution license grant.",
   "notes": [
     "The manifest follows the immutable baseline source commit; retain this revision record with a baseline export.",
-    "R2 and L2 must record the finished checkpoint and test older valid baseline saves.",
+    "R2 tests original version-1 styles 0 and 1; style 3 remains invalid. L2 records the independent finished export/reopening check.",
     "Use distinct origins or storage keys for simultaneous baseline/finished previews.",
     "No merge, deployment or offline reload validation is implied."
   ]

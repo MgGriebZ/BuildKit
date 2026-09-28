@@ -6,12 +6,20 @@ namespace CozyRoom.Core.Tests;
 public sealed class RoomRulesTests
 {
     [Fact]
-    public void TwoStyleCycleReturnsToFirst() =>
-        Assert.Equal(new RoomState(), RoomRules.NextStyle(RoomRules.NextStyle(new())));
+    public void ThreeStyleCycleVisitsEachChoiceAndReturnsToFirst()
+    {
+        var state = new RoomState();
+        foreach (var expected in new[] { 1, 2, 0 })
+        {
+            state = RoomRules.NextStyle(state);
+            Assert.Equal(expected, state.LampStyle);
+        }
+    }
 
     [Theory]
     [InlineData(0)]
     [InlineData(1)]
+    [InlineData(2)]
     public void SaveRoundTripRetainsChoiceAndIdentifiers(int style)
     {
         var read = RoomRules.Read(RoomRules.Write(new(style)));
@@ -30,6 +38,19 @@ public sealed class RoomRulesTests
     }
 
     [Theory]
+    [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":0}", 0)]
+    [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":1}", 1)]
+    public void OriginalR1VersionOneSaveRetainsChoiceAndCanContinue(string json, int expected)
+    {
+        var read = RoomRules.Read(json);
+        Assert.Equal(SaveStatus.Saved, read.Status);
+        Assert.Equal(expected, read.State.LampStyle);
+        Assert.True(read.MayWrite);
+        Assert.Equal(expected + 1, RoomRules.NextStyle(read.State).LampStyle);
+        Assert.Equal(json, RoomRules.Write(read.State));
+    }
+
+    [Theory]
     [InlineData("")]
     [InlineData("broken")]
     [InlineData("null")]
@@ -41,7 +62,7 @@ public sealed class RoomRulesTests
     [InlineData("{\"version\":1,\"roomId\":\"other\",\"objectId\":\"lamp\",\"lampStyle\":0}")]
     [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"other\",\"lampStyle\":0}")]
     [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":-1}")]
-    [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":2}")]
+    [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":3}")]
     [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":0.5}")]
     [InlineData("{\"version\":1,\"roomId\":\"cozy-room\",\"objectId\":\"lamp\",\"lampStyle\":\"0\"}")]
     public void InvalidSaveNeverGrantsWritePermission(string json)
@@ -66,7 +87,7 @@ public sealed class RoomRulesTests
 
     [Theory]
     [InlineData(-1)]
-    [InlineData(2)]
+    [InlineData(3)]
     public void InvalidInMemoryStateCannotBeCycledOrWritten(int style)
     {
         Assert.Throws<ArgumentOutOfRangeException>(() => RoomRules.NextStyle(new(style)));

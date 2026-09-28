@@ -224,7 +224,7 @@ try {
     }
     assert.deepEqual(errors, [], 'No unhandled browser exceptions');
     assert.deepEqual(externalRequests, [], 'No external runtime requests');
-    const report = { slice: 'R2 uncommitted working tree', browser: browser.version(), channel: channel || 'chromium', results, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'PWA/offline reload, independent finished export and timed rehearsal remain untested.'] };
+    const report = { slice: 'R2 three-style validation', browser: browser.version(), channel: channel || 'chromium', results, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'PWA/offline reload and timed rehearsal remain untested.'] };
     await writeFile('artifacts/browser-results.json', JSON.stringify(report, null, 2));
     console.log(JSON.stringify(report, null, 2));
 } finally {

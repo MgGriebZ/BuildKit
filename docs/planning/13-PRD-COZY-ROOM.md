@@ -65,7 +65,7 @@ Keep one canonical source tree with named baseline and finished commit checkpoin
 
 The public guide provides: prerequisites for viewers versus editors, checkpoint selection, the changed files, the prompt used, an expected before/after result, verification steps, failure recovery and one next exercise. A learner can download/open the documented checkpoint and resume without the presenter. The existing event-page worksheet in PR #2 is an optional general scoping resource; it does not block this room guide.
 
-Use original example code/art. Record provenance and required third-party notices. An explicit redistribution license is an owner decision before promoting source downloads as freely reusable; it does not block writing original example code and drafting its guide on a review branch.
+Use original example code/art. Record provenance and required third-party notices. An explicit redistribution license is an owner decision before promoting source downloads as freely reusable; it does not block authoring the original example or its guide.
 
 ## Acceptance evidence
 

@@ -2,7 +2,7 @@
 
 A small, standalone Blazor WebAssembly room: activate the bedside lamp to cycle through **Honey stripes**, **Mint dots** and **Rose diamonds**, then reload to find your choice remembered. The bedroom and lamp are original inline SVG; color and pattern both distinguish the styles. There are no accounts, analytics, external runtime APIs or private repository dependencies.
 
-R2 adds an original rose shade with outlined diamonds and a soft 480 ms ring around the shade after each style activation. The public follow-along and presenter rehearsal come later. This review branch records the implementation checkpoint; the room has not been deployed.
+R2 adds an original rose shade with outlined diamonds and a soft 480 ms ring around the shade after each style activation. The public follow-along is available in `lessons/free/cozy-room`; presenter rehearsal remains ahead. This source is on BuildKit `main`; the room has not been deployed.
 
 ## Open and run
 
@@ -90,4 +90,4 @@ git archive --format=zip --output=cozy-room-checkpoint.zip CHECKPOINT_COMMIT:exa
 
 Extract into a new directory and follow that checkpoint's included commands. The R1 snapshot contains its two-style instructions and tests; the finished snapshot has three styles and the R2 checks. The manifest follows the immutable source commit so it can identify that commit without a self-referencing hash. L2 records which full review-tree revision was exported and independently reopened.
 
-Source redistribution license and public hosting are owner decisions before public-release promotion. This review branch is not a license grant, deployment or completed teaching kit.
+Source redistribution license and public hosting are owner decisions before public-release promotion. This source tree is not a license grant, deployment or completed teaching kit.

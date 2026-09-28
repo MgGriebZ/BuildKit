@@ -2,21 +2,21 @@
 
 Revision 0.5. Owner authorized requirements refinement around a PocketPlayroom/Blazor room seminar and selected private BuildWithGriebZ for authoring. [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md) is the current room execution sequence and contains ready-to-use Luna/Sol goals. The broader launch queue below remains supporting context. No recurring autonomous loop is scheduled.
 
-Immediate work order: L1, R1, R2, L2 and L3 now have review branches. Reconcile the final review comments, then run H1: rehearse the hour with an adult and record what they can repeat or explain. See [PRD R](13-PRD-COZY-ROOM.md). The first room and private home are resolved. Price, host/date and commercial policies remain open without blocking these local preparation slices.
+Immediate work order: public requirements, R1, R2 and L2 are merged to `main`; private L1/L3 presenter materials remain in review. Run H1 next: rehearse the hour with an adult and record what they can repeat or explain. See [PRD R](13-PRD-COZY-ROOM.md). The first room and private home are resolved. Price, host/date and commercial policies remain open without blocking rehearsal.
 
 ## Current slice status — September 28, 2026
 
 | Slice | Current evidence | State / next action |
 |---|---|---|
-| Requirements | PR #3, head `13c0511b9ba22d40fed242a7967488741e1f479d` | Open for review |
-| R1 baseline | PR #4, immutable app source `40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`; review branch head `15d24cfa060f8cd0b45084426aba7c2eaebce4c1` | Open; 22 rule cases and 10 browser scenarios recorded |
-| R2 refinement | PR #5, runtime/test source `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`; standalone review tree `15a93acae7e12fea71ea768b9198428f39a5a312` | Open; 25 rule cases and 12 browser scenarios recorded, including a separate package extraction |
+| Requirements | [BuildKit PR #3](https://github.com/MgGriebZ/BuildKit/pull/3), merged `07f70011224d0dabc0c84947a40aa5ab5ff70094` | Merged September 28, 2026 |
+| R1 baseline | [BuildKit PR #4](https://github.com/MgGriebZ/BuildKit/pull/4), immutable app source `40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`, merge `5f8ecd053792303c23751fa3c0eab0506a212e61` | Merged; 22 rule cases and 10 browser scenarios recorded |
+| R2 refinement | [BuildKit PR #5](https://github.com/MgGriebZ/BuildKit/pull/5), runtime/test source `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`, merge `da1ab4febe56bb9b576d7545b950b3a994b9c031` | Merged; 25 rule cases and 12 browser scenarios recorded, including a separate package extraction |
 | L1 private presenter kit | BuildWithGriebZ PR #2, head `e305aac1443eb7f7d4f1dfcb1c88528287074b4e` | Open; draft agenda, diagrams, checklist, recovery and handoff exist |
-| L2 public guide and beginner edit | PR #6 base guide; exercise content commit `814d525a2d41f62e43adfc976049bdb2c0b68233` in PR #7 | Open; local setup, one-file CSS exercise and public status reconciliation are reviewable |
+| L2 public guide and beginner edit | [BuildKit PR #6](https://github.com/MgGriebZ/BuildKit/pull/6) and [PR #7](https://github.com/MgGriebZ/BuildKit/pull/7); exercise content commit `814d525a2d41f62e43adfc976049bdb2c0b68233`, stack merge `7fc37dc5187b16182ddafaafdb1f052d2d4b94a3` | Merged; local setup, one-file CSS exercise and status reconciliation are on `main` |
 | L3 private presenter kit | BuildWithGriebZ PR #3 | Open; 60-minute flow, text visual fallbacks, recovery, blank handoff and rehearsal checklist are reviewable |
 | H1 human rehearsal | No completed evidence | Owner and adult tester run the hour, observe the learner edit and record actual timing/explain-back privately |
 
-These are branch and validation records checked September 28, 2026. Review PRs for current state before treating a slice as accepted. Physical-device/accessibility observations, human learner results, hosting and source licensing remain open.
+These merge and validation records were checked September 28, 2026. The public code/docs are on `main`; local validation is not a substitute for hosting, license review or human learner evidence. Physical-device/accessibility observations, human learner results, hosting and source licensing remain open.
 
 ## Compute routing
 

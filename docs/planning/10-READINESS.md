@@ -1,6 +1,6 @@
 # Readiness and outstanding work
 
-Revision 0.5 · Status checked September 28, 2026. The standalone Cozy Room R1/R2 implementation and L2 public guide have open review PRs (#4–#6); live event and paid seminar readiness still require owner facts and observed delivery checks.
+Revision 0.5 · Status checked September 28, 2026. The standalone Cozy Room R1/R2 implementation and L2 public guide/exercise have open review PRs (#4–#7); the private L3 presenter kit is also in review. Live event and paid seminar readiness still require owner facts and observed delivery checks.
 
 ## Prepared in this revision
 
@@ -18,7 +18,7 @@ Revision 0.5 · Status checked September 28, 2026. The standalone Cozy Room R1/R
 |---|---|---|---|
 | Pilot price | You | Accept/amend proposed $75 for the accepted one-hour format | Public price, payment product |
 | Private teaching home | Resolved | `MgGriebZ/BuildWithGriebZ` verified PRIVATE with ADMIN access; future authoring path `seminars/cozy-room` | None for authoring; client sharing remains separate |
-| Cozy Room example and follow-along | Implementation evidence exists; PRs #4–#6 open | R1 baseline and R2 three-style refinement built. R1 export: 22 rule cases/10 browser scenarios; R2: 25/12. L2 pins and explains the checked exports. Review PRs and add the beginner edit exercise. | L3 synchronization, human rehearsal, license and any hosting/distribution decision |
+| Cozy Room example and follow-along | Implementation evidence exists; PRs #4–#7 open | R1 baseline and R2 three-style refinement built. R1 export: 22 rule cases/10 browser scenarios; R2: 25/12. L2 pins checked exports and includes the beginner CSS edit. | Human rehearsal, license and any hosting/distribution decision |
 | Weekly capacity | You | Starting 5–10-hour/week range accepted; confirm actual bookable windows/timezone, prep/travel/support allocation and discretionary spending limit | Slots and delivery/support promise |
 | First event host | You | Identify and confirm a suitable initial host/audience; no host or event date is established | Scheduling the first free class; not the room pipeline |
 | Seller identity and operations | You, accountant/appropriate adviser | Existing business/DBA/EIN situation, location, applicable registration and tax handling for session plus included materials | Taking payment under the chosen identity |

@@ -12,7 +12,7 @@ The first topic is Cozy Room, specified in [13-PRD-COZY-ROOM.md](13-PRD-COZY-ROO
 
 The private authoring workspace should contain a reusable presentation outline, visual sources and readable fallbacks, links to the public demo/checkpoint revisions, chosen refinement instructions, recovery notes and proposed client handoff. Canonical demo code stays in BuildKit. Mark recovery as tested only after observing it. Keep reusable content production separate from personalization and support. Extra custom preparation is bounded or separately scoped before booking.
 
-The public BuildKit now contains the independent app under `examples/cozy-room` and the follow-along draft under `lessons/free/cozy-room`; their R1/R2/L2 branches are in open PRs #4–#6. The app and guide include recorded local checks, while hosting, source licensing and learner rehearsal remain open. PocketPlayroom remains the full product/reference and private source stays unchanged. Private scripts and rehearsal materials belong in `BuildWithGriebZ/seminars/cozy-room`; client sharing and storage are separate. See [content placement](12-REPOSITORY-BOUNDARY.md).
+The public BuildKit now contains the independent app under `examples/cozy-room` and the follow-along with a beginner edit under `lessons/free/cozy-room`; R1/R2/L2 work is in open PRs #4–#7. The app checkpoints include recorded local checks, while hosting, source licensing and learner rehearsal remain open. PocketPlayroom remains the full product/reference and private source stays unchanged. Private scripts and rehearsal materials belong in `BuildWithGriebZ/seminars/cozy-room`; the L3 draft is in review. Client sharing and storage are separate. See [content placement](12-REPOSITORY-BOUNDARY.md).
 
 ## Included client Build Kit
 

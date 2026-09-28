@@ -72,7 +72,7 @@ See [README.md](README.md) for reproducible setup, storage recovery and the scop
 
 ## R2 working-tree validation — September 27, 2026
 
-Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 content was checked in the working tree, then committed unchanged as **`440f20391f722b1d804bb207518988698c0bf5ac`**. `checkpoint.json` records the full finished source revision in this metadata follow-up.
+Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. The complete R2 runtime/test checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**. Locked restore, build, 25 rule tests, Release publish and 12 browser scenarios were rerun against the final R2 code/harness content before that commit. Follow-up review metadata records this finished checkpoint.
 
 The existing toolchain was used: SDK **10.0.302**, Node **22.12.0**, npm **10.9.0**, locked Playwright **1.62.1**, installed headless Microsoft Edge **154.0.4258.37**. Package pins and lockfiles were unchanged. Commands run from this subtree:
 

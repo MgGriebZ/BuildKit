@@ -81,13 +81,13 @@ Reports and screenshots are generated under ignored `artifacts/`. See [VALIDATIO
 
 ## Checkpoint and distribution boundary
 
-The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. The finished R2 source checkpoint is **`440f20391f722b1d804bb207518988698c0bf5ac`**; both are identified in `checkpoint.json`. Export the example subtree from a recorded revision, **not the full repository or its history**:
+The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. The finished R2 runtime/test source checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**; both source checkpoints are identified in `checkpoint.json`. The lesson manifest records the self-contained review-tree revisions used for exports. Export only the example subtree, **not the full repository or its history**:
 
 ```powershell
-# From the BuildKit repository root; replace BASELINE_COMMIT with the full recorded SHA.
-git archive --format=zip --output=cozy-room-baseline.zip BASELINE_COMMIT:examples/cozy-room
+# From the BuildKit repository root; replace CHECKPOINT_COMMIT with the chosen full SHA.
+git archive --format=zip --output=cozy-room-checkpoint.zip CHECKPOINT_COMMIT:examples/cozy-room
 ```
 
-Extract into a new directory and follow that checkpoint's included commands. The R1 snapshot contains its own two-style instructions and tests. The manifest follows the immutable source commit so it can identify that commit without a self-referencing hash. Keep a copy of its recorded revision with your local export. L2 records the finished export/reopening check and public guide.
+Extract into a new directory and follow that checkpoint's included commands. The R1 snapshot contains its two-style instructions and tests; the finished snapshot has three styles and the R2 checks. The manifest follows the immutable source commit so it can identify that commit without a self-referencing hash. L2 records which full review-tree revision was exported and independently reopened.
 
 Source redistribution license and public hosting are owner decisions before public-release promotion. This review branch is not a license grant, deployment or completed teaching kit.

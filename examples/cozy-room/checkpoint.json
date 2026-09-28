@@ -1,0 +1,29 @@
+{
+  "manifestVersion": 1,
+  "repository": "MgGriebZ/BuildKit",
+  "subtree": "examples/cozy-room",
+  "baseline": {
+    "commit": "40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc",
+    "label": "R1 two-style Cozy Room",
+    "styleCount": 2,
+    "saveVersion": 1,
+    "storageKey": "buildwithgriebz.cozy-room.baseline.v1"
+  },
+  "finished": null,
+  "commands": {
+    "restore": "dotnet restore CozyRoom.slnx --locked-mode",
+    "build": "dotnet build CozyRoom.slnx --no-restore",
+    "rules": "dotnet test CozyRoom.slnx --no-build --no-restore",
+    "publish": "dotnet publish src/CozyRoom.App/CozyRoom.App.csproj -c Release -o artifacts/publish --no-restore",
+    "preview": "npm run serve",
+    "browserSetup": "npm ci --ignore-scripts --no-fund --no-audit",
+    "browserChecks": "npm run test:browser"
+  },
+  "sourceLicense": "Owner decision pending; not a redistribution license grant.",
+  "notes": [
+    "The manifest follows the immutable baseline source commit; retain this revision record with a baseline export.",
+    "R2 and L2 must record the finished checkpoint and test older valid baseline saves.",
+    "Use distinct origins or storage keys for simultaneous baseline/finished previews.",
+    "No merge, deployment or offline reload validation is implied."
+  ]
+}

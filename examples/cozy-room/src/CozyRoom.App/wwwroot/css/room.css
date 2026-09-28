@@ -1,0 +1,72 @@
+:root {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #4d493c;
+    background: #f7f3e9;
+    font-synthesis: none;
+    --ink: #514638;
+    --muted: #7e7b6d;
+    --line: #ddd9cb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+button, summary { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+button:focus-visible, summary:focus-visible {
+    outline: 3px solid #406a58;
+    outline-offset: 5px;
+}
+.room-shell { max-width: 1120px; margin: auto; padding: 44px 48px 28px; }
+.room-heading { display: flex; align-items: center; gap: 17px; margin-bottom: 24px; }
+.title-mark { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #c5ccbb; border-radius: 50%; color: #819277; font-size: 25px; }
+.eyebrow { font-size: 10px; letter-spacing: .18em; font-weight: 600; margin: 0 0 6px; color: var(--muted); }
+h1 { margin: 0; color: var(--ink); font: 400 38px/1.05 Georgia, serif; letter-spacing: -.025em; }
+h1 span { color: #a88a5a; }
+.room-number { margin-left: auto; font: 18px Georgia, serif; color: #a19c8c; }
+.room-frame { padding: 10px; background: #fbf8ef; border: 1px solid #d6cdbb; border-radius: 17px; box-shadow: 0 12px 35px #5d493518; }
+.room-scene { position: relative; aspect-ratio: 1000 / 720; border-radius: 9px; overflow: hidden; background: #eedec5; }
+.room-backdrop { display: block; width: 100%; height: 100%; }
+.lamp-button { position: absolute; left: 72%; top: 26%; width: 18%; height: 35%; padding: 0; margin: 0; border: 0; border-radius: 30%; background: transparent; cursor: pointer; touch-action: manipulation; }
+.lamp-button:disabled { cursor: wait; }
+.lamp-button { min-width: 44px; min-height: 44px; }
+.lamp-button[aria-busy="true"] { cursor: progress; }
+.lamp-button:focus-visible { outline-offset: -2px; }
+.lamp-button:hover .lamp-shade { stroke-width: 4; }
+.lamp-art { width: 100%; height: 100%; overflow: visible; display: block; }
+.style-0 .lamp-shade { fill: #dfb569; }
+.style-1 .lamp-shade { fill: #a6c4ab; }
+.room-caption { display: flex; align-items: center; gap: 13px; padding: 24px 2px 21px; }
+.caption-symbol { font-size: 22px; color: #849576; }
+.room-caption p { margin: 0; color: #777561; font: italic 16px Georgia, serif; }
+.caption-rule { flex: 1; height: 1px; background: var(--line); margin-left: 12px; }
+.room-footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; border-top: 1px solid var(--line); padding-top: 17px; }
+.save-status { margin: 0; max-width: 65ch; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.room-care { max-width: 360px; flex-shrink: 0; }
+.room-care summary { color: #686c5c; font-size: 12px; cursor: pointer; min-height: 32px; padding: 4px 0; }
+.care-panel { font-size: 13px; line-height: 1.6; margin-top: 8px; max-width: 320px; }
+.care-panel p { margin: 0 0 12px; }
+.care-button { border: 1px solid #bbc6b3; background: #eaf0e2; color: #3e5345; padding: 11px 15px; border-radius: 8px; min-height: 44px; cursor: pointer; }
+.care-button:disabled { opacity: .6; cursor: wait; }
+.secondary { background: transparent; margin-top: 8px; }
+.reset-confirm { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; }
+.reset-confirm .care-button { display: block; }
+.loading-room { max-width: 500px; margin: 80px auto; padding: 24px; font: 20px Georgia, serif; text-align: center; }
+#blazor-error-ui { display: none; position: fixed; inset: auto 16px 16px; padding: 16px; background: #fff1d8; border: 1px solid #b19065; z-index: 10; }
+#blazor-error-ui a { color: #405c4d; margin-left: 12px; }
+@media (max-width: 720px) {
+    .room-shell { padding: 26px 18px 22px; }
+    h1 { font-size: 32px; }
+    .room-heading { gap: 12px; margin-bottom: 18px; }
+    .title-mark { width: 36px; height: 36px; font-size: 22px; }
+    .eyebrow { font-size: 8px; letter-spacing: .14em; }
+    .room-frame { padding: 6px; border-radius: 12px; }
+    .room-scene { border-radius: 6px; }
+    .room-caption { padding: 20px 0; gap: 9px; }
+    .room-caption p { font-size: 14px; }
+    .caption-rule { margin-left: 2px; }
+    .room-footer { flex-direction: column; gap: 10px; }
+    .room-care { max-width: 100%; }
+    .care-panel { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

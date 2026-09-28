@@ -4,7 +4,7 @@ Revision 0.5 · September 27, 2026. The owner selected seminar-led 60-minute tea
 
 ## Experience and promise
 
-The presenter teaches through a working example, visual explanation, one bounded refinement and clear next steps. The planned first topic is a standalone, bedroom-inspired Cozy Room using Blazor WebAssembly, C#, HTML, CSS and SVG. Its specified baseline lamp cycles two styles and persists selection; the specified refinement adds a third style and gentle feedback. Mouse, touch and keyboard operation plus reduced-motion support are requirements, not verified runtime results. A public follow-along is in scope. PocketPlayroom remains the full product/reference; the new example avoids private source dependencies. Scope for any personalized seminar is confirmed before payment.
+The presenter teaches through a working example, visual explanation, one bounded refinement and clear next steps. The first topic is a standalone, bedroom-inspired Cozy Room using Blazor WebAssembly, C#, HTML, CSS and SVG. Its R1 baseline cycles two lamp styles and persists selection; the R2 refinement adds a third patterned style and gentle feedback. The implementation has recorded keyboard, mouse, emulated touch, reduced-motion and version-1 save-compatibility checks; physical-device, screen-reader and learner checks remain open. See the current slice status and evidence in [06-EXECUTION.md](06-EXECUTION.md). The public follow-along and beginner edit are under review in PRs #6 and #7. PocketPlayroom remains the full product/reference; the new example avoids private source dependencies. Scope for any personalized seminar is confirmed before payment.
 
 Working copy: "Your idea, a working example, and a clear way forward. A personal AI-building seminar with a guided refinement and your take-home Build Kit included."
 
@@ -25,7 +25,7 @@ Adapt the pacing for experience level. A presentation-only participant can choos
 
 ## First teaching example
 
-The independent, child-friendly Cozy Room example owns future public outputs `examples/cozy-room` and `lessons/free/cozy-room`; no implementation exists yet. The room is a play experience, with no course or sales CTA inside it. Seminar learners and marketing are adult-facing. The baseline lamp cycles two styles and persists the choice. The taught refinement introduces a third style and gentle feedback while preserving mouse, touch, keyboard and reduced-motion behavior. The new example targets net10.0; existing PocketPlayroom is Blazor net9.0 and remains the full product/reference. Portfolio and Riot API tracks are deferred beyond the first room.
+The independent, child-friendly Cozy Room example and public guide now exist in BuildKit review branches `examples/cozy-room` and `lessons/free/cozy-room` (PRs #4–#7). The room is a play experience, with no course or sales CTA inside it. Seminar learners and marketing are adult-facing. The R1 baseline cycles two styles and persists the choice; R2 adds Rose diamonds and gentle acknowledgement while preserving the version-1 save and input behavior. The new example targets net10.0; existing PocketPlayroom is Blazor net9.0 and remains the full product/reference. Portfolio and Riot API tracks are deferred beyond the first room.
 
 Do not use private PocketPlayroom code/assets as dependencies or publish them. Any later upstream room polish is a separate scoped slice; it does not automatically publish source or deploy anything.
 

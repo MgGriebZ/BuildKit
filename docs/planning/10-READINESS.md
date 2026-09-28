@@ -1,10 +1,10 @@
 # Readiness and outstanding work
 
-Revision 0.5 · September 27, 2026. Public documentation direction is set; the standalone example has not been implemented. Live event and paid seminar readiness still require owner facts and observed delivery checks.
+Revision 0.5 · Status checked September 28, 2026. The standalone Cozy Room R1/R2 implementation and L2 public guide/exercise have open review PRs (#4–#7); the private L3 presenter kit is also in review. Live event and paid seminar readiness still require owner facts and observed delivery checks.
 
 ## Prepared in this revision
 
-- Seminar-led 60-minute offer and launch PRD; standalone Cozy Room and public follow-along are in scope, with outputs planned at `examples/cozy-room` and `lessons/free/cozy-room`.
+- Seminar-led 60-minute offer and launch PRD; original Cozy Room app and public follow-along now exist in review branches at `examples/cozy-room` and `lessons/free/cozy-room`.
 - Standalone-course launch removed from the first-sale dependency chain; no unsupported monetary bonus value.
 - Intake, fit, handoff/support and rehearsal specifications in [09-SESSION-PREP.md](09-SESSION-PREP.md); detailed working runbook retained privately outside Git.
 - Personalized hour, Mermaid visuals, working-demo/refinement tracks and measured usage-case requirements in [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md).
@@ -18,7 +18,7 @@ Revision 0.5 · September 27, 2026. Public documentation direction is set; the s
 |---|---|---|---|
 | Pilot price | You | Accept/amend proposed $75 for the accepted one-hour format | Public price, payment product |
 | Private teaching home | Resolved | `MgGriebZ/BuildWithGriebZ` verified PRIVATE with ADMIN access; future authoring path `seminars/cozy-room` | None for authoring; client sharing remains separate |
-| Cozy Room example and follow-along | Owner + implementation task | Implement independent Blazor WebAssembly net10.0 example; baseline lamp cycles two styles and persists; refinement adds third style and gentle feedback; preserve mouse/touch/keyboard and reduced-motion. Follow specs 13 and 14. | Rehearsal, public follow-along and credible offer |
+| Cozy Room example and follow-along | Implementation evidence exists; PRs #4–#7 open | R1 baseline and R2 three-style refinement built. R1 export: 22 rule cases/10 browser scenarios; R2: 25/12. L2 pins checked exports and includes the beginner CSS edit. | Human rehearsal, license and any hosting/distribution decision |
 | Weekly capacity | You | Starting 5–10-hour/week range accepted; confirm actual bookable windows/timezone, prep/travel/support allocation and discretionary spending limit | Slots and delivery/support promise |
 | First event host | You | Identify and confirm a suitable initial host/audience; no host or event date is established | Scheduling the first free class; not the room pipeline |
 | Seller identity and operations | You, accountant/appropriate adviser | Existing business/DBA/EIN situation, location, applicable registration and tax handling for session plus included materials | Taking payment under the chosen identity |
@@ -28,7 +28,7 @@ Revision 0.5 · September 27, 2026. Public documentation direction is set; the s
 | Session delivery rehearsal | You with a tester; Luna can check artifacts | Run fictional-client script and let tester reopen delivered pack | Evidence that the offer is deliverable |
 | First real leads | You | Three short conversations and feedback, then personal invitations | Demand evidence; agents cannot invent it |
 
-The first prepared milestone is Cozy Room's third lamp style and gentle feedback, with the learner choosing the palette. Confirm fit at intake; requests beyond that initial scope need a separate plan. The room is prepared before the hour, and a six-lesson paid course is not a dependency.
+The prepared demo milestone is complete in the R2 review branch: a third lamp style with a diamond pattern, a brief acknowledgement, reduced-motion handling and version-1 save compatibility. The remaining learning milestone is for a participant to make one safe palette edit, reopen the result and explain what stayed the same. Confirm fit at intake; requests beyond that initial scope need a separate plan. The room is prepared before the hour, and a six-lesson paid course is not a dependency.
 
 ## Outstanding before the first free community class
 

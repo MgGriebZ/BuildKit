@@ -18,6 +18,20 @@
     "saveVersion": 1,
     "storageKey": "buildwithgriebz.cozy-room.baseline.v1"
   },
+  "r3": {
+    "requirementsCommit": "620d33723a3dc309c4837b5a7f91597ad6ac5ef8",
+    "startingExportCommit": "15a93acae7e12fea71ea768b9198428f39a5a312",
+    "startingRuntimeCommit": "91eab16835aac4cfd80a7f51017ac62f5cc6b9bd",
+    "runtimeCommit": "7516e7b29908108a6567b5859fab5faab4d849f8",
+    "label": "R3 three-star hunt with progress, completion and replay",
+    "starCount": 3,
+    "roundPersistence": "Memory only; replay and reload reset the round without altering lamp saves.",
+    "focusPolicy": "Collected buttons remain focusable with aria-disabled; Replay focuses the first star after rendering.",
+    "ruleCases": 40,
+    "lampRegressionScenarios": 12,
+    "gameScenarios": 9,
+    "developmentRecord": "R3-RUN.md"
+  },
   "commands": {
     "restore": "dotnet restore CozyRoom.slnx --locked-mode",
     "build": "dotnet build CozyRoom.slnx --no-restore",

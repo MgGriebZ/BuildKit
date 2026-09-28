@@ -1,6 +1,6 @@
 # Cozy Room validation record
 
-The R1 sections below preserve historical baseline evidence. The appended R2 section records checks against the committed R2 code and independently reopened standalone exports.
+The R1/R2 sections preserve historical evidence. The R3 section records the checked mini-game reference and its separate new coverage.
 
 Observed September 27, 2026 on Windows. These are local development results, not a deployment, physical-device check, child-suitability assessment or seminar rehearsal.
 
@@ -113,3 +113,31 @@ Only `examples/cozy-room/` was exported from each review-tree revision with `git
 There is no implementation/check blocker for the tested R2 scope. L2 can document the two checked exports and the R2 learner workflow using the pinned revisions above.
 
 Physical phone/tablet input, browser diversity, screen-reader use, human accessibility review, adult learner repeat/explain-back, timed seminar rehearsal and child-suitability observations remain unperformed. Offline/PWA reload, native AOT, network-performance and hosting checks remain outside this evidence. Original-source license and release destination are still owner decisions.
+
+## R3 validation — September 28, 2026
+
+Requirements: `620d33723a3dc309c4837b5a7f91597ad6ac5ef8`. Starting runtime: R2 `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`; standalone R2 export: `15a93acae7e12fea71ea768b9198428f39a5a312`. The clean implementation branch began at the requirements commit; its app/tests were identical to the R2 export, with README/validation metadata differences only. Checked R3 runtime/test source: **`7516e7b29908108a6567b5859fab5faab4d849f8`**.
+
+The installed toolchain remained .NET SDK **10.0.302**, Node **22.12.0**, npm **10.9.0**, locked Playwright **1.62.1** and headless Microsoft Edge **154.0.4258.37**. Dependencies, package pins and lockfiles were unchanged. From the sample root, locked restore, Debug build (0 warnings/errors), all **40 rule cases**, static Release publish and browser validation passed. The 40 cases comprise the historical 25 lamp/save cases and 15 new round cases. Release publish retained the existing SDK-only mode without optional native AOT/wasm-tools optimization.
+
+The browser report separates **12 lamp/save regression scenarios** from **9 new R3 game scenarios**:
+
+| R3 scenario | Observed checks |
+|---|---|
+| Mouse | Initial 0/3; out-of-order collection; duplicate real pointer activation stays at the same count; checkmarks; calm 3/3 completion; Replay; partial/completed reload resets; lamp style remains saved |
+| Keyboard | Native Tab order from lamp through stars to Replay; Enter/Space; visible focus; focus retained on collection; repeated activation guarded; Replay returns focus to window star |
+| Tablet / narrow / minimum | Touch emulation at 1024×768, 390×844 and 280×800; unique collection/replay; each target at least 44×44; target and focus space inside scene; no overlapping play targets or horizontal overflow; lamp regression |
+| Reduced motion | Static collection/completion/replay; no star animations; existing lamp acknowledgement remains suppressed |
+| Protected future save | Star play/replay makes no storage writes; future lamp save stays byte-for-byte unchanged through play/reload |
+| Denied storage | Full game/replay without storage calls; lamp play and accurate persistence notice continue |
+| Failed lamp write | Star rounds keep working; only the lamp attempts a write; earlier valid lamp save returns after reload; round returns to 0/3 |
+
+The mounted progress element has `role="status"`, `aria-live="polite"` and `aria-atomic="true"`; its content was checked at 0/3, 1/3, 2/3 and completion. Human screen-reader speech was not observed. Collected stars remain native focusable buttons with distinct updated names and `aria-disabled="true"`; the click handler independently guards repeated activation. A checkmark conveys collection without relying on color. Replay's focus move happens after the reset render.
+
+The first browser attempt failed when Playwright's high-level click refused an already aria-disabled star for the deliberate duplicate-activation test. The harness now sends a real mouse/touch pointer event at its center. This was an observed test-harness failure, followed by a successful rerun; it was not a reported game defect. See [R3-RUN.md](R3-RUN.md) for timing and material inputs.
+
+No unhandled page exceptions or external runtime requests were observed in the passing run. Generated reports/captures remain ignored under `artifacts/`. Five R3 captures were visually reviewed: desktop completion, desktop keyboard focus, tablet, narrow and minimum width. Stars, lamp, progress and Replay are readable and uncut; small widths wrap the text/Replay below the room. Automated geometry checks confirm the recorded target dimensions, non-overlap and focus clearance. Physical phone/tablet, human screen-reader/accessibility review, independent adult learning, timed seminar, offline/PWA and hosting remain pending.
+
+### R3 standalone reopening
+
+The code and run instructions are ready for an app-only export. The exact exported revision and fresh-folder command results will be recorded in the following validation metadata commit after that check is performed.

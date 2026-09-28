@@ -72,7 +72,7 @@ See [README.md](README.md) for reproducible setup, storage recovery and the scop
 
 ## R2 working-tree validation — September 27, 2026
 
-Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. No commit was created for R2; `checkpoint.json` has a null finished commit and an explicit pending status. After owner review/commit, record the full R2 source SHA in a subsequent metadata commit before L2 uses it.
+Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 content was checked in the working tree, then committed unchanged as **`440f20391f722b1d804bb207518988698c0bf5ac`**. `checkpoint.json` records the full finished source revision in this metadata follow-up.
 
 The existing toolchain was used: SDK **10.0.302**, Node **22.12.0**, npm **10.9.0**, locked Playwright **1.62.1**, installed headless Microsoft Edge **154.0.4258.37**. Package pins and lockfiles were unchanged. Commands run from this subtree:
 
@@ -106,6 +106,6 @@ Generated evidence remains under ignored `artifacts/`: `browser-results.json` an
 
 ### R2 remaining evidence and handoff
 
-There is no implementation/check blocker. R2 remains uncommitted for owner review, and its finished SHA is pending. No push, PR creation, merge or deployment occurred. The earlier R1 standalone-export check remains historical evidence for R1 only; an independent finished export/reopening check and the public follow-along await the R2 commit and L2.
+There is no implementation/check blocker for R2. The earlier standalone-export check is evidence for R1 only. An independent finished export/reopening check belongs to L2 and is not yet recorded here.
 
 Physical phone/tablet input, browser diversity, screen-reader use, human accessibility review, adult learner repeat/explain-back, timed seminar rehearsal and child-suitability observations remain unperformed. Offline/PWA reload, native AOT, network-performance and hosting checks remain outside this evidence. Original-source license and release destination are still owner decisions.

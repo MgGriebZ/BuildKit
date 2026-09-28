@@ -11,8 +11,8 @@
   },
   "r2Base": "15d24cfa060f8cd0b45084426aba7c2eaebce4c1",
   "finished": {
-    "commit": null,
-    "revisionStatus": "Pending owner review and commit; replace null with the full R2 source SHA in a subsequent metadata commit before L2.",
+    "commit": "440f20391f722b1d804bb207518988698c0bf5ac",
+    "revisionStatus": "Immutable R2 source checkpoint; validation was run on this content before the commit.",
     "label": "R2 three-style Cozy Room with calm acknowledgement",
     "styleCount": 3,
     "saveVersion": 1,
@@ -30,7 +30,7 @@
   "sourceLicense": "Owner decision pending; not a redistribution license grant.",
   "notes": [
     "The manifest follows the immutable baseline source commit; retain this revision record with a baseline export.",
-    "R2 tests original version-1 styles 0 and 1; style 3 remains invalid. Finished checkpoint SHA and independent export reopening await the owner commit and L2.",
+    "R2 tests original version-1 styles 0 and 1; style 3 remains invalid. L2 records the independent finished export/reopening check.",
     "Use distinct origins or storage keys for simultaneous baseline/finished previews.",
     "No merge, deployment or offline reload validation is implied."
   ]

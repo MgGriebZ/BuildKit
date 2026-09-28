@@ -2,7 +2,7 @@
 
 A small, standalone Blazor WebAssembly room: activate the bedside lamp to cycle through **Honey stripes**, **Mint dots** and **Rose diamonds**, then reload to find your choice remembered. The bedroom and lamp are original inline SVG; color and pattern both distinguish the styles. There are no accounts, analytics, external runtime APIs or private repository dependencies.
 
-R2 adds an original rose shade with outlined diamonds and a soft 480 ms ring around the shade after each style activation. The public follow-along and presenter rehearsal come later. This working tree is awaiting owner review and commit; no finished commit or deployment is claimed.
+R2 adds an original rose shade with outlined diamonds and a soft 480 ms ring around the shade after each style activation. The public follow-along and presenter rehearsal come later. This review branch records the implementation checkpoint; the room has not been deployed.
 
 ## Open and run
 
@@ -81,13 +81,13 @@ Reports and screenshots are generated under ignored `artifacts/`. See [VALIDATIO
 
 ## Checkpoint and distribution boundary
 
-The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. Both are identifiable in `checkpoint.json`. The finished revision is explicitly pending until the owner commits R2; record its full SHA in a subsequent metadata commit before L2. Export the example subtree from a recorded revision, **not the full repository or its history**:
+The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. The finished R2 source checkpoint is **`440f20391f722b1d804bb207518988698c0bf5ac`**; both are identified in `checkpoint.json`. Export the example subtree from a recorded revision, **not the full repository or its history**:
 
 ```powershell
 # From the BuildKit repository root; replace BASELINE_COMMIT with the full recorded SHA.
 git archive --format=zip --output=cozy-room-baseline.zip BASELINE_COMMIT:examples/cozy-room
 ```
 
-Extract into a new directory and follow that checkpoint's included commands. The R1 snapshot contains its own two-style instructions and tests. The manifest follows the immutable source commit so it can identify that commit without a self-referencing hash. Keep a copy of its recorded revision with your local export. Finished export/reopening and the public guide belong to L2 after an actual R2 commit exists.
+Extract into a new directory and follow that checkpoint's included commands. The R1 snapshot contains its own two-style instructions and tests. The manifest follows the immutable source commit so it can identify that commit without a self-referencing hash. Keep a copy of its recorded revision with your local export. L2 records the finished export/reopening check and public guide.
 
 Source redistribution license and public hosting are owner decisions before public-release promotion. This review branch is not a license grant, deployment or completed teaching kit.

@@ -24,6 +24,15 @@ The actual user task was: “Sol R3 builds and validates the mini-game”. The s
 
 Run these commands from a BuildKit repository root (the folder containing `examples`). They export only the checked app subtree into a new folder, leaving your checkout untouched:
 
+If you need the public source checkout, clone BuildKit after the checked R3 reference is available on its default branch:
+
+```powershell
+git clone https://github.com/MgGriebZ/BuildKit.git
+Set-Location .\BuildKit
+```
+
+The pinned archive command below requires a checkout that contains the recorded R3 export revision.
+
 ```powershell
 git archive --format=zip --output=cozy-room-r3.zip 96d51856825cfd36c758aebb55c3c716a2173451:examples/cozy-room
 Expand-Archive -LiteralPath cozy-room-r3.zip -DestinationPath cozy-room-r3

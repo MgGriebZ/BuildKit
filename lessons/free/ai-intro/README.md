@@ -23,6 +23,8 @@ The [free Cozy Room tutorial](../cozy-room/README.md) follows a checked example 
 
 Watching, reading, and running this finished local sample do not call an AI model. A free or paid AI product may have access limits; API use can have separate metered charges. Hosting is a separate service and is optional for this local lesson. Exact costs and account access depend on the provider, plan, and task, so check current terms instead of assuming a subscription buys a fixed number of builds.
 
+For dated provider/model examples and official pricing links, see the public [tools, models and costs reference](../../../docs/planning/16-TOOLS-MODELS-AND-COSTS.md); recheck it before publication.
+
 ## What this does and does not show
 
 The Cozy Room is a small, checkable browser app—not proof that AI always writes correct code or that any app can be finished in an hour. Its recorded automated checks ran locally in a specific environment. They do not replace human accessibility review, screen-reader or physical-device testing, or an adult's independent repeat. The original app's redistribution license is still pending; this lesson does not grant permission to relicense or republish its source.

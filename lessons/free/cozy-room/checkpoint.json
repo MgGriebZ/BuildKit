@@ -57,7 +57,7 @@
   "sourceLicense": "Owner decision pending; this manifest and guide grant no redistribution license.",
   "exportCommand": "git archive --format=zip --output=<local-path> 96d51856825cfd36c758aebb55c3c716a2173451:examples/cozy-room",
   "notes": [
-    "Runtime/test source checkpoints and self-contained review-tree export commits are distinct revisions; use reviewTreeCommit to make the documented app package.",
+    "Runtime/test source checkpoints and self-contained export commits are distinct revisions; use reviewTreeCommit for R1/R2 and standaloneExportCommit for R3 to make the documented app package.",
     "Baseline and finished packages share the same browser storage key. Use separate origins/profiles when comparing them.",
     "R3 reuses the R2 export/runtime checkpoints above; R2's 25 rule cases and 12 browser scenarios are distinct from R3's 40 rule cases and 21 browser scenarios.",
     "No merge, deployment, signup, sales promise or offline validation is implied."

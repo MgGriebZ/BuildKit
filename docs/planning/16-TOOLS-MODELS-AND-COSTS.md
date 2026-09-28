@@ -2,6 +2,22 @@
 
 Checked September 28, 2026. A dated reference for the author and learner-material writer. Recheck prices, availability and quotas before recording or selling an edition. Public list prices do not establish Matt's or a learner's account entitlements.
 
+## Product, model and agent: a short map
+
+Product descriptions rechecked September 28, 2026 against the official pages below. This addition updates the conceptual map; existing dated price/quota references still need a pre-release recheck.
+
+| Layer | Plain-language distinction |
+|---|---|
+| Provider / product | OpenAI offers ChatGPT/Codex experiences; Anthropic offers Claude/Claude Code. Compare the actual available tool and task, not brand names alone. |
+| Model | The selected engine/version within a product; capabilities and access can vary. |
+| Agent workflow | A model works with tools and context across steps. Review its access, proposed actions and results. It is not a third vendor competing with ChatGPT and Claude. |
+
+OpenAI's current guide distinguishes Chat for conversation, ChatGPT Work for a reviewable deliverable, and Codex for developer views and technical work. Our course's Chat / Work / Code labels describe overlapping uses across providers; Work is also the name of a specific OpenAI surface. [Official OpenAI guide](https://learn.chatgpt.com/docs/use-chatgpt).
+
+Claude projects organize conversations and reference files. Claude Code supports reading/editing project files and running commands in development workflows. Those examples do not establish identical features or permissions on every plan/surface. [Claude projects](https://support.claude.com/en/articles/9517075-what-are-projects), [Claude Code overview](https://code.claude.com/docs/en/overview).
+
+Show one available product live and use the source-backed map for comparison. A chat can use tools, and a coding agent can help with non-code work; the labels are not rigid capability boundaries. Learners need not subscribe to both providers. Check the actual interface, access and terms before the session.
+
 ## Three separate bills
 
 | Category | What the learner is paying for | How to describe it |

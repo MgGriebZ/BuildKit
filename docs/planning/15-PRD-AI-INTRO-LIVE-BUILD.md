@@ -1,87 +1,64 @@
-# PRD: bring AI to life through a working browser game
+# PRD: AI in practice — Chat, Work, Code
 
-Revision 0.6 · September 28, 2026. Owner-directed pivot. This is the current product and teaching contract; it supersedes revision 0.5's session-only offer, indefinitely deferred standalone guide, and palette-only seminar. R1/R2 remain valid implemented checkpoints.
+Revision 0.7 · September 28, 2026. This is the current teaching contract. It supersedes revision 0.6's game-build-heavy core; R3 remains a checked optional Code reference. The file path is retained for existing links.
 
 ## Promise and audience
 
-Working title: **Build with GriebZ: Your First AI Build**.
-Working pitch: "Understand AI, watch an idea become a playable browser game, and learn how to guide, check and improve the result yourself."
+Working title: **AI in Practice: Chat, Work & Code**.
+Pitch: "Understand today's AI tools, use them for everyday and professional work, and learn how to explain what you need and check what comes back."
 
-Start with curious adults, including people who have used chat but have never directed a coding agent. Explain AI as software trained on patterns that can generate useful responses and, when connected to tools, help perform work. It can also invent facts or produce broken code. Avoid claims about consciousness or guaranteed understanding. Coding is a useful demonstration because we can inspect changes, run the program and compare behavior with a stated goal; passing a few checks does not prove all code correct.
+Start with curious adults, professionals and organizers, including people who use chat but have never used an agent. Matt speaks from his own projects and use, introduces concepts, demonstrates selected prompts, and invites discussion. A participant can benefit without wanting to make a game or write software.
 
-The emotional result to test is: "I saw Matt make a meaningful app change with AI, understood the decisions, and know something I can try." This is a learning and demonstration promise, not a universal one-hour application delivery guarantee.
+The owner identifies MgGriebZ.com as his daily calendar tool and RoadScript as a regular work tool. These are first-person experience, with publicly inspectable projects as supporting examples. shaco/PocketPlayroom are brief breadth examples. Do not add unprovided job titles, certifications, employer/client endorsements, income or time-saving figures.
 
-## One product, three ways to use it
+## Matt's point of view
 
-| Format | Included result | Commercial status |
-|---|---|---|
-| Compact standalone introduction | Readable book-like guide, prompts with explanations, before/after examples, troubleshooting, free/paid tool paths and cost reference | In scope now; proposed accessible one-time purchase, exact price and delivery platform undecided |
-| Free community hour | Live guided build using the same core, audience decisions, explanation and a useful public takeaway | Core outreach; no purchase or paid account required to attend |
-| Personal session | Same foundation adapted to one agreed goal, with individual help and handoff | Additional service; duration/price/support agreed separately |
+The owner believes agents are as strong as the person directing them, particularly their understanding of requirements. Express the practical lesson as: defining the need, supplying relevant context, naming constraints and reviewing the result improves human/AI communication. Software engineers practice these habits, making software a useful illustration of his view.
 
-No subscription to our own course, LMS, login/progress backend, large video-production pipeline or full curriculum platform is needed for the first edition. A narrated recording can complement the guide after the live path is rehearsed; the guide must make sense without it. Do not label it a bestseller, imply validated demand, or invent a monetary bonus value. The former $75 session proposal and ~$50 course idea are not approved prices. Price the finished product separately from personal delivery time.
+Present this as Matt's perspective from use. It does not establish that all software engineers are better communicators, that requirements explain the whole AI market, or that every failure is the user's fault. Models, tools, information, access and verification still affect outcomes. Teach communication in everyday language before naming it requirements.
 
-## Demonstration selected for preparation
+## Teaching frame and examples
 
-Default showcase is the independent BuildKit Cozy Room, inspired by PocketPlayroom. The existing R2 room is the visible starting point. Explain which art, framework and lamp interaction were prepared beforehand. The main new feature is a **three-star collection mini-game** (R3, proposed and not yet implemented):
+| Lens | Useful result | Main example | Human check |
+|---|---|---|---|
+| Chat | Clearer understanding, message or question | A vague request refined with audience, context and desired output | Compare with source facts and intended audience |
+| Work | A brief, action table or plan someone can use | Fictional project notes, followed by RoadScript as the professional communication example | Preserve facts, flag unknown owners/dates, make next actions understandable |
+| Code | A bounded software improvement | Checked Cozy Room and optionally one small live change; RoadScript history shows professional iteration | Review the diff and observe the requested behavior |
 
-- Three original star controls appear in the room. Each is a native button with an accessible label and visible focus.
-- Activating an uncollected star collects it once; progress advances from 0/3 to 3/3. Repeated activation cannot increase the count.
-- Finishing shows a calm completion message and a Replay button. Replay resets only the mini-game.
-- Mouse, touch and keyboard work. A polite progress announcement conveys the count without relying on color.
-- The round is temporary: reloading starts 0/3. The existing lamp styles and browser-local lamp save remain intact. No new save schema or migration.
-- Any celebration respects reduced motion. No timer, leaderboard, login, AI inference at runtime, backend, external art or monetization inside the room.
-
-The audience can choose an accent color or a short friendly completion message before the feature prompt; keep behavior and acceptance criteria stable. The existing CSS palette exercise remains an optional first practice task and recovery activity.
-
-PocketPlayroom itself may be shown as product context using cleared screens and a clean demo profile. Live source changes in that repository need a separately scoped upstream ticket; a private source reference is not part of the learner download. An existing website/app change is a bonus transfer example, not a second full build squeezed into the core hour.
-
-## Required learning outcomes
-
-A learner can explain a model versus the app/agent using it; write a prompt with context, goal, constraints and checks; recognize a code diff and checkpoint; observe a feature failing or passing a check; describe one useful repair strategy; and distinguish AI usage from hosting costs. Watching, predicting and directing the presenter count as participation. Hands-on editing is an optional path with setup completed beforehand.
-
-Teach terms where they become useful: prompt/context/model/agent in the opening; repository/branch/diff/checkpoint while editing; test/debug/build/preview during checking; deploy/domain/hosting at the end. Tokens, credits and subscription limits get a short cost explanation and a longer reference chapter. Model families take about two minutes, not a ranking lecture.
+These lenses overlap and can be used in any order. They are not course levels, product entitlements or model rankings. Explain provider/product, model and agent workflow separately using [16](16-TOOLS-MODELS-AND-COSTS.md). Compare ChatGPT and Claude at the task/product level; show one available tool live rather than requiring both accounts.
 
 ## Flexible 60-minute core
 
-| Minutes | Teaching purpose | Evidence or audience action |
+| Minutes | Purpose | Presenter / audience action |
 |---|---|---|
-| 0–7 | What AI can do, why code offers checkable outputs, limits | One relatable non-code example; show the prepared room and disclose prior work |
-| 7–13 | Vocabulary, model choice and money basics | Distinguish model/app/agent and subscription/usage/hosting; choose a model for this job |
-| 13–18 | Goal, baseline and acceptance | Play R2, state three-star behavior and boundaries; audience chooses a cosmetic detail |
-| 18–38 | Live AI feature build | Read the planned prompts, inspect the proposed plan and diff, build and preview |
-| 38–48 | Verify and debug | Check behavior and existing lamp; one focused repair if needed, then checkpoint/fallback |
-| 48–54 | Polish and deployment explanation | Show final result; demonstrate an already-prepared deployment only if ready, otherwise explain the path |
-| 54–60 | Cost recap, explain-back and next action | Separate prepared/live work and observed/unknown usage; share guide/sample and a starter prompt |
+| 0–7 | Matt, his projects and why this matters | Daily calendar and RoadScript story; ask where people spend effort communicating or organizing |
+| 7–17 | AI products, models and agents | Explain AI basics and fallibility, ChatGPT/Claude, context and tool access; introduce the three lenses |
+| 17–29 | Chat: communicate a useful request | Compare a vague prompt with a clearer request; discuss audience, facts and what makes the answer usable |
+| 29–44 | Work: produce a reviewed deliverable | Turn fictional notes into a brief/action table; inspect assumptions; show RoadScript timeline/list as a professional example |
+| 44–53 | Code: make the idea tangible | Show checked Cozy Room, explain preparation, inspect one small change/check or a labeled recorded example |
+| 53–57 | Costs, data and practical limits | Distinguish subscriptions, metered use and hosting; choose appropriate data and tools |
+| 57–60 | Questions and next action | Each learner names a useful task, missing context and a way to check the result |
 
-Seven + six + five + twenty + ten + six + six = 60 minutes. This is a target, not rehearsal evidence. A 75–90 minute workshop may add a 15–30 minute Azure resource/deployment lab after the core. Do not let deployment consume the closing learning check.
+7 + 10 + 12 + 15 + 9 + 4 + 3 = 60 minutes. This is a rehearsal target, not observed timing. Discussion is woven through the hour. Model families get a brief example within the landscape segment. New Azure resources belong in a separate optional lab.
 
-## Prompt and debugging contract
+## Demonstration contract
 
-Prepare cards for inspect/plan, implement, verify, repair, explain/handoff and optional deploy. Each card names its input checkpoint, allowed paths, goal, observable checks and next step. Prompts are live inputs whose output may vary; checkpoints provide a dependable recovery path.
+At least one real Chat or Work interaction belongs in the normal advertised live format. Use a clearly fictional, prepared input with a reviewable result. Label prepared expected output separately from an actual run. RoadScript's published professional history supplies context; it does not establish native AI features or an automatic import integration.
 
-Show actual prompting, a meaningful behavior change and human review. Do not present a prepared finished feature as live generated. If an error happens, show the relevant message, state a hypothesis, request a small repair and rerun the failed check. Allow one focused repair or five minutes of diagnosis within the check segment, whichever comes first. Then use a verified reference checkpoint and explain what remains unresolved. If everything works, discuss a labeled prepared failure example; do not secretly introduce a bug and pretend it occurred naturally.
+For Code, use the existing R3 reference. A small cosmetic or wording change may be shown live if preflight supports it, but rebuilding the full star game is an optional longer coding workshop. Protect the professional example and closing discussion. Allow one focused repair or up to two minutes within the Code segment, then show the labeled reference. Do not manufacture failures.
 
-Use disposable teaching branches/folders and scoped diffs so a failed attempt can be preserved without disrupting the reference demo. Never overwrite unrelated work to reset a classroom example.
+If no AI interaction is available, disclose the substitution and walk through prepared prompts/results. Installation, account purchase and source builds are optional preparation for hands-on learners, not prerequisites for watching.
 
-## Required kit and truthful usage story
+## Material and boundaries
 
-The short guide, deeper optional chapters, prompt cards, baseline/finished source references, failure walkthrough, glossary, cost sheet and next exercise form the first edition. Label every outcome as live observed, recorded, prepared reference, hypothetical or not checked. Include timestamps and the exact revision for a recorded run.
+The guide teaches all three lenses independently of the seminar. Required supporting material: Matt's introduction, a readable product/model/agent map, one everyday prompt pair, fictional work notes and expected review criteria, RoadScript source notes, a concise Code case, glossary, cost/data guidance, and a next-task worksheet. Existing technical setup, full game prompt cards and R3 evidence become optional depth.
 
-The teaching case must report what is known about cost even when exact tokens are unavailable. Record provider/product, account mode, full model/version, effort/speed, task boundary, elapsed time, retries and the usage source. Keep preparation, live work and repairs separate. Do not calculate a per-run dollar amount by dividing a subscription price by prompts or by treating a remaining-limit percentage as tokens. See [16-TOOLS-MODELS-AND-COSTS.md](16-TOOLS-MODELS-AND-COSTS.md). Routine repository work still needs no credit reports.
+Public requirements and selected free takeaways remain in BuildKit. Full prose and presenter material remain private. Use fictional work records; do not screen-share real employer/customer boards, personal calendar entries or private source without a separate selected scope. No RoadScript or PocketPlayroom code change is included in this revision.
 
-## Acceptance before releasing the first edition
+## Acceptance and remaining evidence
 
-1. A novice can read the guide without Matt and explain prompt -> change -> check -> repair.
-2. The R3 reference is built and tested; a fresh baseline can follow the prompt path. Record actual timing and failures, not a predetermined success story.
-3. The public example and free takeaway reopen from documented revisions; private paid text and recordings are excluded from public exports.
-4. The core fits an observed rehearsal with an adult; the optional cloud lab has a separate duration.
-5. The cost sheet identifies free observation/local use, limited free AI access, one-subscription use, optional API spend and hosting separately, with dated official sources.
-6. Product price, scope, support/update policy, license, delivery access and checkout/refund path are decided and tested before taking product payments.
-7. A failed build or cloud quota still leaves the learner with an understandable result, working reference and next action.
+A learner can distinguish an assistant product, its model and a tool-using agent; choose Chat/Work/Code for a task; improve a request with context and checks; spot an invented commitment; and describe one useful next action. They can explain Matt's perspective without treating it as a guaranteed result.
 
-## Evidence now versus work next
+H1 must observe timing and understanding of the new hour. Independent readers must complete a non-code task without Matt; Code setup is a separate optional path. Physical-device and screen-reader checks remain separate. Prices, source/prose licenses, delivery, terms and business/payment setup remain owner decisions.
 
-R1/R2 and L2 are merged in BuildKit PRs #3–#7. Recorded R2 evidence is 25 rule cases and 12 browser scenarios. That evidence does not cover R3, a new live AI run, current subscription entitlements, Azure capacity, or learner success. The existing private L1/L3 kit is a draft, now being revised.
-
-Use [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md) for L4, R3, L5, D1 and H1. The current task refines requirements and presenter preparation; no game feature, purchase, Azure resource, outreach or paid publication is created by this document.
+R3 has 40 rule cases and 21 recorded browser scenarios; those checks do not validate this new teaching flow or a new live AI response. L4/L5 are completed drafts/evidence synchronization for the previous direction, now being aligned. Use [14](14-EXECUTION-HANDOFF.md) for next work.

@@ -1,31 +1,15 @@
-# PRD M: a useful live introduction for the community
+# PRD M: practical AI education for the community
 
-Revision 0.6 · September 28, 2026. Free classes remain core outreach; no invitations or event scheduling are performed by this document.
+Revision 0.7 · September 28, 2026.
 
-## Shared learning core
+The free hour mixes Matt's story, AI explanation, audience discussion and useful prompts. [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md#flexible-60-minute-core) owns the schedule. Chat / Work / Code demonstrates everyday communication, professional organization and a short software case.
 
-Begin with AI basics and practical uses, then teach through a live coding-agent demonstration. Use the [canonical 60-minute agenda](15-PRD-AI-INTRO-LIVE-BUILD.md#flexible-60-minute-core), including terminology, a meaningful game change, verification/debugging and an honest cost recap. The standalone guide expands this same story for independent reading; attendees receive a useful free takeaway.
+Start with adults. Viewers can ask, predict, direct a prompt or critique an answer without buying tools or learning to code. A chosen hands-on route needs preflight; coding setup is optional. Schools/minors require a separate adaptation and host requirements.
 
-The default R3 proposal adds three collectible stars, progress and replay to the independent Cozy Room. Audience choice can personalize an accent or completion phrase. The current CSS exercise is optional practice. Do not promise a complete arbitrary game from scratch in one hour.
+## Unsent invitation draft
 
-## Host and participation
+"I use AI in projects I rely on every day, from my calendar to a tool I use at work. I'm preparing a free introduction to ChatGPT, Claude and agents: what they do, how to explain what you need, and how to check the result. We'll try an everyday request, work through a professional example, and briefly show how the same habits help with code. No coding experience or paid account is needed to watch."
 
-The initial audience is adults. Viewers need no paid AI account and may watch, vote, predict results or help refine the prompt. Hands-on participation requires preflight tools and a prepared checkout. School/student use needs an age-appropriate adaptation and the host's requirements.
+Choose actual host, audience, date, equipment and access needs. Do not invent attendance, endorsements or learning outcomes. Use fictional work notes and cleared public examples. Provide a useful free takeaway without purchase or signup requirements.
 
-Confirm projector readability, network, accessibility, duration, attendee count, venue needs and setup/travel time. Keep local/reference and printed/text alternatives available. A prepared recording or failure example is explicitly labeled.
-
-Use an optional 15–30-minute Azure lab only if the host wants a longer workshop and the selected account has capacity. Do not create resources or buy plans simply to rescue the core demonstration.
-
-## Invitation drafts
-
-Host: "I'm preparing a free introduction to AI where people can watch me prompt, check and improve a small browser game. We'll explain the language, real costs and what to do when things break. People can participate without buying tools and leave with a useful starter guide. Would this suit your adult community?"
-
-Learner: "See how a clear idea, a few planned prompts and practical checks become a working app change. The guide expands the demonstration so you can try your own next step."
-
-These are unsent drafts. The owner chooses recipients, dates and any personal-help invitation. Free material does not require a purchase, testimonial or marketing signup.
-
-## Evidence and capacity
-
-Rehearse with an adult, then record anonymous learning observations, confusing terms, actual time and recovery points. Track community usefulness separately from voluntary inquiries or sales. One good class does not establish recurring demand.
-
-Plan within the owner's expandable 5–10-hour/week starting range, including preparation, travel and follow-up. A guide release and paid-session setup are not prerequisites for a properly arranged free class.
+H1 records timing, questions, confusion, prompt/review behavior and a next-task explain-back. Independent reading is a separate observation. New Azure resources are an optional extended lab; the core can use local/prepared references. Track community usefulness separately from optional inquiries and sales.

@@ -1,15 +1,13 @@
 # Build with GriebZ
 
-Understand AI, watch an idea become a playable browser game, and learn how to guide, check and improve the result yourself.
+Understand AI, use it for everyday and professional work, and learn how to communicate a goal and check the result.
 
-## Current direction — revision 0.6
+## Current direction — revision 0.7
 
-A compact standalone introduction is now in scope, alongside a flexible live community hour and optional personal help. Read [the launch brief](docs/planning/00-START-HERE.md), [AI introduction/live-build PRD](docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md), [course requirements](docs/planning/03-PRD-COURSE.md) and [next execution slices](docs/planning/14-EXECUTION-HANDOFF.md).
+**AI in Practice: Chat, Work & Code** is the working title for a concise guide and educational community hour. Matt's daily use of MgGriebZ.com and RoadScript grounds the story. Chat covers useful conversation, Work turns information into a reviewed deliverable, and Code shows a small software change. These uses overlap; they are not learner levels or vendor tiers.
 
-The public R1/R2 Cozy Room and [beginner palette exercise](lessons/free/cozy-room/README.md) are implemented and merged through PRs #3–#7. The proposed next demonstration uses live AI prompts to add a three-star collection game. R3 is not implemented; the revised hour and standalone manuscript are not completed or rehearsed.
+Read [the brief](docs/planning/00-START-HERE.md), [current teaching PRD](docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md), [RoadScript evidence](docs/planning/17-ROADSCRIPT-CASE-STUDY.md) and [execution handoff](docs/planning/14-EXECUTION-HANDOFF.md).
 
-Public example code lives in `examples/cozy-room/`; free learning material lives in `lessons/free/`. Full guide authoring, presenter scripts and recordings belong in private BuildWithGriebZ. PocketPlayroom remains the full product/reference. See [content boundaries](docs/planning/12-REPOSITORY-BOUNDARY.md).
+R1/R2/L2 are merged. R3's Cozy Room mini-game is built and checked in PR #9; L4/L5 guide work is drafted and synchronized in open PRs. Cozy Room remains an [optional Code example](lessons/free/cozy-room/README.md). The [free introduction](lessons/free/ai-intro/README.md) applies across Chat, Work and Code. The revised hour and independent learner path need human rehearsal.
 
-[Tools, models and costs](docs/planning/16-TOOLS-MODELS-AND-COSTS.md) separates subscriptions, metered AI usage and hosting quotas. The room is not hosted. Exact sale price, source license, delivery/checkout, first host and customer terms remain open; see [readiness](docs/planning/10-READINESS.md).
-
-The original [BuildKit-PRD.md](BuildKit-PRD.md) is historical source material. Its architecture, fixed prices and embedded instructions are superseded by the current planning packet.
+Full guide and presenter authoring live in private BuildWithGriebZ. Public code and selected free lessons live here. [Tools and costs](docs/planning/16-TOOLS-MODELS-AND-COSTS.md) and [readiness](docs/planning/10-READINESS.md) record remaining choices. No new hosting, sale or deployment is established. The original BuildKit-PRD.md is historical.

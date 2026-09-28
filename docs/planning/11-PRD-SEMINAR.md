@@ -1,33 +1,13 @@
-# PRD S: an introduction to AI through a live build
+# PRD S: an educational AI introduction
 
-Revision 0.6 · September 28, 2026. [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) is the detailed current teaching contract.
+Revision 0.7 · September 28, 2026. [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) owns the teaching contract and timing.
 
-## Experience
+The participant hears Matt's experience, learns the AI landscape and sees practical uses across Chat / Work / Code. The professional example has a central place: fictional notes become a reviewed deliverable, with RoadScript showing how information can be made useful for a team. Cozy Room is a short Code case.
 
-Begin with what AI can help people do and why coding makes an instructive example: output can be inspected, run and tested. Teach terminology while Matt directs a real coding agent to extend a prepared app. The participant sees the prompt, useful output, human judgment, checks and any repair.
+Use the canonical 60 minutes: 7 introduction, 10 AI/products/agents, 12 Chat, 15 Work, 9 Code, 4 costs/boundaries, 3 close. Discussion and audience choices belong throughout. A code lab or Azure extension is separately timed.
 
-The first demonstration starts from the existing R2 Cozy Room and adds a three-star collection mini-game. R3 is specified, not implemented. The learner-selected color is an optional detail; the actual lesson changes behavior. The old palette-only hour is superseded. The same core supports a free adult community class, the standalone guide and a personal session.
+Show a real Chat or Work prompt in the ordinary live format. Explain the request, inspect assumptions and invite critique. A full live game build is optional depth. If tools fail, label a prepared prompt/result walkthrough. For the short Code segment, use one focused repair or up to two minutes, then the checked reference.
 
-## Pacing
+The private kit includes host introduction, outline, core prompt cards, professional demonstration, recovery, readable diagrams, rehearsal and blank handoff. The guide follows the same concepts independently. Learners need no coding account to watch or understand the main examples.
 
-Use the single canonical schedule in [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md#flexible-60-minute-core): 7 minutes introduction, 6 language/models/cost, 5 baseline/goal, 20 live build, 10 verification/debugging, 6 polish/deployment explanation, 6 close. Rehearsal can adjust adjacent segments while preserving a clear opening, substantial live prompt/build and closing check. The Azure creation lab is an optional extension.
-
-Show a finished reference only with its label. Explain what was prepared before the hour. Screen-sharing, audience prediction and directing the prompt are valid participation; a coding account and local environment are required only for a chosen hands-on route. Setup is preflight.
-
-## Live behavior and debugging
-
-The prompt sequence is inspect/plan -> implement -> verify -> repair if needed -> explain/checkpoint. A meaningful live AI interaction is required for the ordinary advertised format. If tools fail, label the session's substitution clearly and show an explicitly prepared example; do not call it a successful live build.
-
-Allow one focused repair or five minutes of diagnosis, then show the tested reference and what failed. A planned failure walkthrough is labeled as prepared. Debugging is teaching content; unresolved problems are also evidence.
-
-Preserve accessible input, reduced motion, existing lamp saves and source boundaries. Tests support named claims; they do not certify all behavior or production readiness.
-
-## Costs and tools
-
-Spend about two minutes comparing available model choices within the language segment; expand in the written guide. Always state the actual model/version. Explain subscription limits separately from model credits/tokens and hosting resource bills. Provide one honest measured-run record or clearly mark unavailable usage. Use [16-TOOLS-MODELS-AND-COSTS.md](16-TOOLS-MODELS-AND-COSTS.md); no routine credit reporting for ordinary agent work.
-
-## Materials and acceptance
-
-Presenter outline, prompt cards, readable visual fallbacks, reference checkpoint, recovery instructions, rehearsal checklist and blank delivery record live privately. Public source and free takeaway are separate selected outputs. Paid guide chapters are authored privately under the course PRD.
-
-Acceptance requires an actual timed adult rehearsal, understandable before/after feature, prompt and diff visibility, checks/repair, an honest cost explanation and a usable next step. Physical-device and accessibility observations remain separate evidence. Price, event host, standalone delivery and personal-session policies still need owner choices.
+Acceptance is learner understanding: distinguish product/model/agent, give relevant context, identify an invented commitment, review a useful result and choose a next task. Observe it in H1 and independent reading. Keep formal credentials, client endorsements, quantitative impact and commercial promises out unless supplied and supported.

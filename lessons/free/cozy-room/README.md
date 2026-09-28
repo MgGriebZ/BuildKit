@@ -1,5 +1,7 @@
 # Cozy Room: from a saved lamp to a small star hunt
 
+**Optional Code companion:** The core introduction is now [AI in Practice: Chat, Work & Code](../ai-intro/README.md). This deeper technical follow-along preserves the checked mini-game and is not required to participate in the educational hour.
+
 This free follow-along uses the standalone Blazor Cozy Room. The checked R2 starting point has three patterned lamp shades, a calm change acknowledgement, and browser-local saving. The checked R3 result adds three star controls, progress from 0/3 to 3/3, a completion message, and Replay. Collecting stars is temporary: reload begins a new round. The lamp choice and its save key/schema remain unchanged.
 
 R1/R2's optional palette edit remains a historical beginner exercise below. The main worked example is the R2-to-R3 mini-game. This is a small demonstration with inspectable code and checks, not a promise that an arbitrary app will be completed in an hour.

@@ -1,31 +1,22 @@
-# PRD L: introduce the guide, demonstration and personal help
+# PRD L: present practical AI education and personal help
 
-Revision 0.6 · September 28, 2026. Future implementation requirements; no site or checkout is deployed here.
+Revision 0.7 · September 28, 2026. Future page requirements; this document creates no site or checkout.
 
-## Page and actions
+Lead with the [current teaching promise](15-PRD-AI-INTRO-LIVE-BUILD.md): understand AI tools, use them for everyday and professional work, and communicate/review useful results. Working title: AI in Practice: Chat, Work & Code.
 
-Lead with: "Understand AI. Watch an idea become a playable browser game. Learn how to guide, check and improve it yourself."
+## Page content
 
-Show the actual edition status and these sections:
-1. Outcome and honest before/after demonstration, identifying prepared and live work.
-2. Who it is for, what the six chapters contain and what can be done without paid tools.
-3. A useful free sample and independent Cozy Room example. Keep sales copy outside the play room.
-4. Standalone guide contents, actual delivery formats and exact approved one-time price. Until sellable, use "Preview the guide" or a working inquiry action, not an active Buy button.
-5. A free-class hosting invitation and optional personal-help inquiry.
-6. Tool/subscription/hosting costs as separate optional expenses, with a dated source link.
-7. About Matt using substantiated experience, plus clear support/refund/update terms for the selected offer.
-8. Contact and FAQ: prerequisites, guide versus live class, what if a build fails, and how delivery works.
-
-The proposed $19 guide price and old $75 session price are not approved public prices. Do not fabricate savings, testimonials, demand, countdowns or guaranteed results.
-
-## Delivery and implementation
-
-Use a small static marketing page or an existing appropriate page. No new backend, user accounts, LMS or parallel React room is required. The sample is Blazor WebAssembly. The final guide remains privately authored; publish only the edition assets intentionally selected for that channel.
-
-Choose and test product delivery before enabling checkout: receipt and access, wrong/missing email or link, duplicate purchase, refund and support contact. Personal-session inquiry remains a separate path with agreed scope and booking. Confirm offer-specific tax treatment and terms via operations.
+1. A clear audience and outcome for curious adults and professionals.
+2. Matt's firsthand project story: daily calendar use, RoadScript at work, brief creative examples. Use owner-confirmed experience; do not add job titles, credentials or client endorsements.
+3. The three overlapping lenses, with professional work at least as visible as the Code example.
+4. A useful free introduction, public RoadScript examples and optional Cozy Room reference.
+5. Actual guide contents, edition status, formats, approved price and delivery. Use a preview/inquiry action while the edition is a draft.
+6. Free-class hosting and separately scoped personal-help routes.
+7. Tool/access/hosting costs and appropriate use of work data.
+8. Working contact, prerequisites, support/refund/update terms and delivery explanation.
 
 ## Acceptance
 
-A visitor can distinguish free sample/class, paid standalone guide and personal help; identify tool costs separately; and access a genuine sample. Navigation, mobile/keyboard and reduced motion work. Price and claims match the released edition. Public builds exclude private authoring/customer material. Host and contact URLs are verified before deployment.
+A visitor can distinguish free teaching/sample, paid guide and personal help; see a relevant professional use; understand that coding is optional; and identify a genuine next step. The page must match current material and approved claims/prices. Mobile, keyboard, links and reduced motion need checks.
 
-Implementation follows owner direction after the relevant readiness decisions; this planning task does not publish a site or enable payments.
+Choose and test recipient delivery before checkout activation. Keep private authoring and customer records out of public builds. A small static/existing page is sufficient; no LMS or new app backend is required. Branding, selected assets, contact route, price and hosting still need decisions. No outreach, payment activation or deployment follows from this PRD.

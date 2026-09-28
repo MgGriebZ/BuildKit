@@ -1,6 +1,6 @@
 # Cozy Room validation record
 
-The R1 sections below preserve historical baseline evidence. The appended R2 section records checks on the current uncommitted refinement; it does not assign a finished revision or claim an independent finished export.
+The R1 sections below preserve historical baseline evidence. The appended R2 section records checks against the committed R2 code and independently reopened standalone exports.
 
 Observed September 27, 2026 on Windows. These are local development results, not a deployment, physical-device check, child-suitability assessment or seminar rehearsal.
 
@@ -70,9 +70,9 @@ Exported only `examples/cozy-room/` with `git archive` and extracted into a fres
 
 See [README.md](README.md) for reproducible setup, storage recovery and the scoped export boundary.
 
-## R2 working-tree validation — September 27, 2026
+## R2 validation — September 27, 2026
 
-Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. The complete R2 runtime/test checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**. Locked restore, build, 25 rule tests, Release publish and 12 browser scenarios were rerun against the final R2 code/harness content before that commit. Follow-up review metadata records this finished checkpoint.
+Base: reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** on `work/r2-cozy-room`. The immutable two-style source baseline remains **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. The complete R2 runtime/test checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**. Locked restore, build, 25 rule tests, Release publish and 12 browser scenarios were rerun against the final R2 code/harness content before that commit. The standalone R2 review-tree export is **`15a93acae7e12fea71ea768b9198428f39a5a312`**; its `checkpoint.json` pins the runtime checkpoint above. The independent baseline review-tree export is **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**.
 
 The existing toolchain was used: SDK **10.0.302**, Node **22.12.0**, npm **10.9.0**, locked Playwright **1.62.1**, installed headless Microsoft Edge **154.0.4258.37**. Package pins and lockfiles were unchanged. Commands run from this subtree:
 
@@ -104,8 +104,12 @@ Normal acknowledgement was checked on the rendered element: CSS animation `lamp-
 
 Generated evidence remains under ignored `artifacts/`: `browser-results.json` and `screenshots/desktop.png`, `tablet.png`, `narrow.png`, `acknowledgement.png`. All four captures were visually inspected. Rose diamonds is distinct from stripes/dots at all three dimensions, the lamp remains on the bedside surface, and the ring is restrained around the shade. The desktop shows the retained keyboard outline. No scene clipping, target overlap or horizontal overflow was observed. Tablet may scroll vertically; narrow retains the complete room and adult controls below it.
 
+### Independent standalone export check
+
+Only `examples/cozy-room/` was exported from each review-tree revision with `git archive` and extracted into fresh sibling directories outside the BuildKit checkout. The R1 package at **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`** was reopened and passed locked restore, build (0 warnings/errors), 22 rule tests, Release publish, `npm ci --ignore-scripts --no-fund --no-audit`, and all 10 browser scenarios. The R2 package at **`15a93acae7e12fea71ea768b9198428f39a5a312`** was reopened and passed the same checks with 25 rule tests and all 12 browser scenarios. Both browser runs used Edge **154.0.4258.37** and reported no unhandled page exceptions or external runtime requests. These tests ran from the extracted subtree, without files from the parent repository. R1 and R2 package contents were compared with their respective runtime checkpoints; only README, VALIDATION, and checkpoint metadata differ in the later review-tree commits. The exports are independent source packages; this does not claim a hosted deployment or offline/PWA behavior.
+
 ### R2 remaining evidence and handoff
 
-There is no implementation/check blocker for R2. The earlier standalone-export check is evidence for R1 only. An independent finished export/reopening check belongs to L2 and is not yet recorded here.
+There is no implementation/check blocker for the tested R2 scope. L2 can document the two checked exports and the R2 learner workflow using the pinned revisions above.
 
 Physical phone/tablet input, browser diversity, screen-reader use, human accessibility review, adult learner repeat/explain-back, timed seminar rehearsal and child-suitability observations remain unperformed. Offline/PWA reload, native AOT, network-performance and hosting checks remain outside this evidence. Original-source license and release destination are still owner decisions.

@@ -45,6 +45,26 @@ h1 span { color: #a88a5a; }
     35% { opacity: .45; }
     100% { opacity: 0; transform: scale(1.08); }
 }
+.star-button {
+    position: absolute; width: 8%; aspect-ratio: 1; min-width: 44px; min-height: 44px;
+    transform: translate(-50%, -50%); padding: 0; border: 0; border-radius: 50%;
+    background: #fbf4e3; box-shadow: 0 2px 6px #61472a24; cursor: pointer;
+    touch-action: manipulation;
+}
+.star-0 { left: 22%; top: 26%; }
+.star-1 { left: 43%; top: 62%; }
+.star-2 { left: 65%; top: 81%; }
+.star-art { display: block; width: 100%; height: 100%; }
+.star-shape { fill: #e5b65c; stroke: #71512c; stroke-width: 2; stroke-linejoin: round; }
+.star-button:not([aria-disabled="true"]):hover .star-shape { stroke-width: 3; }
+.star-button[aria-disabled="true"] { cursor: default; background: #eef1e7; }
+.star-button[aria-disabled="true"] .star-shape { fill: #d8e2cb; stroke: #49624b; }
+.star-check { fill: none; stroke: #314c37; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.game-panel { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 2px 0; }
+.game-panel h2 { margin: 0 0 6px; color: var(--ink); font: 400 21px Georgia, serif; }
+.game-instruction { margin: 0; color: #696654; font-size: 13px; line-height: 1.6; }
+.round-status { margin: 5px 0 0; color: #3e5345; font-size: 14px; line-height: 1.6; }
+.replay-button { flex-shrink: 0; }
 .room-caption { display: flex; align-items: center; gap: 13px; padding: 24px 2px 21px; }
 .caption-symbol { font-size: 22px; color: #849576; }
 .room-caption p { margin: 0; color: #777561; font: italic 16px Georgia, serif; }
@@ -71,6 +91,7 @@ h1 span { color: #a88a5a; }
     .eyebrow { font-size: 8px; letter-spacing: .14em; }
     .room-frame { padding: 6px; border-radius: 12px; }
     .room-scene { border-radius: 6px; }
+    .game-panel { align-items: flex-start; flex-wrap: wrap; gap: 12px; padding-top: 17px; }
     .room-caption { padding: 20px 0; gap: 9px; }
     .room-caption p { font-size: 14px; }
     .caption-rule { margin-left: 2px; }

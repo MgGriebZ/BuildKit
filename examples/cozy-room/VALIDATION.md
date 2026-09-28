@@ -52,6 +52,12 @@ Generated local evidence is intentionally ignored by Git:
 
 All three captures were visually inspected: coherent warm room, lamp on the bedside surface, distinct striped/dotted shade, no clipped scene objects or overlapping controls. The desktop capture intentionally includes the visible keyboard-focus outline. Narrow layout keeps the complete room visible and leaves adult controls below it. Vertical page scrolling on shorter viewports is expected.
 
+## Immutable baseline and standalone export
+
+Baseline source revision: **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. The later `checkpoint.json` identifies this revision; it is not part of that earlier source snapshot.
+
+Exported only `examples/cozy-room/` with `git archive` and extracted into a fresh sibling directory outside the BuildKit checkout. From that export, `dotnet restore CozyRoom.slnx --locked-mode`, build, all **22 rule cases**, Release publish and `npm ci --ignore-scripts --no-fund --no-audit` succeeded without parent repository files. Running `npm run test:browser` from the export also passed **all 10 scenarios** against its own published output. The independent build again reported **0 warnings, 0 errors**. The documented development server also returned the app successfully over HTTP in the original checkout.
+
 ## Remaining checks and release gates
 
 - Touch evidence is browser emulation, not an actual phone/tablet. Physical-device input, browser diversity, screen-reader use and human accessibility review remain outstanding.

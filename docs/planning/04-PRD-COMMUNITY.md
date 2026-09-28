@@ -1,14 +1,14 @@
 # PRD M: useful demonstrations and community discovery
 
-Revision 0.4 · Draft material only. No outreach has been authorized or sent.
+Revision 0.5 · Draft material only. No outreach has been authorized or sent.
 
 ## Purpose
 
-Describe the one-to-one offer consistently as one full hour of personalized, seminar-like guided presentation with Mermaid visuals, a prepared working product demo, and one focused learner-chosen refinement. Include the reusable Build Kit. It is not open-ended debugging or a promise to build a complete game during the hour.
+Use the Cozy Room as the initial shared teaching example for free public/community classes and personalized seminars. The 60-minute experience is seminar-led teaching with visual explanation, a working baseline, one focused learner-chosen refinement and next steps. Public follow-along is in scope. Do not promise a complete game or app during the hour.
 
 ## Free one-hour public/community class
 
-Free classes are a core early outreach and community-service activity approved in the business direction. The owner intends to offer them to public/community events while building relationships and paid interest, then become more selective as demand and calendar commitments grow. Event frequency is not yet promised. A community host can reuse this hour with one group-selected refinement. Free attendees receive a deliberately selected public worksheet/demo subset; personalized client handoffs and the full private presenter kit are not distributed by default. Adapt the pacing to the audience:
+Free classes are a core early outreach and community-service activity. The Cozy Room baseline and one group-selected refinement can anchor the hour; attendees can use the public follow-along without a purchase. Paid standalone course/LMS remains deferred. Event frequency is not promised. Personalized client handoffs and the private presenter kit are not distributed by default. Adapt pacing to the audience:
 
 | Time | Activity | Participant outcome |
 |---|---|---|
@@ -23,8 +23,8 @@ Use an offline screenshot or prepared demo if connectivity fails. Attendance sho
 
 ## Pilot readiness and path
 
-1. Choose one initial audience, theme and prospective host; libraries, community groups and public events are candidates, not established partners. School/student delivery requires a separate audience-appropriate plan and host requirements before booking.
-2. Reuse the selected seminar core with fictional or cleared material; rehearse one observable change, readable visuals and offline fallback. Prepare a public takeaway that works without payment, sign-up or private-repository access.
+1. Use the selected Cozy Room theme and confirm the initial audience and prospective host; libraries, community groups and public events are candidates, not established partners. School/student delivery requires a separate audience-appropriate plan and host requirements before booking.
+2. Reuse the Cozy Room teaching core with original/cleared material; rehearse the lamp baseline, third-style refinement, readable visuals and offline fallback. Ensure the public follow-along works without payment, sign-up or private-repository access.
 3. Confirm the host's duration, equipment, accessibility, audience size and suitability, travel/setup time, contact route and any venue requirements. No event is scheduled by this document.
 4. Deliver only after the owner authorizes outreach and confirms the event. End with an optional personal-help invitation; do not require marketing consent, a testimonial or a purchase to receive the promised free material.
 5. Review the first event before promising a cadence. Record preparation, travel/setup, delivery and follow-up time; participant learning and host feedback; and voluntary paid inquiries separately. No paid booking, payment account or new website is a prerequisite for a free class.
@@ -45,7 +45,7 @@ These are drafts only. The owner selects recipients and sends any message. Do no
 
 ## Demonstration and measurement
 
-Possible tracks: Playroom room/game/toy; gamer portfolio/guide; conditional Riot API lesson. Prepare the working product before the session; the hour refines a focused element rather than guaranteeing a full game build. For Riot API lessons, fixtures are the default. Actual API access is conditional on learner-held credentials and applicable policy prerequisites; do not share or collect key details. Use fictional data and cleared examples. For a product/credit case study, record the measured isolated example, date, model, retries, prep versus live activity, and observed credit use. This is not a promise of credits or a reason for new spending; routine credit reports are not part of the offer.
+The first shared track is the standalone Cozy Room. Gamer portfolio/guide and Riot API examples are deferred beyond this first room. Build the public version independently with Blazor WebAssembly, C#, HTML, CSS and SVG; do not rely on private PocketPlayroom source. PocketPlayroom remains the complete product/reference. Any later polish to its upstream room is a separate scoped effort, with no automatic source publication or deployment.
 
 Measure community outcomes (attendance, what participants can explain/repeat, useful next steps and host feedback) separately from business outcomes (voluntary inquiries, fit decisions, paid and delivered sessions, handoffs and support). Track actual owner time for both. Keep private contact details outside the repository. Social views and free attendance are context, not paid demand; a useful free class can still succeed as service without immediate sales. Ask permission separately before using a testimonial or recording.
 

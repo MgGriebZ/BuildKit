@@ -1,18 +1,18 @@
 # Session preparation requirements
 
-Revision 0.4. Public preparation specification for the one-hour personal seminar. The detailed working runbook and teaching templates are preserved locally outside this public repository, pending selection of a private teaching home. This file specifies what to produce; it does not distribute the private script.
+Revision 0.5. Public preparation specification for seminar-led 60-minute teaching. The private presenter/business authoring home is `MgGriebZ/BuildWithGriebZ`, verified PRIVATE with ADMIN access; future seminar materials belong under `seminars/cozy-room`. This public file specifies outputs and boundaries; it does not distribute the private script. Client sharing remains separately unresolved.
 
 ## Intake and agreement
 
 Collect the learner's desired result, intended user, existing attempts, relevant device/tool readiness, and available time windows. Choose one track and one refinement with an observable check. Confirm what the prepared demo already does, what will change during the hour, included files/materials and any prerequisites before payment. The accepted format is one hour; $75 is still a proposed price.
 
-Candidate tracks and the timed presentation are in [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md). An API lesson can use fixtures without a live key. Live access requires the appropriate key/policy setup controlled by the learner; do not request credentials in intake forms.
+The first topic is Cozy Room, specified in [13-PRD-COZY-ROOM.md](13-PRD-COZY-ROOM.md) with a bounded handoff in [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md). The independent room uses Blazor WebAssembly, C#, HTML, CSS and SVG, without private PocketPlayroom source dependencies. Baseline lamp cycles two styles and persists selection. The taught refinement adds a third style and gentle feedback, retaining mouse, touch, keyboard and reduced-motion behavior. Portfolio and Riot tracks are deferred.
 
 ## Private presenter preparation
 
-The authoring workspace must contain a reusable presentation outline, Mermaid sources and readable fallbacks, working demo/checkpoints, chosen refinement instructions, tested recovery path, and proposed client handoff. Keep the one-time content-production effort separate from per-client personalization and support. Extra custom preparation is bounded or separately scoped before booking.
+The private authoring workspace should contain a reusable presentation outline, visual sources and readable fallbacks, links to the public demo/checkpoint revisions, chosen refinement instructions, recovery notes and proposed client handoff. Canonical demo code stays in BuildKit. Mark recovery as tested only after observing it. Keep reusable content production separate from personalization and support. Extra custom preparation is bounded or separately scoped before booking.
 
-Public free examples may be selected intentionally; private full scripts and client information do not enter this public repository. See [content placement](12-REPOSITORY-BOUNDARY.md).
+The public BuildKit owns future outputs at `examples/cozy-room` and `lessons/free/cozy-room`; neither is implemented yet. PocketPlayroom remains the full product/reference and private source stays unchanged. Private scripts belong in `BuildWithGriebZ/seminars/cozy-room`; client sharing and storage are separate. See [content placement](12-REPOSITORY-BOUNDARY.md).
 
 ## Included client Build Kit
 

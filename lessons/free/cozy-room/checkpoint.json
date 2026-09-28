@@ -4,8 +4,8 @@
   "lessonPath": "lessons/free/cozy-room",
   "exportedSubtree": "examples/cozy-room",
   "requirements": {
-    "commit": "13c0511b9ba22d40fed242a7967488741e1f479d",
-    "path": "docs/planning/13-PRD-COZY-ROOM.md"
+    "commit": "620d33723a3dc309c4837b5a7f91597ad6ac5ef8",
+    "path": "docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md"
   },
   "baseline": {
     "runtimeCommit": "40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc",
@@ -25,11 +25,24 @@
     "ruleCasesPassed": 25,
     "browserScenariosPassed": 12
   },
+  "r3": {
+    "startingExportCommit": "15a93acae7e12fea71ea768b9198428f39a5a312",
+    "startingRuntimeCommit": "91eab16835aac4cfd80a7f51017ac62f5cc6b9bd",
+    "runtimeTestCommit": "7516e7b29908108a6567b5859fab5faab4d849f8",
+    "standaloneExportCommit": "96d51856825cfd36c758aebb55c3c716a2173451",
+    "label": "R3 three-star hunt with progress, completion and replay",
+    "ruleCasesPassed": 40,
+    "browserScenariosPassed": 21,
+    "browserScenarioBreakdown": {
+      "lampSaveRegressions": 12,
+      "game": 9
+    }
+  },
   "validation": {
     "independentlyExtractedAndChecked": true,
     "runtimeBrowser": "Microsoft Edge 154.0.4258.37",
     "touchEvidence": "Browser emulation only; no physical device tested.",
-    "scope": "Only examples/cozy-room/ was exported and tested. This lesson subtree was not separately exported or tested.",
+    "scope": "R1/R2/R3 evidence covers exported examples/cozy-room/ app packages only. This lesson subtree was not separately exported or tested.",
     "deployment": "Not performed; no hosted or offline/PWA claim.",
     "remaining": [
       "Physical phone/tablet input",
@@ -42,10 +55,11 @@
     ]
   },
   "sourceLicense": "Owner decision pending; this manifest and guide grant no redistribution license.",
-  "exportCommand": "git archive --format=zip --output=<local-path> <full-review-tree-commit>:examples/cozy-room",
+  "exportCommand": "git archive --format=zip --output=<local-path> 96d51856825cfd36c758aebb55c3c716a2173451:examples/cozy-room",
   "notes": [
     "Runtime/test source checkpoints and self-contained review-tree export commits are distinct revisions; use reviewTreeCommit to make the documented app package.",
     "Baseline and finished packages share the same browser storage key. Use separate origins/profiles when comparing them.",
+    "R3 reuses the R2 export/runtime checkpoints above; R2's 25 rule cases and 12 browser scenarios are distinct from R3's 40 rule cases and 21 browser scenarios.",
     "No merge, deployment, signup, sales promise or offline validation is implied."
   ]
 }

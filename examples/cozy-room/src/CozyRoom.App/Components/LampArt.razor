@@ -1,0 +1,35 @@
+<svg viewBox="0 0 180 250" aria-hidden="true" focusable="false" class="lamp-art">
+    <defs>
+        <radialGradient id="lamp-glow">
+            <stop offset="0" stop-color="#ffeabb" stop-opacity=".64" />
+            <stop offset="1" stop-color="#ffeabb" stop-opacity="0" />
+        </radialGradient>
+        <pattern id="shade-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+            @if (Style == 0)
+            {
+                <path d="M5 0v18" stroke="#a87531" stroke-width="2" opacity=".27" />
+            }
+            else
+            {
+                <circle cx="5" cy="5" r="2.4" fill="#426b55" opacity=".5" />
+                <circle cx="14" cy="14" r="2.4" fill="#426b55" opacity=".5" />
+            }
+        </pattern>
+    </defs>
+    <ellipse cx="90" cy="116" rx="88" ry="105" fill="url(#lamp-glow)" />
+    <ellipse cx="91" cy="236" rx="56" ry="9" fill="#704c38" opacity=".14" />
+    <path d="M88 122v95" stroke="#73503b" stroke-width="11" stroke-linecap="round" />
+    <path d="M90 136v71" stroke="#bc9365" stroke-width="4" stroke-linecap="round" />
+    <path d="M57 220q33-17 67 0l6 12H51z" fill="#ac7e51" stroke="#73503b" stroke-width="3" />
+    <path d="M66 221q26-9 49 0" fill="none" stroke="#d8b17a" stroke-width="3" stroke-linecap="round" />
+    <path d="M52 41q38-10 76 0l28 92q-66 15-132 0z" class="lamp-shade" stroke="#73503b" stroke-width="3" stroke-linejoin="round" />
+    <path d="M52 41q38-10 76 0l28 92q-66 15-132 0z" fill="url(#shade-pattern)" />
+    <path d="M24 133q66 15 132 0" fill="none" stroke="#73503b" stroke-width="3" />
+    <path d="M55 46q35-8 69 0" fill="none" stroke="#fff5d7" stroke-width="4" opacity=".65" />
+    <path d="M143 128v25" stroke="#73503b" stroke-width="2" />
+    <circle cx="143" cy="157" r="4" fill="#d3a46a" stroke="#73503b" stroke-width="1.5" />
+</svg>
+
+@code {
+    [Parameter] public int Style { get; set; }
+}

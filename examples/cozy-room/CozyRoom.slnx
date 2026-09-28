@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/CozyRoom.Core/CozyRoom.Core.csproj" />
+  <Project Path="src/CozyRoom.App/CozyRoom.App.csproj" />
+  <Project Path="tests/CozyRoom.Core.Tests/CozyRoom.Core.Tests.csproj" />
+</Solution>

@@ -1,0 +1,118 @@
+@inject BrowserRoomStore Store
+
+<PageTitle>Cozy Room</PageTitle>
+<main class="room-shell">
+    <header class="room-heading">
+        <div class="title-mark" aria-hidden="true">✦</div>
+        <div>
+            <p class="eyebrow">A LITTLE PLACE OF YOUR OWN</p>
+            <h1>Cozy Room<span>.</span></h1>
+        </div>
+        <span class="room-number" aria-hidden="true">01</span>
+    </header>
+
+    <section class="room-frame" aria-label="A cozy bedroom with a lamp to personalize">
+        <div class="room-scene" data-testid="room-scene">
+            <RoomBackdrop />
+            <button class="lamp-button style-@_state.LampStyle" type="button"
+                    aria-label="Change lamp style. Current style: @StyleName"
+                    disabled="@(!_ready)" aria-busy="@(_busy ? "true" : "false")" data-testid="lamp"
+                    data-style="@_state.LampStyle" data-busy="@(_busy ? "true" : "false")" @onclick="ChangeStyleAsync">
+                <LampArt Style="@_state.LampStyle" />
+            </button>
+        </div>
+    </section>
+
+    <div class="room-caption">
+        <span class="caption-symbol" aria-hidden="true">✧</span>
+        <p>A little change. A room that feels like you.</p>
+        <span class="caption-rule" aria-hidden="true"></span>
+    </div>
+
+    <footer class="room-footer">
+        <p class="save-status" role="status" data-testid="save-status">@_notice</p>
+        <details class="room-care">
+            <summary>Room care</summary>
+            <div class="care-panel">
+                <p>Tap, click, or focus the lamp and press Enter or Space to change its style.</p>
+                <p>This example remembers only this lamp in this browser. Clearing browser data removes it. It doesn't change any other playroom.</p>
+                <button type="button" class="care-button" data-testid="reset-request"
+                        disabled="@(!_ready || _busy)" @onclick="RequestReset">Start a fresh room</button>
+                @if (_confirmReset)
+                {
+                    <div role="group" aria-label="Confirm a fresh room" class="reset-confirm" data-testid="reset-confirm">
+                        <p>Replace this example's saved lamp choice? Any unreadable saved value will be replaced too.</p>
+                        <button type="button" class="care-button" disabled="@_busy" data-testid="reset-confirm-button" @onclick="ResetAsync">Yes, start fresh</button>
+                        <button type="button" class="care-button secondary" disabled="@_busy" data-testid="reset-cancel" @onclick="CancelReset">Keep this room</button>
+                    </div>
+                }
+            </div>
+        </details>
+    </footer>
+</main>
+
+@code {
+    private RoomState _state = new();
+    private bool _ready, _busy, _mayWrite, _confirmReset;
+    private string _notice = "Opening your room…";
+    private string StyleName => _state.LampStyle == 0 ? "Honey stripes" : "Mint dots";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        var browser = await Store.ReadAsync();
+        var save = RoomRules.Read(browser.Json);
+        _state = save.State;
+        _mayWrite = browser.Available && save.MayWrite;
+        _notice = !browser.Available
+            ? "You can play, but this browser can't remember changes right now."
+            : save.Status switch
+            {
+                SaveStatus.Invalid => "The saved room couldn't be read. It is kept safe; play without saving, or use Room care to start fresh.",
+                SaveStatus.FutureVersion => "This room was saved by a newer version. It is kept safe; play without saving, or use Room care to start fresh.",
+                SaveStatus.Saved => "Welcome back. Your lamp choice was remembered.",
+                _ => "Your lamp choice will be remembered in this browser."
+            };
+        _ready = true;
+        StateHasChanged();
+    }
+
+    private async Task ChangeStyleAsync()
+    {
+        if (!_ready || _busy) return;
+        _busy = true;
+        try
+        {
+            _state = RoomRules.NextStyle(_state);
+            if (_mayWrite)
+            {
+                if (await Store.WriteAsync(_state)) _notice = "Your lamp choice is remembered in this browser.";
+                else
+                {
+                    _mayWrite = false;
+                    _notice = "You can keep playing, but this browser couldn't save the change. Your earlier save is kept.";
+                }
+            }
+        }
+        finally { _busy = false; }
+    }
+
+    private void RequestReset() => _confirmReset = true;
+    private void CancelReset() => _confirmReset = false;
+
+    private async Task ResetAsync()
+    {
+        if (_busy) return;
+        _busy = true;
+        try
+        {
+            _state = new();
+            _mayWrite = await Store.WriteAsync(_state);
+            _notice = _mayWrite
+                ? "A fresh room is remembered in this browser."
+                : "A fresh room is ready for this visit. This browser couldn't save it; the earlier saved value is kept.";
+            _confirmReset = false;
+        }
+        finally { _busy = false; }
+    }
+}

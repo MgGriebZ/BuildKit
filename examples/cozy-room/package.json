@@ -1,0 +1,11 @@
+{
+  "name": "cozy-room-validation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test:browser": "node tests/browser/baseline.mjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

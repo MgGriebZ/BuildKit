@@ -1,0 +1,51 @@
+{
+  "manifestVersion": 1,
+  "repository": "MgGriebZ/BuildKit",
+  "lessonPath": "lessons/free/cozy-room",
+  "exportedSubtree": "examples/cozy-room",
+  "requirements": {
+    "commit": "13c0511b9ba22d40fed242a7967488741e1f479d",
+    "path": "docs/planning/13-PRD-COZY-ROOM.md"
+  },
+  "baseline": {
+    "runtimeCommit": "40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc",
+    "reviewTreeCommit": "15d24cfa060f8cd0b45084426aba7c2eaebce4c1",
+    "label": "R1 two-style Cozy Room",
+    "styles": 2,
+    "saveVersion": 1,
+    "ruleCasesPassed": 22,
+    "browserScenariosPassed": 10
+  },
+  "finished": {
+    "runtimeTestCommit": "91eab16835aac4cfd80a7f51017ac62f5cc6b9bd",
+    "reviewTreeCommit": "15a93acae7e12fea71ea768b9198428f39a5a312",
+    "label": "R2 three-style Cozy Room with calm acknowledgement",
+    "styles": 3,
+    "saveVersion": 1,
+    "ruleCasesPassed": 25,
+    "browserScenariosPassed": 12
+  },
+  "validation": {
+    "independentlyExtractedAndChecked": true,
+    "runtimeBrowser": "Microsoft Edge 154.0.4258.37",
+    "touchEvidence": "Browser emulation only; no physical device tested.",
+    "scope": "Only examples/cozy-room/ was exported and tested. This lesson subtree was not separately exported or tested.",
+    "deployment": "Not performed; no hosted or offline/PWA claim.",
+    "remaining": [
+      "Physical phone/tablet input",
+      "Browser diversity",
+      "Screen-reader and human accessibility review",
+      "Adult learner explain-back/repeat",
+      "Timed seminar rehearsal",
+      "Child-suitability observation",
+      "Optional wasm-tools/native AOT and network-performance checks"
+    ]
+  },
+  "sourceLicense": "Owner decision pending; this manifest and guide grant no redistribution license.",
+  "exportCommand": "git archive --format=zip --output=<local-path> <full-review-tree-commit>:examples/cozy-room",
+  "notes": [
+    "Runtime/test source checkpoints and self-contained review-tree export commits are distinct revisions; use reviewTreeCommit to make the documented app package.",
+    "Baseline and finished packages share the same browser storage key. Use separate origins/profiles when comparing them.",
+    "No merge, deployment, signup, sales promise or offline validation is implied."
+  ]
+}

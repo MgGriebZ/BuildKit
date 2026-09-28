@@ -2,7 +2,20 @@
 
 Revision 0.5. Owner authorized requirements refinement around a PocketPlayroom/Blazor room seminar and selected private BuildWithGriebZ for authoring. [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md) is the current room execution sequence and contains ready-to-use Luna/Sol goals. The broader launch queue below remains supporting context. No recurring autonomous loop is scheduled.
 
-Immediate work order: Luna L1 private seminar draft can run beside Sol R1 independent room baseline; then Sol R2 refinement, Luna L2 public guide and Luna L3 final presenter kit, followed by human rehearsal. See [PRD R](13-PRD-COZY-ROOM.md). The first room and private home are resolved. Price, host/date and commercial policies remain open without blocking these local preparation slices.
+Immediate work order: L1, R1, R2 and L2 now have review branches. Finish L3 and the beginner edit exercise, reconcile these status pages, then rehearse the hour with an adult. See [PRD R](13-PRD-COZY-ROOM.md). The first room and private home are resolved. Price, host/date and commercial policies remain open without blocking these local preparation slices.
+
+## Current slice status — September 28, 2026
+
+| Slice | Current evidence | State / next action |
+|---|---|---|
+| Requirements | PR #3, head `13c0511b9ba22d40fed242a7967488741e1f479d` | Open for review |
+| R1 baseline | PR #4, immutable app source `40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`; review branch head `15d24cfa060f8cd0b45084426aba7c2eaebce4c1` | Open; 22 rule cases and 10 browser scenarios recorded |
+| R2 refinement | PR #5, runtime/test source `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`; standalone review tree `15a93acae7e12fea71ea768b9198428f39a5a312` | Open; 25 rule cases and 12 browser scenarios recorded, including a separate package extraction |
+| L1 private presenter kit | BuildWithGriebZ PR #2, head `e305aac1443eb7f7d4f1dfcb1c88528287074b4e` | Open; draft agenda, diagrams, checklist, recovery and handoff exist |
+| L2 public guide | PR #6, head `c83962da006527bde560243242cb170d0e2b931a` | Open; checkpoint manifest and local setup guide exist; hands-on edit exercise is being added |
+| L3 and H1 | No completed evidence yet | Reconcile presenter materials, prepare fallback visuals, then run a timed adult rehearsal |
+
+These are branch and validation records checked September 28, 2026. Review PRs for current state before treating a slice as accepted. Physical-device/accessibility observations, human learner results, hosting and source licensing remain open.
 
 ## Compute routing
 

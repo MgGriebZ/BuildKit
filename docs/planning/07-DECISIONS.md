@@ -1,56 +1,44 @@
 # Decision register
 
-Revision 0.5 · September 27, 2026. “Accepted direction” records the user's steering. Requirements/PRD push is authorized; proposed customer terms are not approved for sales.
+Revision 0.6 · September 28, 2026. Owner direction is distinguished from planner defaults and commercial decisions.
 
-## Accepted direction
+## Accepted on September 28
 
-- The primary initial offer is one-to-one build sessions.
-- Relevant course/follow-along material is included in the session, with project files, prompts, and personal next steps in the handoff.
-- The hour is a personalized seminar with Mermaid visual explanations, a prepared working product and a bounded refinement chosen around the participant's interests. See [seminar PRD](11-PRD-SEMINAR.md).
-- PocketPlayroom room refinement is the first track. The independent follow-along product is Cozy Room using Blazor WebAssembly; gamer portfolio/guide and Riot API tracks are later alternatives.
-- Measured credits-to-result examples may be part of teaching; routine credit counting/reporting for our work is no longer requested.
-- Refine and push requirements now. The owner-created private `MgGriebZ/BuildWithGriebZ` is the selected presenter/authoring home, verified private with admin access. BuildKit holds public requirements and original free examples; full PocketPlayroom source visibility remains unchanged.
-- Free one-hour public/community-event classes are a core early outreach and service activity, sharing the teaching core with paid personal seminars. Become more selective with events as demand and calendar commitments grow; no host or cadence is yet confirmed.
-- Start from a 5–10-hour/week minimum planning commitment range, expandable as the business progresses. Five hours is not a ceiling and two sessions is not a fixed weekly cap. Actual booking windows and spending authority remain separate decisions.
-- A standalone playable room with a public follow-along is now part of the first seminar path. This does not establish a paid standalone course or LMS. Actual application implementation follows the bounded goals in [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md).
+- Begin with an accessible explanation of AI and why checkable coding outputs make it useful to demonstrate.
+- Show actual prompting and a meaningful app/game improvement, with terminology and lessons along the way.
+- Bugs, debugging and deployment friction may be visible teaching moments; use prepared prompts and a recovery plan.
+- Create a compact independently readable introduction that can also be taught in a loose hour and expanded in optional chapters.
+- Make free/paid tool paths, model differences and subscription/usage/hosting costs transparent.
+- Azure setup can be optional ending/extended content; actual account capacity is unverified.
+- Keep free community classes and optional personal help. Preserve private authoring in BuildWithGriebZ and public original examples in BuildKit.
+- Refine documentation before launching further implementation agents. No routine credit report for this work.
 
-## Implementation choices for this revision
+These supersede the older session-only primary offer, indefinite standalone-course deferral and palette-only core seminar. R1/R2 implementation and the CSS beginner exercise remain useful assets.
 
-The owner selected the PocketPlayroom/Blazor direction. The planner resolves the first slice to a bedroom-inspired Cozy Room, two-style lamp baseline and a third-style/gentle-feedback refinement with saved choice. Use original example code/art under BuildKit, .NET 10 and a small isolated save record. PocketPlayroom already uses Blazor/.NET 9; its upgrade and later integration are separate. These bounded implementation defaults can be revised after the first runnable proof without reopening the business direction. See [PRD R](13-PRD-COZY-ROOM.md).
+## Planner defaults for concrete preparation
 
-## Working recommendations for this revision
+Use the independent R2 Cozy Room as the prepared starting app. R3 adds a three-star collection mini-game with progress, completion and replay; its rounds are temporary and its existing lamp save is preserved. This is a proposed implementation default for review, not an observed feature.
 
-The following implement that direction as proposals; the owner has not approved every detail.
+Use six concise chapters, a 60-minute core and optional 15–30-minute cloud lab. Recommend reviewing $19 USD as a one-time first-edition price after the material and delivery are tested. No bestseller status or revenue forecast is supported.
 
-- Work begins with inquiry, scope/fit, slot selection, payment, session work, then handoff/follow-up. No package is promised before scope and fit are established.
-- A complete six-lesson curriculum is not required for paid sessions. Starter worksheet/materials should support an arbitrary well-scoped event page, toy, or organizer.
-- A one-hour session is not a promise to complete a toy or arbitrary application.
-- A standalone roughly $50 course is de-emphasized and on hold pending later demand. No “$50 value” or “normally $50” claim.
-- $75/60 minutes is a proposed pilot price, not accepted.
-- Current milestone is document refinement and preparation. Application implementation, publishing, outreach and live payment setup remain next milestones.
+## Open choices
 
-## Open decisions and evidence
-
-| ID | Question | Current state / next evidence |
+| ID | Decision | State |
 |---|---|---|
-| D1 | Exact pilot price | One-hour seminar format accepted; $75 remains proposed. Review price against reusable content development, personalization, delivery and support time. |
-| D2 | Initial audience and session fit | Adults with a small personal, community, or work project are a working hypothesis. Learn from relevant inquiries and conversations; do not claim validated demand. |
-| D3 | Weekly time and cash available | Starting 5–10-hour/week commitment range with room to grow accepted September 27, 2026. Confirm actual booking windows and count prep, travel/setup, delivery and follow-up before committing to dates. Discretionary spending limit remains unconfirmed. |
-| D4 | Included material and content handling | Private authoring home resolved: owner-created BuildWithGriebZ, private/admin verified September 27. Public example/guide in BuildKit; client handoff storage remains separate. See [repository boundary](12-REPOSITORY-BOUNDARY.md). |
-| D5 | Business identity, operational and tax readiness | Unconfirmed. [10-READINESS.md](10-READINESS.md) names owners and evidence required. Obtain appropriate advice for actual obligations; this register makes no individual legal/tax determination. |
-| D6 | Cancellation, refund, no-fit/no-result and support terms | Proposed boundaries in [01-BUSINESS.md](01-BUSINESS.md); owner must approve exact terms before use. Honor any discovered prior customer promises. |
-| D7 | Site/contact/payment details | Contact route, provider/account, policies, and any payment flow are unconfirmed. Inquiry-first site spec in [02-PRD-LAUNCH.md](02-PRD-LAUNCH.md); live payment and publishing need separate authorization/readiness. |
-| D8 | Community and acquisition channels | Free one-hour public/event classes accepted as a core early channel September 27, 2026. First audience/theme, host, event date and cadence remain open; no partnership, audience access or outreach is confirmed. |
-| D9 | Standalone course | On hold. Revisit only if repeated session demand supports independent learning and a complete path can pass separate usability/support gates. Price is undecided. |
-| D10 | First demo and stack | PocketPlayroom room/Blazor direction selected. Planner's first proof is Cozy Room's two-to-three lamp styles, feedback and persistence; standalone .NET 10. See PRD R; other tracks deferred. |
-| D11 | Public example release | Original room/source and guide are intended public outputs. Redistribution license and actual hosting destination must be chosen before promoting downloads/deploying. Full PocketPlayroom source remains private; upstream changes need their own scope. |
+| D1 | Product price/format | Accessible one-time guide accepted in direction; proposed $19 and Markdown-to-HTML/PDF packaging need owner choice |
+| D2 | Audience and title | Curious adults; working title Your First AI Build; test understanding in rehearsal |
+| D3 | Time and spending | Expandable 5–10-hour/week starting range remains; specific calendar and purchases unconfirmed |
+| D4 | Paid distribution | Private authoring selected; buyer delivery channel, license and access test pending |
+| D5 | Business identity/tax/payment | Review the actual standalone and live offers separately before sales |
+| D6 | Support/refund/update policy | Separate product and personal-session terms; no lifetime-update promise |
+| D7 | Public site/contact | Future copy follows revised offer; live contact, checkout and deployment not selected |
+| D8 | First class | Host/date/audience details open; free class can precede paid sales |
+| D9 | Manuscript evidence | L4/L5 plus independent reader review; guide now in scope |
+| D10 | Demonstration | Proposed R3 three-star feature; substantive AI build required, exact content can improve through rehearsal |
+| D11 | Source and hosting | Original sample license, destination and actual Azure capacity pending; private source visibility unchanged |
 
-## First review gates
+## Status and review sequence
 
-1. Prepare session worksheet and handoff materials with arbitrary small-project support.
-2. Confirm operating readiness, capacity, exact price, contact route, and customer terms before offering paid slots.
-3. Deliver the first two paid sessions if and when the owner authorizes and is ready. Review actual scope fit, results, time, follow-up, client ability to continue, and any no-result cases.
-4. In parallel, prepare and rehearse one free class, confirm host/audience requirements and arrange it only when authorized. Review community usefulness, total time and optional paid inquiries separately; no paid-session prerequisite.
-5. Review again after three delivered paid sessions for recurring needs and support/time costs; choose whether to refine the service, pause or test one extension. No course/platform or revenue forecast follows automatically.
+Public requirements/R1/R2/L2 merged through PRs #3–#7 before this revision. Private L1/L3 remain draft PRs. Current requirements revision is on planning/ai-intro-live-build. Next: review revised pitch/demo, dispatch L4 + R3, synchronize with L5, rehearse H1, then decide product release and optional hosting. D1 can prepare the hosting choice separately.
 
-Do not promote proposed defaults to accepted customer promises without a dated owner decision. Record later decisions as ID, date, choice, decision-maker, evidence, and revisit condition.
+Keep historical source research in file 08; it does not override this register. Record later choices with date, owner, evidence and revisit condition.

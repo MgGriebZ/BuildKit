@@ -1,6 +1,6 @@
 # PRD R: polish a PocketPlayroom-inspired Cozy Room
 
-Revision 0.5 · September 27, 2026 · Implementation brief; no application or deployment completed by this document.
+Revision 0.6 · September 28, 2026. R1/R2 below are implemented historical requirements. The current live lesson follows [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and the proposed R3 extension at the end of this file. R3 is not yet implemented.
 
 ## Product decision
 
@@ -8,7 +8,7 @@ The first seminar teaches adults to refine a small, working room using AI-assist
 
 Use Blazor WebAssembly, C#, HTML/CSS and SVG. PocketPlayroom already uses this stack; this continues its architecture. Its inspected source targets .NET 9. The new standalone example targets .NET 10, with SDK 10.0.302 observed locally. A full PocketPlayroom upgrade is separate work. Exact commands and package versions must be recorded by the implementation slice after a successful build.
 
-The standalone room and its public follow-along are in scope now. A paid standalone course, LMS, authentication and checkout remain deferred. The free group class and paid personal seminar share this one prepared example. Portfolio and Riot API tracks follow later if needed.
+The standalone room and public follow-along are implemented. A compact paid introduction is now in scope under PRD 15; an LMS and app authentication remain deferred. The free class, standalone guide and personal help share the example. Portfolio and Riot API tracks remain later options.
 
 ## Three connected outputs
 
@@ -20,7 +20,7 @@ The standalone room and its public follow-along are in scope now. A paid standal
 
 The sample is a deliberately smaller original implementation, not a maintained fork of the full household. No source-level dependency between these repositories is required. Any later upstream integration uses PocketPlayroom's current canonical docs and separate branch review. Existing public play does not imply public source licensing. Personal names, saved households and uncleared artwork stay out of the teaching example.
 
-## Exact first lesson
+## Historical R1/R2 implementation
 
 **Prepared baseline:** one calm room, one fixed lamp, two visibly different lamp styles, direct activation and local persistence. The presenter has already built and checked it.
 
@@ -88,3 +88,15 @@ These are future implementation gates. This PRD is source-inspected and document
 First produce a reviewable local room and lesson. Public hosting requires the chosen destination, source/license review, acceptance evidence and an explicit release task. Keep the public product name and tutorial association clear without claiming all PocketPlayroom source is open.
 
 Then consider one upstream room improvement backed by the lesson/rehearsal results. Review current PocketPlayroom behavior first; avoid a cosmetic transplant that duplicates an existing feature. That separate slice must preserve both bedroom instances, household saves, cross-room interactions and the product's child-facing rules. Runtime upgrade, deployment workflow and repository visibility are separate changes.
+
+## R3: three-star mini-game for the live AI demonstration
+
+Status: proposed, not implemented. Start with the existing R2 lamp and original room. Follow [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and [R3 handoff](14-EXECUTION-HANDOFF.md#goal-r3--sol).
+
+Add three native star buttons with distinct accessible names and usable pointer targets. Collection is unique per star; progress goes from 0/3 to 3/3, with a polite status announcement. Completed round shows a calm message and Replay. Replay returns all three stars and clears only round progress. Reload also starts a new round; preserve the existing lamp save and all existing storage failure protections.
+
+Collected controls must not leave keyboard users stranded: use a predictable focus policy when a control is removed/disabled; keep remaining stars and Replay reachable. Retain visible focus, mouse/touch/keyboard behavior and reduced-motion handling. No color-only distinction, timer, leaderboard, cloud save, account, runtime AI, API, external art or unrelated room expansion.
+
+Checks cover unique collection, repeated activation, progression/completion, replay, reload reset, keyboard focus/status announcement, pointer/touch, reduced motion and lamp/save regression. Verify publish/output and scoped export. Record new tests separately from historical R2 counts. Human screen-reader/device checks remain explicit if not performed.
+
+Provide a checked finished checkpoint and a repeatable teaching path from an exact clean R2 tree. Document actual prompts, elapsed build/check/repair time and failures; no fabricated successful transcript or usage. Preserve R1/R2 historical commits and any failed attempt separately. A feature implementation does not demonstrate that a novice understood it or that it fits the hour; H1 supplies that evidence.

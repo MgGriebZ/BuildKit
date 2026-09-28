@@ -1,48 +1,33 @@
-# PRD S: your idea, explained and refined in a personal seminar
+# PRD S: an introduction to AI through a live build
 
-Revision 0.5 · September 27, 2026. The owner selected seminar-led 60-minute teaching. Cozy Room is the first topic. Price remains proposed. This is a public production brief, not the private presenter script itself.
+Revision 0.6 · September 28, 2026. [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) is the detailed current teaching contract.
 
-## Experience and promise
+## Experience
 
-The presenter teaches through a working example, visual explanation, one bounded refinement and clear next steps. The first topic is a standalone, bedroom-inspired Cozy Room using Blazor WebAssembly, C#, HTML, CSS and SVG. Its R1 baseline cycles two lamp styles and persists selection; the R2 refinement adds a third patterned style and gentle feedback. The implementation has recorded keyboard, mouse, emulated touch, reduced-motion and version-1 save-compatibility checks; physical-device, screen-reader and learner checks remain open. See the current slice status and evidence in [06-EXECUTION.md](06-EXECUTION.md). The public follow-along and beginner edit are merged to `main` in PRs #6 and #7. PocketPlayroom remains the full product/reference; the new example avoids private source dependencies. Scope for any personalized seminar is confirmed before payment.
+Begin with what AI can help people do and why coding makes an instructive example: output can be inspected, run and tested. Teach terminology while Matt directs a real coding agent to extend a prepared app. The participant sees the prompt, useful output, human judgment, checks and any repair.
 
-Working copy: "Your idea, a working example, and a clear way forward. A personal AI-building seminar with a guided refinement and your take-home Build Kit included."
+The first demonstration starts from the existing R2 Cozy Room and adds a three-star collection mini-game. R3 is specified, not implemented. The learner-selected color is an optional detail; the actual lesson changes behavior. The old palette-only hour is superseded. The same core supports a free adult community class, the standalone guide and a personal session.
 
-The same Cozy Room core supports free public/community classes and personalized seminars. The public follow-along is a useful free takeaway. Personalized scoping and tailored handoffs remain part of the personal format. Paid standalone course/LMS is deferred. See [04-PRD-COMMUNITY.md](04-PRD-COMMUNITY.md).
+## Pacing
 
-## Reusable hour
+Use the single canonical schedule in [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md#flexible-60-minute-core): 7 minutes introduction, 6 language/models/cost, 5 baseline/goal, 20 live build, 10 verification/debugging, 6 polish/deployment explanation, 6 close. Rehearsal can adjust adjacent segments while preserving a clear opening, substantial live prompt/build and closing check. The Azure creation lab is an optional extension.
 
-| Minutes | Presenter/participant activity | Visible result |
-|---|---|---|
-| 0–5 | Confirm the participant's goal; show the finished baseline | They know what works before the live change |
-| 5–15 | Explain the room and interaction with simple visuals | Learner understands the baseline and choices |
-| 15–25 | Walk through the prepared example and its implementation decisions | Learner sees how the working result is structured |
-| 25–45 | Make one bounded refinement together | One observable before/after change |
-| 45–55 | Check the change; participant explains it or repeats a small step | Evidence of behavior and understanding |
-| 55–60 | Reopen artifact, explain included kit and agree next steps | A clear handoff and support boundary |
+Show a finished reference only with its label. Explain what was prepared before the hour. Screen-sharing, audience prediction and directing the prompt are valid participation; a coding account and local environment are required only for a chosen hands-on route. Setup is preflight.
 
-Adapt the pacing for experience level. A presentation-only participant can choose the refinement and explain its effect while the owner operates the tools. A hands-on participant can operate their prepared environment. Confirm the mode beforehand. Installation/account recovery should not consume a promised demonstration hour; resolve in preflight or agree a different session.
+## Live behavior and debugging
 
-## First teaching example
+The prompt sequence is inspect/plan -> implement -> verify -> repair if needed -> explain/checkpoint. A meaningful live AI interaction is required for the ordinary advertised format. If tools fail, label the session's substitution clearly and show an explicitly prepared example; do not call it a successful live build.
 
-The independent, child-friendly Cozy Room example and public guide are on BuildKit `main` at `examples/cozy-room` and `lessons/free/cozy-room` (PRs #4–#7). The room is a play experience, with no course or sales CTA inside it. Seminar learners and marketing are adult-facing. The R1 baseline cycles two styles and persists the choice; R2 adds Rose diamonds and gentle acknowledgement while preserving the version-1 save and input behavior. The new example targets net10.0; existing PocketPlayroom is Blazor net9.0 and remains the full product/reference. Portfolio and Riot API tracks are deferred beyond the first room.
+Allow one focused repair or five minutes of diagnosis, then show the tested reference and what failed. A planned failure walkthrough is labeled as prepared. Debugging is teaching content; unresolved problems are also evidence.
 
-Do not use private PocketPlayroom code/assets as dependencies or publish them. Any later upstream room polish is a separate scoped slice; it does not automatically publish source or deploy anything.
+Preserve accessible input, reduced motion, existing lamp saves and source boundaries. Tests support named claims; they do not certify all behavior or production readiness.
 
-## Mermaid and presentation requirements
+## Costs and tools
 
-For Cozy Room, prepare two or three small visuals: a goal-to-checked-result flow, a room/component map, and optionally a lamp interaction/state view. Each should answer a learner question. Provide readable static fallbacks and a text explanation in the follow-along; learners need no Mermaid editor account. Labels must match the implemented example. Prefer a few useful visuals over filling slides with complexity.
+Spend about two minutes comparing available model choices within the language segment; expand in the written guide. Always state the actual model/version. Explain subscription limits separately from model credits/tokens and hosting resource bills. Provide one honest measured-run record or clearly mark unavailable usage. Use [16-TOOLS-MODELS-AND-COSTS.md](16-TOOLS-MODELS-AND-COSTS.md); no routine credit reporting for ordinary agent work.
 
-The private presenter kit contains the actual script, diagram sources, original demo checkpoints, selected prompt sequence, recovery plan and rehearsal notes. The shareable client kit contains only the agreed cleared subset plus personalized next steps. Keep private working notes and client information out of public build artifacts.
+## Materials and acceptance
 
-## Measured example: credits to result
+Presenter outline, prompt cards, readable visual fallbacks, reference checkpoint, recovery instructions, rehearsal checklist and blank delivery record live privately. Public source and free takeaway are separate selected outputs. Paid guide chapters are authored privately under the course PRD.
 
-This is an optional teaching case study, not routine reporting for repository tasks. A valid demonstration identifies the baseline, actual bounded change, date, model/tool configuration, measurement source, observed usage for that isolated run, retries and output checks. Separate prerecorded/prepared work from the live incremental change. If the usage source includes unrelated work, is unavailable or cannot isolate the example, label it unavailable or an explicitly qualified estimate rather than presenting a precise number.
-
-Show the observable result with the record; do not claim that a fixed number of credits always buys the same app or convert subscription credits into cash without an applicable verified rate. Presenter preparation time and existing starter code must be visible context. No purchase or quota consumption is required just to populate a presentation slide. Do not count/report credits on every ordinary agent task; the owner explicitly waived that routine reporting.
-
-## Preparation economics and completion
-
-Build a reusable seminar core once and track its development effort separately from the 60-minute appointment. Initial planning allowance: one bounded preparation block chosen by the owner; no unlimited bespoke deck per inexpensive session. Personalize an existing track within a proposed 15-minute preflight block, plus 15-minute handoff; if a request needs more, reduce scope or quote different preparation/delivery before booking. Reusable content development is real work even when later sessions reuse it.
-
-Acceptance before the first sold seminar: owner rehearses the hour against a clock; prepared demo/checkpoints and offline fallback work; sample diagrams are readable; one refinement has observable checks; fixture/live API status is explicit; client kit reopens in a fresh folder; exact policies, price and selected delivery tools are ready. Test with one adult participant and record what they can explain/repeat. A prepared spec is not a completed seminar or evidence of customer demand.
+Acceptance requires an actual timed adult rehearsal, understandable before/after feature, prompt and diff visibility, checks/repair, an honest cost explanation and a usable next step. Physical-device and accessibility observations remain separate evidence. Price, event host, standalone delivery and personal-session policies still need owner choices.

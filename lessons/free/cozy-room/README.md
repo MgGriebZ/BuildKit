@@ -1,5 +1,7 @@
 # Cozy Room: from a remembered choice to a polished interaction
 
+**Where this lesson fits:** This checked R1/R2 guide and palette exercise remain beginner practice. Revision 0.6 plans a broader AI introduction with live prompting and a three-star game feature; that feature is not implemented here yet. See the [current course requirements](../../../docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md).
+
 This follow-along accompanies the standalone Cozy Room example. You begin with a small bedroom and a lamp with two patterned shades; the finished checkpoint adds a third shade and a brief, gentle acknowledgement when the lamp changes. The selected shade survives a reload. The lesson is a bounded example of taking a visible idea through C# rules, rendering, persistence and verification—not a promise to build a complete game or arbitrary application in one hour.
 
 The public app is original and self-contained. It does not require PocketPlayroom or the private presenter repository. No account or signup is needed to read or run a downloaded copy. This guide and its validation describe local source packages, not a hosted demo, offline/PWA behavior or a redistribution license. The source license remains an owner decision; do not treat this guide as permission to republish or relicense the app.

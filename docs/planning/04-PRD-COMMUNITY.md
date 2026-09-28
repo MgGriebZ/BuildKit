@@ -1,52 +1,31 @@
-# PRD M: useful demonstrations and community discovery
+# PRD M: a useful live introduction for the community
 
-Revision 0.5 · Draft material only. No outreach has been authorized or sent.
+Revision 0.6 · September 28, 2026. Free classes remain core outreach; no invitations or event scheduling are performed by this document.
 
-## Purpose
+## Shared learning core
 
-Use the Cozy Room as the initial shared teaching example for free public/community classes and personalized seminars. The 60-minute experience is seminar-led teaching with visual explanation, a working baseline, one focused learner-chosen refinement and next steps. Public follow-along is in scope. Do not promise a complete game or app during the hour.
+Begin with AI basics and practical uses, then teach through a live coding-agent demonstration. Use the [canonical 60-minute agenda](15-PRD-AI-INTRO-LIVE-BUILD.md#flexible-60-minute-core), including terminology, a meaningful game change, verification/debugging and an honest cost recap. The standalone guide expands this same story for independent reading; attendees receive a useful free takeaway.
 
-## Free one-hour public/community class
+The default R3 proposal adds three collectible stars, progress and replay to the independent Cozy Room. Audience choice can personalize an accent or completion phrase. The current CSS exercise is optional practice. Do not promise a complete arbitrary game from scratch in one hour.
 
-Free classes are a core early outreach and community-service activity. The Cozy Room baseline and one group-selected refinement can anchor the hour; attendees can use the public follow-along without a purchase. Paid standalone course/LMS remains deferred. Event frequency is not promised. Personalized client handoffs and the private presenter kit are not distributed by default. Adapt pacing to the audience:
+## Host and participation
 
-| Time | Activity | Participant outcome |
-|---|---|---|
-| 0–5 min | Learner goal and product context | Shared focus and outcome |
-| 5–15 min | Visual map of the product/workflow, including Mermaid diagrams | Understand the system and choices |
-| 15–25 min | Walk through the prepared working product demo | See a complete example and its checks |
-| 25–45 min | Guide one bounded learner-chosen refinement | Practice making and reasoning about a change |
-| 45–55 min | Run checks and learner explain-back | Confirm understanding and limits |
-| 55–60 min | Free worksheet/demo links and next steps | Know how to continue independently |
+The initial audience is adults. Viewers need no paid AI account and may watch, vote, predict results or help refine the prompt. Hands-on participation requires preflight tools and a prepared checkout. School/student use needs an age-appropriate adaptation and the host's requirements.
 
-Use an offline screenshot or prepared demo if connectivity fails. Attendance should not require a paid subscription or account. Confirm host, audience, accessibility, venue, equipment, and any student-facing requirements before scheduling; this draft is adult-facing. A free session has a defined end and does not include continuing consulting or custom curriculum.
+Confirm projector readability, network, accessibility, duration, attendee count, venue needs and setup/travel time. Keep local/reference and printed/text alternatives available. A prepared recording or failure example is explicitly labeled.
 
-## Pilot readiness and path
+Use an optional 15–30-minute Azure lab only if the host wants a longer workshop and the selected account has capacity. Do not create resources or buy plans simply to rescue the core demonstration.
 
-1. Use the selected Cozy Room theme and confirm the initial audience and prospective host; libraries, community groups and public events are candidates, not established partners. School/student delivery requires a separate audience-appropriate plan and host requirements before booking.
-2. Reuse the Cozy Room teaching core with original/cleared material; rehearse the lamp baseline, third-style refinement, readable visuals and offline fallback. Ensure the public follow-along works without payment, sign-up or private-repository access.
-3. Confirm the host's duration, equipment, accessibility, audience size and suitability, travel/setup time, contact route and any venue requirements. No event is scheduled by this document.
-4. Deliver only after the owner authorizes outreach and confirms the event. End with an optional personal-help invitation; do not require marketing consent, a testimonial or a purchase to receive the promised free material.
-5. Review the first event before promising a cadence. Record preparation, travel/setup, delivery and follow-up time; participant learning and host feedback; and voluntary paid inquiries separately. No paid booking, payment account or new website is a prerequisite for a free class.
+## Invitation drafts
 
-Start planning within the owner's 5–10-hour/week initial commitment range, with room to grow. The shared teaching core avoids requiring a bespoke production for every free event; agree any host-specific customization in advance. Later event selection should consider community usefulness, audience fit, preparation/travel load and actual calendar capacity—not conversion alone.
+Host: "I'm preparing a free introduction to AI where people can watch me prompt, check and improve a small browser game. We'll explain the language, real costs and what to do when things break. People can participate without buying tools and leave with a useful starter guide. Would this suit your adult community?"
 
-## Draft learner invitation
+Learner: "See how a clear idea, a few planned prompts and practical checks become a working app change. The guide expands the demonstration so you can try your own next step."
 
-“I’m exploring one-to-one sessions for people who have tried AI chat and want help moving a small project forward. We’d first agree on a realistic result and whether it fits. If we proceed, we’d work on it together and I’d send the project files, relevant prompts and follow-along material, and personal next steps. An hour is a focused work session, not a promise to finish every project. Would you tell me what you’re trying to make and where you’re stuck?”
+These are unsent drafts. The owner chooses recipients, dates and any personal-help invitation. Free material does not require a purchase, testimonial or marketing signup.
 
-If the owner elects to mention the pilot price after approving it, use only the exact approved amount and duration. The current proposed price is $75/60 minutes and is not approved; do not include it as settled copy. Never add a reference value such as “normally $50.”
+## Evidence and capacity
 
-## Draft community-host invitation
+Rehearse with an adult, then record anonymous learning observations, confusing terms, actual time and recovery points. Track community usefulness separately from voluntary inquiries or sales. One good class does not establish recurring demand.
 
-“I’m preparing a free one-hour introduction to making small projects with AI assistance. Participants would see a working example, understand it through simple visuals, help choose one focused change, and leave with a useful worksheet and next steps. No purchase or paid account is needed to attend. Would this fit an event for your adult community, and what would participants most want to learn?”
-
-These are drafts only. The owner selects recipients and sends any message. Do not describe a host as a partner without agreement or imply school endorsement.
-
-## Demonstration and measurement
-
-The first shared track is the standalone Cozy Room. Gamer portfolio/guide and Riot API examples are deferred beyond this first room. Build the public version independently with Blazor WebAssembly, C#, HTML, CSS and SVG; do not rely on private PocketPlayroom source. PocketPlayroom remains the complete product/reference. Any later polish to its upstream room is a separate scoped effort, with no automatic source publication or deployment.
-
-Measure community outcomes (attendance, what participants can explain/repeat, useful next steps and host feedback) separately from business outcomes (voluntary inquiries, fit decisions, paid and delivered sessions, handoffs and support). Track actual owner time for both. Keep private contact details outside the repository. Social views and free attendance are context, not paid demand; a useful free class can still succeed as service without immediate sales. Ask permission separately before using a testimonial or recording.
-
-Free community delivery is part of the initial plan, alongside paid personal seminars. A standalone course, fixed multi-platform posting schedule, formal student program or committed recurring-event cadence is not established by this PRD. No outreach has been sent and no host or partnership is confirmed.
+Plan within the owner's expandable 5–10-hour/week starting range, including preparation, travel and follow-up. A guide release and paid-session setup are not prerequisites for a properly arranged free class.

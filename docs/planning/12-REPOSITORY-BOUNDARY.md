@@ -1,14 +1,14 @@
 # Public requirements and private teaching material
 
-Revision 0.5 · September 27, 2026. The owner created `MgGriebZ/BuildWithGriebZ` and selected it for private authoring. Access was verified as private/admin. BuildKit remains the public requirements and example repository. No repository visibility was changed.
+Revision 0.6 · September 28, 2026. The owner created `MgGriebZ/BuildWithGriebZ` and selected it for private authoring. Access was verified as private/admin. BuildKit remains the public requirements and example repository. No repository visibility was changed.
 
 ## Selected layout
 
-BuildKit owns public requirements, eventual marketing content, the original standalone Cozy Room in `examples/cozy-room/`, and selected public follow-along material in `lessons/free/cozy-room/`. Private BuildWithGriebZ owns `seminars/cozy-room/` presenter scripts, lesson authoring, rehearsal notes and exclusive teaching assets. Client-specific files belong in private per-client storage with controlled sharing; the authoring repo is not a shared customer portal.
+BuildKit owns public requirements, eventual marketing content, the original standalone Cozy Room in `examples/cozy-room/`, and selected public follow-along material in `lessons/free/cozy-room/`. Private BuildWithGriebZ owns `seminars/cozy-room/` presenter scripts and `courses/ai-intro/` standalone guide chapters, plus private rehearsal preparation and exclusive teaching assets. Selected free introductory material belongs in BuildKit `lessons/free/ai-intro/`; paid edition exports need an explicitly selected recipient delivery route. Client-specific files belong in private per-client storage with controlled sharing; the authoring repo is not a shared customer portal.
 
 PocketPlayroom remains the existing full product and private source reference. The owner intends the seminar and public tutorial to showcase it through one independently runnable room. That direction does not change source visibility or publish its history/assets. A later product improvement is a separately reviewed upstream slice. Before any future visibility change, check collaborators/integrations and remember that earlier public copies are not made secret retroactively. [GitHub visibility documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
 
-The public requirements push can proceed without deciding this future layout, provided its contents are suitable for public viewing. A public branch or pull request is just as public as the default branch.
+This layout is selected for the first edition. Public requirements specify outcomes and checks; full paid prose and presenter prompt cards stay private. A public branch or pull request is just as public as the default branch.
 
 ## Content placement
 

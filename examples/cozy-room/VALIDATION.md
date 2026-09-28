@@ -140,4 +140,6 @@ No unhandled page exceptions or external runtime requests were observed in the p
 
 ### R3 standalone reopening
 
-The code and run instructions are ready for an app-only export. The exact exported revision and fresh-folder command results will be recorded in the following validation metadata commit after that check is performed.
+Only `examples/cozy-room/` was archived from **`96d51856825cfd36c758aebb55c3c716a2173451`** and extracted into a new sibling directory outside the BuildKit checkout. The archive contains 34 source/instruction files, with no parent repository, private authoring or generated build directories. Its app/tests match runtime checkpoint `7516e7b29908108a6567b5859fab5faab4d849f8`; only documentation/manifest metadata differs.
+
+From that fresh directory, locked restore, npm locked install, build (0 warnings/errors), all 40 rule cases, Release static publish and all 21 browser scenarios (12 lamp/save + 9 R3) passed. The passing package run again used Edge 154.0.4258.37 and had no page exceptions or external runtime requests. It completed by the observed UTC timestamp **19:03:18** on September 28. This is an agent reopening/build check; independent novice understanding and H1's live presentation remain pending. The final metadata commit records the tested immutable export without changing its runtime/test source.

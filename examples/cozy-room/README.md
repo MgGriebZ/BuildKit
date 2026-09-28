@@ -87,7 +87,7 @@ Reports and screenshots are generated under ignored `artifacts/`. See [VALIDATIO
 
 The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. The finished R2 runtime/test source checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**; both source checkpoints are identified in `checkpoint.json`. The lesson manifest records the self-contained review-tree revisions used for exports. Export only the example subtree, **not the full repository or its history**:
 
-For the star lesson, use R2 standalone start **`15a93acae7e12fea71ea768b9198428f39a5a312`**. The checked R3 runtime/test checkpoint is **`7516e7b29908108a6567b5859fab5faab4d849f8`**. A following metadata revision records the standalone R3 export/reopening check in [checkpoint.json](checkpoint.json) and [VALIDATION.md](VALIDATION.md); the runtime checkpoint remains immutable. The historical R1/R2 references above remain available.
+For the star lesson, use R2 standalone start **`15a93acae7e12fea71ea768b9198428f39a5a312`**. The checked R3 runtime/test checkpoint is **`7516e7b29908108a6567b5859fab5faab4d849f8`**. The independently reopened R3 standalone export is **`96d51856825cfd36c758aebb55c3c716a2173451`**. Its app/tests match the runtime checkpoint; the export also includes instructions and run evidence. This following metadata revision pins that immutable export in [checkpoint.json](checkpoint.json) and [VALIDATION.md](VALIDATION.md). The historical R1/R2 references above remain available.
 
 ```powershell
 # From the BuildKit repository root; replace CHECKPOINT_COMMIT with the chosen full SHA.

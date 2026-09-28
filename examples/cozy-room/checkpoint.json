@@ -23,6 +23,8 @@
     "startingExportCommit": "15a93acae7e12fea71ea768b9198428f39a5a312",
     "startingRuntimeCommit": "91eab16835aac4cfd80a7f51017ac62f5cc6b9bd",
     "runtimeCommit": "7516e7b29908108a6567b5859fab5faab4d849f8",
+    "exportCommit": "96d51856825cfd36c758aebb55c3c716a2173451",
+    "exportStatus": "App-only source archive independently reopened; restore/build/40 rules/publish/21 browser scenarios passed.",
     "label": "R3 three-star hunt with progress, completion and replay",
     "starCount": 3,
     "roundPersistence": "Memory only; replay and reload reset the round without altering lamp saves.",

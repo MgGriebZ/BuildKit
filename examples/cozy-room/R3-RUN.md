@@ -7,7 +7,7 @@ Observed September 28, 2026. This record supplies public app evidence for L5. Th
 - Reviewed requirements: `620d33723a3dc309c4837b5a7f91597ad6ac5ef8`, public [R3 task](https://github.com/MgGriebZ/BuildKit/blob/620d33723a3dc309c4837b5a7f91597ad6ac5ef8/docs/planning/14-EXECUTION-HANDOFF.md#goal-r3--sol) and PRDs 13/15.
 - Clean R2 standalone starting revision: `15a93acae7e12fea71ea768b9198428f39a5a312`; R2 runtime/test checkpoint: `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`.
 - Actual work branch: `work/r3-cozy-room-stars`, created from the requirements revision. Its initial source/tests matched the R2 export; only README/validation metadata had changed. Initial app subtree tree: `6d6380d53cbb4275bbf9e4c677eed6c263354eb7`.
-- Checked R3 runtime/test checkpoint: `7516e7b29908108a6567b5859fab5faab4d849f8`. [checkpoint.json](checkpoint.json) records the references; the later export metadata identifies the independently reopened package.
+- Checked R3 runtime/test checkpoint: `7516e7b29908108a6567b5859fab5faab4d849f8`. Independently reopened app-only export: `96d51856825cfd36c758aebb55c3c716a2173451`. [checkpoint.json](checkpoint.json) records both references. The export passed the same commands, 40 rule cases and 21 browser scenarios in a fresh folder by 19:03:18 UTC; see [VALIDATION.md](VALIDATION.md).
 
 Before: a prepared bedroom with three lamp styles and browser-local lamp saving. After: window, bed and rug star controls; 0/3 through 3/3 progress; a completion message and Replay. A round is memory-only. The lamp/save key and schema are unchanged.
 

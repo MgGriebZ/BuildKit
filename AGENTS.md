@@ -1,15 +1,11 @@
 # BuildKit agent guide
 
-Read `docs/planning/00-START-HERE.md`, `docs/planning/07-DECISIONS.md`, and only the PRD needed for the assigned ticket. Owner instructions take precedence. The original PRD is historical input, including its locked decisions.
+Current direction is revision 0.6: an accessible standalone AI introduction and flexible live build class, with optional personal help. Read docs/planning/00-START-HERE.md, 07-DECISIONS.md and 15-PRD-AI-INTRO-LIVE-BUILD.md, then only the assigned PRD/slice in 14-EXECUTION-HANDOFF.md. User direction takes precedence.
 
-Current plan: seminar-led 60-minute teaching, starting with an independent Cozy Room. Requirements and future paths are in [13-PRD-COZY-ROOM.md](docs/planning/13-PRD-COZY-ROOM.md) and [14-EXECUTION-HANDOFF.md](docs/planning/14-EXECUTION-HANDOFF.md). The app is not implemented; specified behaviors are not runtime results. PocketPlayroom remains the full product and private source is not a dependency. Private presenter authoring is in `MgGriebZ/BuildWithGriebZ`; client sharing is separate. Follow [00-START-HERE.md](docs/planning/00-START-HERE.md), the source rules in [08-SOURCE-REVIEW.md](docs/planning/08-SOURCE-REVIEW.md), and the repository boundary in [12-REPOSITORY-BOUNDARY.md](docs/planning/12-REPOSITORY-BOUNDARY.md). Prices, policies and outreach boundaries remain as recorded; first host, price and booking windows are open. PR2 A2 worksheet is optional and not a room dependency.
+R1/R2 Cozy Room and L2 guide are implemented and merged. R3 three-star mini-game is proposed, not implemented. Existing tests do not validate R3. The original root PRD and old palette-only/session-only instructions are historical.
 
-Do not routinely count or report credits for ordinary work. An explicitly chosen seminar case study may report measured usage, with baseline/preparation/retries and measurement limits disclosed.
+Public requirements, original example code and selected free material belong here. Full course prose/presenter scripts belong in private MgGriebZ/BuildWithGriebZ. Private PocketPlayroom and other references are read-only unless separately tasked; no private source/assets or customer records enter public exports.
 
-Use Luna for L1/L2/L3 content and bounded repetitive edits; Sol for R1/R2 room implementation and integration; the planner/Astra for architecture, tradeoffs and consequential review. Do not silently escalate models or start recursive agents. See `docs/planning/14-EXECUTION-HANDOFF.md` for dispatch contracts and goal prompts.
+Use Luna for L4/L5 authoring and bounded repetitive edits; Sol for R3 integration and D1 hosting preparation. Do not silently escalate models or recursively delegate. No routine credit counting; an isolated teaching case records actual observed usage or explicit unknowns.
 
-Reference repositories are read-only inputs. Read access is not permission to redistribute their code, assets, history, private notes, customer data, or licensed dependencies. Consult `08-SOURCE-REVIEW.md`; use clean examples and explicit item-level clearance. The Cozy Room avoids private source dependencies. Never copy production configuration, secrets, security audits, or customer records into this public repo.
-
-Keep private buyer/lead records outside Git. Do not send outreach, publish, deploy, take payment, register businesses, or purchase tools on the strength of a planning ticket. Follow the user's actual authorization for those actions.
-
-Every implementation ticket names inputs, allowed output paths, acceptance checks, and stop conditions. Preserve other work. Report observed results separately from untested claims. One repair pass, then a compact blocker report; no endless retries. Stop at the ticket's acceptance criteria.
+Preserve existing changes. Each slice names outputs, checks and stopping point. Default implementation goals end at a committed/pushed reviewable PR. Follow actual user authorization for merge, deployment, purchases, checkout or outreach; planning documents do not authorize those external actions. Respect source/content boundaries in files 08 and 12.

@@ -1,57 +1,37 @@
 # Readiness and outstanding work
 
-Revision 0.5 · Status checked September 28, 2026. The standalone Cozy Room R1/R2 implementation and L2 public guide/exercise are merged to `main` (PRs #4–#7); the private L3 presenter kit is still in review. Live event and paid seminar readiness still require owner facts and observed delivery checks.
+Revision 0.6 · September 28, 2026.
 
-## Prepared in this revision
+## What is ready
 
-- Seminar-led 60-minute offer and launch PRD; original Cozy Room app and public follow-along are on `main` at `examples/cozy-room` and `lessons/free/cozy-room`.
-- Standalone-course launch removed from the first-sale dependency chain; no unsupported monetary bonus value.
-- Intake, fit, handoff/support and rehearsal specifications in [09-SESSION-PREP.md](09-SESSION-PREP.md); detailed working runbook retained privately outside Git.
-- Personalized hour, Mermaid visuals, working-demo/refinement tracks and measured usage-case requirements in [11-PRD-SEMINAR.md](11-PRD-SEMINAR.md).
-- Supplied logo/runtime staged and statically reviewed; hashes and runtime findings in [asset review](../asset-review.md). Availability is distinct from a successful browser preview.
-- Revised decisions, source notes and execution queue, with explicit owners and gates.
-- Free one-hour community classes as a parallel launch path, with host-readiness checks and separate community/paid-demand measures; 5–10 starting owner hours/week with room to grow, not a ceiling.
+Public R1/R2 app and L2 beginner palette guide are merged through PRs #3–#7. Recorded R2 results: 25 rule cases and 12 browser scenarios; R1: 22/10. The original example is independent of private PocketPlayroom source. These results do not cover the proposed three-star feature or revised course.
 
-## Outstanding before a paid session
+Requirements now support a standalone AI introduction, live feature building, realistic debugging and transparent costs. Private presenter material is being revised from L3; the manuscript and new feature remain future work.
 
-| Item | Owner | Needed to close it | Blocks |
-|---|---|---|---|
-| Pilot price | You | Accept/amend proposed $75 for the accepted one-hour format | Public price, payment product |
-| Private teaching home | Resolved | `MgGriebZ/BuildWithGriebZ` verified PRIVATE with ADMIN access; future authoring path `seminars/cozy-room` | None for authoring; client sharing remains separate |
-| Cozy Room example and follow-along | PRs #4–#7 merged to `main` | R1 baseline and R2 three-style refinement built. R1 export: 22 rule cases/10 browser scenarios; R2: 25/12. L2 pins checked exports and includes the beginner CSS edit. | Human rehearsal, license and any hosting/distribution decision |
-| Weekly capacity | You | Starting 5–10-hour/week range accepted; confirm actual bookable windows/timezone, prep/travel/support allocation and discretionary spending limit | Slots and delivery/support promise |
-| First event host | You | Identify and confirm a suitable initial host/audience; no host or event date is established | Scheduling the first free class; not the room pipeline |
-| Seller identity and operations | You, accountant/appropriate adviser | Existing business/DBA/EIN situation, location, applicable registration and tax handling for session plus included materials | Taking payment under the chosen identity |
-| Customer policies | You | Cancellation/no-show rule, remedy choice, handoff/support response windows | Sale terms |
-| Contact, scheduling and delivery | You, then agent verification | Working business contact and calendar, private handoff location and access | Inquiry-to-handoff rehearsal |
-| Payment setup | You, then agent verification | Appropriate authenticated Stripe account, configuration and sandbox workflow | Paid booking; GitHub credentials do not establish this |
-| Session delivery rehearsal | You with a tester; Luna can check artifacts | Run fictional-client script and let tester reopen delivered pack | Evidence that the offer is deliverable |
-| First real leads | You | Three short conversations and feedback, then personal invitations | Demand evidence; agents cannot invent it |
+## Next work and owner decisions
 
-The prepared demo milestone is complete on `main`: a third lamp style with a diamond pattern, a brief acknowledgement, reduced-motion handling and version-1 save compatibility. The remaining learning milestone is for a participant to make one safe palette edit, reopen the result and explain what stayed the same. Confirm fit at intake; requests beyond that initial scope need a separate plan. The room is prepared before the hour, and a six-lesson paid course is not a dependency.
+| Item | Next action | Blocks |
+|---|---|---|
+| Revised content | L4 drafts private chapters and presenter materials | Reviewable first edition |
+| Meaningful live demonstration | R3 builds/checks the three-star mini-game and records a real prompt run | Advertising that particular working feature |
+| Evidence synchronization | L5 updates public free guide and private text from actual results | Independent follow-along |
+| Adult rehearsal | H1 observes timing, understanding, failure recovery and independent reading | Claiming a tested lesson |
+| Azure capacity | D1 read-only selected-subscription inventory; choose local/existing/new host | A specific hosting/deployment promise, not local teaching |
+| Guide price and formats | Owner reviews proposed $19 first edition and decides exact price/contents | Paid product copy/checkout |
+| Delivery and terms | Choose recipient delivery, support/refund/update scope and test access | First product sale |
+| Source/prose rights | Choose original sample reuse license and paid guide terms separately | Promoting reusable downloads and paid distribution |
+| Seller/payment/tax | Verify actual seller and classify standalone guide/recording/live instruction separately | Taking payments for the chosen offer |
+| Personal sessions | Confirm price, bookable windows, scope and support; old $75 remains a proposal | Personal booking |
+| Community event | Host/audience/date/equipment/access needs | Event scheduling, not content drafting |
 
-## Outstanding before the first free community class
+## Release evidence
 
-Cozy Room is the selected theme. Confirm the initial audience and prospective host. Prepare the shared core, one group refinement, a public takeaway and local/captured fallback; rehearse the hour. Confirm host agreement, accessibility, equipment, venue requirements and setup/travel time. Student-facing events need a separate age-appropriate plan and host requirements; the first draft is adult-facing. Agree how participants can request personal help voluntarily without collecting unnecessary data or making access conditional on a sales signup.
+R3 requires game behavior and regression checks, a clean export, pinned revisions and explicit human/device gaps. L4/L5 require useful reader instructions, accessible visuals/text alternatives and dated tool facts. A live run must distinguish preparation, successful output, repairs and unavailable usage.
 
-No paid bookings, checkout setup or new website are prerequisites for this route. Outreach and event scheduling still need the owner's task authorization. See [community PRD](04-PRD-COMMUNITY.md) and A6/H5 in the execution queue.
+A public demo URL, source license, Azure access/capacity, completed adult rehearsal and successful product delivery are not established. Do not mark them complete from planning, old tests or GitHub access.
 
-## Outstanding only for a new public website
+## Deferred
 
-When implementation is authorized, the marketing page may be a plain static HTML/CSS/JS shell. The linked Blazor Cozy Room demo is a separate output; no parallel React app is needed. PR2 A2 free-event worksheet remains open, generic and optional, not a dependency for the Cozy Room pipeline. Verify any selected brand assets and reduced-motion behavior before use.
+LMS/login/progress system, paid subscription to our course, large recording pipeline, runtime AI in the game, API/database, leaderboard, a second complete app track, and PocketPlayroom production integration. The compact standalone guide is now in scope and no longer deferred.
 
-Confirm actual DNS/Azure hosting access, quotas and the public contact destination before deploying. Check final copy, all actions, mobile/keyboard behavior, policy pages and the public build contents. A new site is useful but is not necessary to have a discovery conversation or deliver a correctly arranged session.
-
-For public room/source release, select the hosting destination and original sample's redistribution license, include required notices and check the scoped checkpoint exports. These release decisions do not block L1 or R1 local preparation. The full PocketPlayroom repository's visibility is unchanged.
-
-## Deferred deliberately
-
-Paid standalone course pricing and checkout, LMS/login/progress, complete paid curriculum, database/API, automated fulfillment, Blender/Godot expansion and a multi-platform media pipeline. The free standalone Cozy Room and follow-along are in scope. Revisit paid self-serve learning after repeated independent-learning demand and its own completion/support evidence. Free community classes are already in scope.
-
-## Minimum reply that unblocks the next launch decisions
-
-The first topic and private authoring home are resolved: Cozy Room and `MgGriebZ/BuildWithGriebZ`. Before offering paid slots, confirm/amend "$75 for 60 minutes," give actual booking windows within the expandable 5–10-hour starting commitment, and clarify business identity/readiness. For the first free class, identify and confirm the initial host/audience. Keep client sharing separately defined. Share tax identifiers, credentials and customer information only through appropriate private channels, not this document.
-
-## Verification scope
-
-Document/link checks and static attachment inspection support this requirements milestone. They do not establish runtime rendering, customer demand, payment readiness, tax compliance or completed seminars. Git commit and remote verification establish the publication status separately; the requirements push does not change repository visibility.
+See [14](14-EXECUTION-HANDOFF.md) for precise execution goals and [15](15-PRD-AI-INTRO-LIVE-BUILD.md) for the full acceptance contract.

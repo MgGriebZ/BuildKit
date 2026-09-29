@@ -1,46 +1,38 @@
-# PRD C: learner material included in build sessions
+# PRD C: a compact introduction to building with AI
 
-Revision 0.5 · This specification covers the public Cozy Room follow-along and materials used in the seminar. Paid standalone course/LMS remains deferred.
+Revision 0.6 · September 28, 2026. Standalone guide production is now in scope under [the current product PRD](15-PRD-AI-INTRO-LIVE-BUILD.md). This replaces the earlier requirement to wait for paid session demand.
 
-## Purpose and scope
+## First edition
 
-Teach one bounded project path through the standalone bedroom-inspired Cozy Room and its public follow-along. The example uses Blazor WebAssembly, C#, HTML, CSS and SVG. Learners first inspect a working lamp that cycles two styles and persists selection, then follow a refinement that adds a third style and gentle feedback. Preserve mouse, touch, keyboard and reduced-motion behavior. This public learning path is now in scope; it is not a paid standalone course or a promise to build a complete game live.
+An approachable book-like guide that can be read independently, taught through a loose one-hour demonstration, or used during a personal session. Working title: Build with GriebZ: Your First AI Build. A reader should understand enough to try a small idea and judge what the AI produced. Exact price is open; an accessible one-time purchase is the direction, not a $50/$75 commitment or bestseller claim.
 
-The first public learning path is the Cozy Room described above. Keep the room child-friendly as a play experience; seminar learners and marketing remain adult-facing, and the room itself has no course or sales call to action. Select relevant briefing, scope/non-goal, safe tool-use, visual explanation, worked example, refinement, check, prompt and follow-along materials.
+## Reading path and chapter acceptance
 
-## Minimum client handoff
+| Chapter | Core explanation | Reader action / evidence |
+|---|---|---|
+| 1. Meet your AI collaborator | Useful generation, tools, limits; why code has observable checks | Describe one useful request and how to check its answer |
+| 2. Speak the language | Model, product, agent, prompt, context, tokens, credits | Write goal/context/constraints/checks in plain language |
+| 3. From idea to a playable room | Prepared R2 baseline -> live three-star mini-game | Follow actual prompts and a before/after behavior comparison |
+| 4. Check, debug and improve | Diff, tests, browser observation, error message, repair and checkpoints | Diagnose one labeled example; verify or revert a small change |
+| 5. What it costs | Free/paid paths, subscriptions/API/hosting distinctions | Choose a feasible path and name unknown costs |
+| 6. Share it and take the next step | Local preview, optional deployment, transfer to another app | Reopen the artifact and describe one next feature with checks |
 
-For each delivered session, provide:
+Optional deeper sections cover tool installation, a complete prompt transcript, model choice, a website change, Azure setup, a glossary and measured-run notes. A recording is optional; it cannot carry explanations missing from the text. Target a concise first edition; do not pad to a page count.
 
-- The agreed goal and scope, with explicit non-goals or deferred items.
-- The project files or an agreed, accessible link, plus a clear way to reopen them.
-- The prompts/instructions materially used, edited for the client's context and safe to reuse.
-- A short sequence for repeating the completed step and a personalized next-action list.
-- A record of what changed and what was checked, including any important limits or untested behavior.
-- Contact route and support boundary as stated in the session agreement.
+## Required deliverables
 
-Use accessible formats such as a concise HTML/Markdown file or worksheet, plus native project files. Avoid requiring an account or paid tool for reading the handoff. Clearly identify optional tools/costs; never include secrets, access tokens, or another person's private material.
+Private authoring lives under BuildWithGriebZ `courses/ai-intro/`: index, six Markdown chapters, glossary, model/cost reference, setup routes, exercises with sample checks, and an edition/release checklist. Author native Markdown first; PDF/HTML export or video production is a later packaging choice. The presenter script and prompt cards remain under `seminars/cozy-room/`.
 
-## Material completion criteria
+Public BuildKit retains `examples/cozy-room/` and `lessons/free/cozy-room/`, plus a free introductory takeaway under `lessons/free/ai-intro/`. The takeaway includes the prompt framework, one checkable exercise and links to the source; it must be useful without buying the full guide. No paid text or private records enter public build output.
 
-The starter pack is ready for pilot use when:
+## Independent learning acceptance
 
-1. A client can fill in the project goal, user/context, desired next result, constraints, and non-goals.
-2. The scope prompt guides a project toward one observable session-sized milestone and flags requests needing more time or expertise.
-3. Prompts are adaptable across an event page, toy, or organizer rather than implying one canonical toy is mandatory.
-4. The work worksheet records the starting state, steps tried, decisions, and a checkpoint without teaching unsafe credential handling.
-5. The handoff template distinguishes completed, verified, unverified, and deferred items and includes personal next steps.
-6. A person who was not present can open the provided files and understand how to resume from the documented checkpoint.
-7. The owner has reviewed the prompts and examples for factual accuracy, privacy, source rights, and clarity.
+A reader without the live session can choose viewer/editor mode, find setup instructions, identify the prepared baseline, follow the recorded feature change, recognize a failed check and reopen the result. Include text alternatives for visual material and copyable commands with their working directory. Distinguish conceptual examples, tested instructions and proposed content.
 
-The public follow-along has its own completion/readability checks in [the Cozy Room specification](13-PRD-COZY-ROOM.md) and L2 in [the execution handoff](14-EXECUTION-HANDOFF.md). These kit criteria cover personalized seminar support; they do not substitute for public example verification.
+L4 drafts the chapter structure and explanations; R3 provides the checked game and a real prompt-run record; L5 fills the worked example and free guide from that evidence. Do not write a fictional successful transcript while R3 is pending.
 
-## Later optional course gate
+## Commercial completion
 
-Only consider a standalone course after multiple session clients ask for the same self-serve path and the owner chooses to pursue it. Then select a single learner/project, write the complete curriculum and tool requirements, test it with novice learners, define support/refund terms, and review private delivery and content rights. The earlier six-lesson room/toy concept may be evaluated then; it is not a fixed commitment. Do not publish a ~$50 valuation or “normally $50” claim. Any eventual price needs its own owner decision and evidence.
+Before selling: choose exact price/currency/tax presentation, included formats, delivery route, source/prose licenses, support/refund terms and edition-update policy. Test recipient access and delivery failure recovery. A manual or existing delivery service is acceptable; building an LMS is not required. A standalone product and an interactive personal seminar need separate offer descriptions and operations review.
 
-## Technical and source boundaries
-
-Use original or item-cleared examples. Repository access does not establish redistribution rights; consult [08-SOURCE-REVIEW.md](08-SOURCE-REVIEW.md). Keep client handoffs and any private paid material out of public builds and Git unless the owner explicitly chooses an openly licensed model. The public free worksheet may be useful independently but must not be represented as the paid session itself.
-
-Preparation requirements are in [09-SESSION-PREP.md](09-SESSION-PREP.md); the detailed draft templates are retained locally outside public Git. They need a delivery rehearsal and learner feedback. Public requirements publication is authorized; no application implementation or private repository creation was performed.
+See [cost reference](16-TOOLS-MODELS-AND-COSTS.md), [repository boundaries](12-REPOSITORY-BOUNDARY.md), and [execution handoff](14-EXECUTION-HANDOFF.md). No purchase flow or full manuscript is claimed complete by this PRD.

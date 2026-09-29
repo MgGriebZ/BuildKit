@@ -1,35 +1,31 @@
-# Session preparation requirements
+# Preparation for the live AI introduction
 
-Revision 0.5. Public preparation specification for seminar-led 60-minute teaching. The private presenter/business authoring home is `MgGriebZ/BuildWithGriebZ`, verified PRIVATE with ADMIN access; future seminar materials belong under `seminars/cozy-room`. This public file specifies outputs and boundaries; it does not distribute the private script. Client sharing remains separately unresolved.
+Revision 0.6 · September 28, 2026. Follow [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and the private presenter outline.
 
-## Intake and agreement
+## Prepare the story and environment
 
-Collect the learner's desired result, intended user, existing attempts, relevant device/tool readiness, and available time windows. Choose one track and one refinement with an observable check. Confirm what the prepared demo already does, what will change during the hour, included files/materials and any prerequisites before payment. The accepted format is one hour; $75 is still a proposed price.
+Use a clean R2 starting tree and a separately prepared, tested R3 reference when it exists. Pin both commits, verify the sample export and preflight the .NET/editor/browser tooling. Identify the model/version and account mode actually used. AI prompts are part of the live demonstration; a manual palette change alone is not its replacement.
 
-The first topic is Cozy Room, specified in [13-PRD-COZY-ROOM.md](13-PRD-COZY-ROOM.md) with a bounded handoff in [14-EXECUTION-HANDOFF.md](14-EXECUTION-HANDOFF.md). The independent room uses Blazor WebAssembly, C#, HTML, CSS and SVG, without private PocketPlayroom source dependencies. Baseline lamp cycles two styles and persists selection. The taught refinement adds a third style and gentle feedback, retaining mouse, touch, keyboard and reduced-motion behavior. Portfolio and Riot tracks are deferred.
+Keep an inspect/plan card, feature card, verification card, repair card and handoff card ready. Each gives the audience a reason for the action and an observable check. Select one small audience choice before coding. Keep a labeled failure example ready if no natural bug occurs.
 
-## Private presenter preparation
+Reserve one focused repair or five minutes of diagnosis, then fall back honestly. Preserve failed attempts separately from the working reference. Use the existing CSS exercise as optional practice if a learner wants an easier first action.
 
-The private authoring workspace should contain a reusable presentation outline, visual sources and readable fallbacks, links to the public demo/checkpoint revisions, chosen refinement instructions, recovery notes and proposed client handoff. Canonical demo code stays in BuildKit. Mark recovery as tested only after observing it. Keep reusable content production separate from personalization and support. Extra custom preparation is bounded or separately scoped before booking.
+## Participant and host preflight
 
-The public BuildKit `main` branch contains the independent app under `examples/cozy-room` and the follow-along with a beginner edit under `lessons/free/cozy-room`; R1/R2/L2 merged in PRs #4–#7. The app checkpoints include recorded local checks, while hosting, source licensing and learner rehearsal remain open. PocketPlayroom remains the full product/reference and private source stays unchanged. Private scripts and rehearsal materials belong in `BuildWithGriebZ/seminars/cozy-room`; the L3 draft is in review. Client sharing and storage are separate. See [content placement](12-REPOSITORY-BOUNDARY.md).
+Confirm watch/direct/hands-on mode, adult audience, equipment, readable visuals and accessibility needs. Tool/account installation is completed before the hour. A free viewer does not need a coding subscription. A personal session additionally confirms its goal, price, time and support terms before payment.
 
-## Included client Build Kit
+## Cost and deployment preparation
 
-Provide the agreed goal, usable project/checkpoint or other agreed artifact, how to reopen it, selected prompts and repeatable steps, diagrams relevant to the result, checks actually performed, limitations and personal next steps. A client should be able to find the next action without relying on memory of the call. Use original/cleared materials and verify file sharing per recipient.
+Prepare a case-study record with known usage and explicit unknowns using [16](16-TOOLS-MODELS-AND-COSTS.md). Keep prep/live/repair costs separate. A hosted browser game without runtime AI has no model-token bill for each play.
 
-Proposed handoff window is one business day. Proposed included support is one consolidated clarification message within seven days, answered within two business days. Corrections to the supplied instructions are included; new features require new scope. These response windows require owner acceptance before they become promises.
+Azure deployment is optional. D1 checks the selected subscription and quotas before workflow preparation. A prepared target can support a short deployment showcase; new resource creation belongs in an extended lab. Local preview is sufficient for the core learning result.
 
-## Proposed remedies
+## Handoff and rehearsal
 
-Screen no-fit requests before payment. If the owner cancels, client chooses refund or agreed reschedule. Proposed client cancellation at least 24 hours ahead permits refund or one reschedule; late cancellation/no-show terms remain open. If the agreed milestone cannot be delivered by the provider, client chooses full refund or an agreed no-charge corrective follow-up, with a feasible cap set before sale. A new paid quote cannot be required to receive the originally promised milestone.
+Provide the relevant public guide/checkpoint, changed behavior, prompts used, actual checks, unknowns and next action. The blank private template can cover free demonstration, standalone guide or personal help; completed customer records stay outside Git.
 
-If setup fails, agree explicitly to an alternative outcome, reschedule or refund. Do not quietly substitute a specification for a promised working artifact. Reconcile precise terms with [operations](05-OPERATIONS.md) before collecting payment.
+Run the revised hour with an adult and separately ask someone to read/use a chapter without live assistance. Record actual timing, explain-back and whether they can define a checkable next prompt. No observed rehearsal is claimed yet.
 
-## Rehearsal acceptance
+## Personal-session terms still to decide
 
-Use fictional data and observe the sequence: inquiry, fit, scoped slot, sandbox payment, seminar, checks, kit delivery and clarification. Also walk through no-fit, canceled/pending payment, duplicate notification, unavailable tools, wrong delivery permissions, owner cancellation and refund. Open the kit from a fresh folder and have a tester explain the refinement.
-
-Record actual elapsed delivery time and whether the tester can repeat the relevant step; do not count a written checklist as a successful rehearsal. Use ordinary task reports without credit totals. A deliberate credits-to-result teaching example follows the measurement boundaries in the seminar PRD.
-
-Private records need only the contact/consent route, scope, slot, payment reference/status, delivery, outcome, support and remedy history needed to operate the service. Public docs hold blank requirements and anonymized findings, not customer records.
+The prior handoff/support/cancellation proposals are not approved promises. Before a sale choose exact scope, booking, remedies, cancellation/no-show, support and update terms. The standalone guide needs its own delivery/refund/support terms rather than inheriting live-session policies.

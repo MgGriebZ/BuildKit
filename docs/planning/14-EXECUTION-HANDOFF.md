@@ -1,57 +1,49 @@
-# Room seminar execution slices
+# Execution handoff: AI introduction and live build
 
-Revision 0.5 · September 27, 2026. Use [PRD R](13-PRD-COZY-ROOM.md) for the product and this file for execution boundaries. These are ready-to-use goal prompts; no loop or automation has been started.
+Revision 0.6 · September 28, 2026. Read [15-PRD-AI-INTRO-LIVE-BUILD.md](15-PRD-AI-INTRO-LIVE-BUILD.md), [03-PRD-COURSE.md](03-PRD-COURSE.md) and [16-TOOLS-MODELS-AND-COSTS.md](16-TOOLS-MODELS-AND-COSTS.md). Old L1/R1/R2/L2/L3 prompts are completed or superseded; do not dispatch them as new work.
 
-## Settled inputs
+## Existing evidence and starting points
 
-- First example: PocketPlayroom-inspired Cozy Room; two-style lamp baseline, then third style and gentle feedback.
-- Public source/guide home: BuildKit. Private presenter home: owner-created `MgGriebZ/BuildWithGriebZ`, verified private with admin access.
-- Standalone Blazor WebAssembly/.NET 10; SDK 10.0.302 observed locally. PocketPlayroom's existing .NET 9 app is a reference; its upgrade is separate.
-- Adult seminar audience, one prepared hour, free community and paid personal formats. Price, booking windows and first host remain owner decisions that do not block local room preparation.
-- PR #2 contains the generic event worksheet and remains independent. Use the branch containing these requirements until its PR is merged; never merge another PR implicitly to begin a slice.
+Public requirements/R1/R2/L2 merged in BuildKit PRs #3–#7. Public main was `b4e4a7fe7eb78b726dfdb0d96b840d2a2ad00449` before this requirements revision. R2 source/test checkpoint is `91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`; standalone export tree is `15a93acae7e12fea71ea768b9198428f39a5a312`. R1 source is `40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`. Existing L2 exercise content is `814d525a2d41f62e43adfc976049bdb2c0b68233`.
 
-## Work order
+Current revision is on `planning/ai-intro-live-build` in each repo. Use its reviewed requirements while its PR is open, then main after merge. Public and private branches have different history. Private requirements branch starts from `work/l3-cozy-room`; preserve that dependency. Check actual heads and dirty state before branching. A2 worksheet PR #2 is independent.
 
-| Slice | Model / repository | Allowed output | Acceptance and next step |
+## Next slices
+
+| ID | Worker / repository | Allowed outputs | Acceptance and stop |
 |---|---|---|---|
-| L1 | Luna / private BuildWithGriebZ | `seminars/cozy-room/` planning material | 60-minute script outline, diagram specifications, rehearsal checklist, handoff template; mark app-dependent details unverified. Can run beside R1 |
-| R1 | Sol / public BuildKit | `examples/cozy-room/` | Independent baseline with two styles, persistence and recovery; build/rule/browser checks recorded; baseline commit identified |
-| R2 | Sol / public BuildKit | `examples/cozy-room/` | Add third style and feedback, retain baseline save compatibility and input behavior; finished checkpoint identified |
-| L2 | Luna / public BuildKit | `lessons/free/cozy-room/` | Write guide against R1/R2 exact revisions; checkpoint manifest, scoped export instructions and actual local reopening check |
-| L3 | Luna / private BuildWithGriebZ | `seminars/cozy-room/` | Update presenter material to observed demo; diagram sources/static fallbacks, 60-minute free-class adaptation and recovery; reference public files rather than duplicate app code |
-| H1 | Owner with adult tester | Private rehearsal record | Timed rehearsal, learner explain-back/repeat attempt, device and host facts; agent prep alone does not close this |
-| U1 | Sol / PocketPlayroom, later separately scoped | One selected upstream room change | Review evidence, agree exact improvement, preserve product invariants; separate PR before any production release |
+| L4 | Luna / private BuildWithGriebZ | `courses/ai-intro/`, `seminars/cozy-room/` | Draft six chapters, glossary, setup routes, prompt cards, cost explanation, audience choices and fallback; link pending R3 honestly. Check timing/links and source dates; commit/push PR |
+| R3 | Sol / public BuildKit | `examples/cozy-room/` | Implement/check three-star game and reference checkpoint; document reproducible starting tree, real prompts, failed attempts, commands and timing without private transcripts. Preserve R1/R2; commit/push PR |
+| L5 | Luna / public BuildKit, then separate private PR | Public `lessons/free/ai-intro/`, `lessons/free/cozy-room/`; private `courses/ai-intro/`, `seminars/cozy-room/` | After R3: synchronize actual prompts, checkpoints and before/after lesson; reopen scoped export and check independent instructions. Separate commits/PRs per repo |
+| D1 | Sol / BuildKit plus private inventory | Public `docs/hosting/`, `.github/workflows/`, sample hosting config in `examples/cozy-room/`; private inventory outside Git | Read-only selected Azure inventory first, propose existing/new host, prepare and validate a manually triggered workflow and deployment instructions. No dispatch/resource change in this slice |
+| H1 | Matt and adult tester | Private observation record | Rehearse the revised hour and independent reader path; record actual prompt/build/repair timing and explain-back |
+| P1 | Luna + owner, after L5/H1 | Private `courses/ai-intro/release/` | Concrete edition inventory, price/format/delivery/terms decisions and delivery test plan; no checkout activation until directed |
+| U1 | Sol / PocketPlayroom, only if selected later | One explicitly selected upstream feature | Separate product change and PR; never import private source into public tutorial |
 
-R1 -> R2 -> L2 and L1 -> L3 -> H1 are the main paths; L3 also needs L2. A new marketing site, merged event worksheet, Stripe setup and full paid course are not prerequisites for these local outputs. A1/A3 branding/site tickets remain supporting work.
+L4 and R3 can proceed in parallel after requirements review. L5 depends on their actual outputs. D1 is optional and not a prerequisite for local teaching. H1 follows the synchronized materials; P1 follows the useful tested edition. Marketing work uses the revised offer, not the old session-only copy.
 
-## Shared execution contract
+## Shared contract
 
-Read the repository's AGENTS.md and current requirements first. Check clean/dirty state, preserve other changes, and create a feature branch from the required approved checkpoint. If these planning PRs are still open, use their reviewed branch contents explicitly and state the base; do not silently run against stale main. Linked PRs may be stacked; when a dependency merges, retarget/rebase deliberately and recheck the diff.
+Read repository AGENTS.md and this revision. Preserve existing edits. Create a scoped branch, inspect the diff and run proportionate checks. Commit, push and open a PR; attach it to the chat. Each default slice stops at its acceptance criteria and reviewable PR. No automatic merge, resource creation, deployment, checkout, outreach or purchases. Earlier explicit owner authorization governs any separately requested action.
 
-Work to the named slice's acceptance criteria, commit the scoped files, push a branch and open a PR. Attach the PR to the chat. Stop with a concise result and remaining human checks. No automatic merge, public deployment, source-visibility change, purchases, outreach or unrelated app migration is included in these default goals. A requested implementation goal authorizes the named source/guide changes and their checks.
+Use the selected worker model. Luna handles bounded authoring and mechanical reconciliation; Sol handles app integration and hosting workflow. These worker assignments are not learner levels or claims that vendors' models are interchangeable. No routine credit reports; the teaching case study records only its isolated observed usage or explicit unknowns.
 
-Use the requested model for its slice. Luna may report a precise integration blocker for Sol after one focused repair; it should not repeatedly regenerate the app. Record practical test results, not routine credit counts. Bounded goals end at a reviewable PR; a recurring unattended loop is unnecessary for this sequence.
+## Goal: L4 / Luna
 
-## Goal: Luna / L1
+> Execute L4 in private BuildWithGriebZ from planning/ai-intro-live-build (or its merged successor). Read planning/ROOM-SEMINAR-HANDOFF.md and public PRDs 03/15/16 plus handoff 14. Write only courses/ai-intro/ and seminars/cozy-room/. Draft a concise standalone introduction with six chapters, glossary, free/paid setup routes, cost references and a flexible 60-minute script. Live AI prompting and a three-star game extension are central; palette editing is optional practice. Include specific inspect/implement/check/repair/handoff cards, audience choices and a truthful fallback. Mark R3 results/transcript/usage pending until observed. Preserve source references and keep paid prose private. Check timing, links and internal consistency. Commit, push and open a private PR; stop for review.
 
-> In the private MgGriebZ/BuildWithGriebZ checkout, execute L1 using planning/ROOM-SEMINAR-HANDOFF.md and the linked public PRD R. Author only seminars/cozy-room/: a 60-minute seminar outline, speaker-note draft, specifications for a few diagrams, a rehearsal checklist and blank client handoff. Teach the two-style lamp baseline -> third style plus gentle feedback, explaining local saves and verification. Provide free-group and personal-session pacing using one core. Mark all unbuilt app behavior and file references pending; don't invent results. Verify timing sums, links and consistency. Commit, push a private branch and open a PR. Stop at the reviewable draft; no merge or deployment.
+## Goal: R3 / Sol
 
-## Goal: Sol / R1
+> Execute R3 in BuildKit using the reviewed revision 0.6 requirements in docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md and 13-PRD-COZY-ROOM.md. Write only examples/cozy-room/. Start from the current R2 app, preserve its historical commits, and add three accessible star buttons with single collection, 0/3 through 3/3 progress, calm completion and replay. The round is temporary on reload; preserve lamp state/storage. No runtime AI, backend, timer or leaderboard. Build a checked reference result and record a repeatable live prompt path from a clean R2 tree, including real failures and timing; don't invent usage. Validate unique collection/replay, keyboard/mouse/touch, progress announcement, reduced motion, reload reset and lamp regression, plus build/test/publish. Record exact baseline/finished/export revisions and outstanding human checks. Commit, push, open a PR and stop; no merge or deploy.
 
-> In MgGriebZ/BuildKit, execute R1 from docs/planning/13-PRD-COZY-ROOM.md and 14-EXECUTION-HANDOFF.md. Write only examples/cozy-room/. Build an original standalone .NET 10 Blazor WebAssembly Cozy Room with one lamp, two styles, semantic activation and versioned isolated local persistence with documented recovery. Keep all run/build configuration within the subtree. Use original HTML/CSS/SVG art and no private repository dependency. Record SDK/packages, run focused rules and browser checks including reload, keyboard/touch, reduced motion and storage failures, and verify Release output. Record what needs real-device/human testing. Commit the baseline, push a feature branch and open a PR. Stop there; no merge or deployment.
+## Goal: L5 / Luna
 
-## Goal: Sol / R2
+> After L4 and R3 supply actual checked revisions, execute L5. In BuildKit update only lessons/free/ai-intro/ and lessons/free/cozy-room/ with a useful free takeaway, prompt/check framework, documented feature exercise, exact checkpoints and free/local path. Keep private paid chapters out of the public repository. In a separate BuildWithGriebZ branch update only courses/ai-intro/ and seminars/cozy-room/ against that evidence. Export only the app subtree, reopen it and check the documented commands. Match real prompt results and cost unknowns; do not inherit R2 test counts as R3 evidence. Commit/push separate PRs, attach both and stop before release.
 
-> Continue from R1's reviewed baseline revision in BuildKit. Execute R2 in examples/cozy-room/: add the third lamp style and gentle feedback from PRD R. Keep the baseline checkpoint immutable and record its commit. Check all style cycles, older valid save compatibility, reload persistence, keyboard/mouse/touch and reduced motion. Avoid expanding the room. Commit a finished checkpoint, push the branch and open/update the explicitly named slice PR with evidence. Stop for review; no merge or deployment.
+## Goal: D1 / Sol
 
-## Goal: Luna / L2
+> Prepare D1 from the reviewed revision 0.6 requirements. Establish the selected Azure subscription/target from owner context; if ambiguous, prepare the offline workflow and request only the missing selection. Inspect resources/quotas read-only and keep identifiers outside Git. Do not delete resources, change a plan or provision a subscription to work around limits. Prepare a manually triggered deployment workflow and hosting instructions that publish only the Cozy Room static output with the pinned .NET SDK, named target environment and protected credentials. Validate the build/output and config locally; do not dispatch the workflow or create resources. If quota blocks a new app, document a scoped existing-host option or local-demo fallback. Commit/push a PR and report the concrete destination/cost decision still needed.
 
-> After R1/R2 have actual checked revisions, author only lessons/free/cozy-room/ in BuildKit. Use the real baseline/finished source to write a concise follow-along with viewer/editor prerequisites, exact commands, changed files, prompts, expected output, recovery and done checks. Include a manifest of both full commit IDs and instructions that export only examples/cozy-room/ to temporary local packages. Open each export independently and check the documented run path using the existing toolchain. State any missing tools; don't install globally or claim a check you couldn't run. Record source/license release status accurately. Commit, push and open a PR; no merge or deployment.
+## Review result required from every worker
 
-## Goal: Luna / L3
-
-> In private BuildWithGriebZ, finish L3 after the public guide and demo have checked revisions. Update only seminars/cozy-room/ to the actual behavior and paths; create readable diagram sources with static/text fallbacks, presenter recovery steps and a free 60-minute class adaptation. Link to the public source/checkpoints rather than copying app code. Check pacing and references; leave actual timed adult rehearsal and physical-device checks as owner tasks. Commit, push and open a private PR. Stop at the reviewed kit; no outreach, merge or deployment.
-
-## Owner choices before release or paid delivery
-
-Original sample source license, public hosting destination, first host/date/audience details, price/customer policies and business/payment readiness. Their resolution is timed to the affected release or sale, not a prerequisite to L1 or R1. See [readiness](10-READINESS.md).
+Changed paths and artifact links; observed checks; exact reference revisions; unverified/pending items; next dependency. An actual live run, a prepared recording and a successful deployment are distinct. Never mark H1 done from agent checks alone.

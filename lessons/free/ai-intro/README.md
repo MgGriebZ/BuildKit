@@ -26,6 +26,28 @@ Matt uses MgGriebZ.com as a daily calendar and RoadScript for regular work. His 
 
 ## Choose an accessible next step
 
+### A five-minute practice without code
+
+1. Use a blank note or a new conversation in an AI product you can already access. If access is unavailable, write a response yourself; do not buy anything for this practice.
+2. Copy this whole fictional request:
+
+```text
+Write a three-sentence status update using only these fictional notes:
+Requests arrive by email. A two-week pilot is proposed, not approved.
+IT must confirm access first. No launch date, individual owner or budget is decided.
+Preserve proposals and unknowns. Do not invent commitments or send anything.
+```
+
+3. Check the answer against each note. “Proposed” must not become “approved”; “must confirm” must not become “has confirmed.” IT names a role, not an assigned person.
+4. If a statement is unsupported, quote it and ask for a correction using the source note. Review the complete revision. If no error is found, say so; do not manufacture a failure.
+5. Stop with a reviewed draft and one question a person must answer. No calendar connection, file upload, roadmap import or deployment is needed.
+
+**Prepared comparison, not a live response:** “Requests currently arrive by email. A two-week pilot is proposed, but is not approved and requires IT access confirmation first. The launch date, individual owner and budget remain undecided.”
+
+**Authored error to spot:** “The approved pilot starts Monday.” Both approval and Monday are unsupported. This deliberately flawed sentence is not a reported model failure.
+
+This is an estimated five-minute exercise, not evidence that a learner has completed it.
+
 Read or watch without buying AI/cloud tools. For an AI attempt, use suitable available access and appropriate data. Tool subscriptions, metered AI usage and hosting are different costs; the completed Cozy Room makes no model calls while you play.
 
 Pick one everyday or professional task. State what would make the output useful, what context is missing and how you would check it. Exact product features and terms can change; use the dated references and your account information. Physical-device/screen-reader and human learner checks for the course remain pending. The sample source's reuse license is still an owner decision.

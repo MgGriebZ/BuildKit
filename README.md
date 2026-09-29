@@ -1,13 +1,9 @@
-# Build with GriebZ
+# BuildKit — public reference snapshot
 
-Understand AI, use it for everyday and professional work, and learn how to communicate a goal and check the result.
+Active business, course, kit and sales-page development now lives in the private BuildWithGriebZ repository. This public repository is parked until an intentional distribution release. There is no ongoing synchronization.
 
-## Current direction — revision 0.7
+All previously open PRs (#2 and #8–#12) were merged on September 28, 2026. The checked [Cozy Room sample](examples/cozy-room/README.md), [free lesson](lessons/free/ai-intro/README.md) and commit history remain available.
 
-**AI in Practice: Chat, Work & Code** is the working title for a concise guide and educational community hour. Matt's daily use of MgGriebZ.com and RoadScript grounds the story. Chat covers useful conversation, Work turns information into a reviewed deliverable, and Code shows a small software change. These uses overlap; they are not learner levels or vendor tiers.
+The original BuildKit-PRD.md and docs/planning/ describe historical drafts. Their prices, next-slice instructions and old open-PR statuses are superseded by private development. Future public material will be packaged from the private working repository when ready.
 
-Read [the brief](docs/planning/00-START-HERE.md), [current teaching PRD](docs/planning/15-PRD-AI-INTRO-LIVE-BUILD.md), [RoadScript evidence](docs/planning/17-ROADSCRIPT-CASE-STUDY.md) and [execution handoff](docs/planning/14-EXECUTION-HANDOFF.md).
-
-R1/R2/L2 are merged. R3's Cozy Room mini-game is built and checked in PR #9; L4/L5 guide work is drafted and synchronized in open PRs. Cozy Room remains an [optional Code example](lessons/free/cozy-room/README.md). The [free introduction](lessons/free/ai-intro/README.md) applies across Chat, Work and Code. The revised hour and independent learner path need human rehearsal.
-
-Full guide and presenter authoring live in private BuildWithGriebZ. Public code and selected free lessons live here. [Tools and costs](docs/planning/16-TOOLS-MODELS-AND-COSTS.md) and [readiness](docs/planning/10-READINESS.md) record remaining choices. No new hosting, sale or deployment is established. The original BuildKit-PRD.md is historical.
+Consolidation preserves original R1/R2/R3 commits and their recorded evidence. It does not publish a new website or activate a sale.

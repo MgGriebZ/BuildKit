@@ -12,6 +12,8 @@ This revision starts from public work/l5-ai-intro-public (501e43c) and private w
 
 ## Next slices
 
+L6 preparation update (September 28): the owner requested direct main-assistant review instead of delegation. Complete copyable Chat/Work practice, answer keys, readable demo fallback and an independent learner protocol are prepared on work/l6-beginner-polish, based on public #11/private #6. Links and content receive document checks; the selected-product prompt run and all H1 human evidence remain pending. Do not repeat the authoring slice wholesale; complete the open evidence and use observed confusion for further edits. No runtime change or release is part of L6.
+
 | ID | Worker / scope | Output and stopping point |
 |---|---|---|
 | L6 | Luna / private courses/ai-intro/ and seminars/cozy-room/; selected public lessons/free/ai-intro/ in a separate PR | Beginner/visual polish, a recorded fictional Chat/Work attempt and checked reader steps; preserve prepared/observed distinction; scoped PRs |

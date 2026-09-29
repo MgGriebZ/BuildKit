@@ -1,8 +1,8 @@
-# Cozy Room — R2 refinement
+# Cozy Room — R3 star hunt
 
-A small, standalone Blazor WebAssembly room: activate the bedside lamp to cycle through **Honey stripes**, **Mint dots** and **Rose diamonds**, then reload to find your choice remembered. The bedroom and lamp are original inline SVG; color and pattern both distinguish the styles. There are no accounts, analytics, external runtime APIs or private repository dependencies.
+A small, standalone Blazor WebAssembly room: find three stars, watch progress reach **3/3**, and choose **Replay** for another round. The bedside lamp still cycles through **Honey stripes**, **Mint dots** and **Rose diamonds** and remembers its style on reload. The bedroom, lamp and stars are original inline SVG. There are no accounts, analytics, external runtime APIs or private repository dependencies.
 
-R2 adds an original rose shade with outlined diamonds and a soft 480 ms ring around the shade after each style activation. The public follow-along is available in `lessons/free/cozy-room`; presenter rehearsal remains ahead. This source is on BuildKit `main`; the room has not been deployed.
+R3 adds temporary star-round state to the checked R2 room. The R2 lamp/save schema and soft 480 ms lamp acknowledgement remain intact. This implementation is on the R3 review branch; deployment and presenter rehearsal remain ahead. [R3-RUN.md](R3-RUN.md) records the actual development attempt, observed failure, checks and a prepared prompt path from R2. L5 will synchronize the learner guide with these results.
 
 ## Open and run
 
@@ -30,11 +30,13 @@ Open `http://127.0.0.1:5188`. The local preview binds only to loopback. Node ser
 
 ## Play and recover
 
+Click, tap, or use Tab and Enter/Space on the window, bed and rug stars in any order. Each counts once. Collected stars show a checkmark and a collected accessible name; they stay focusable with `aria-disabled` so collecting one keeps your keyboard position. The progress line is a polite, atomic status region. At 3/3 it shows a calm completion message and **Replay**. Replay resets only the round and moves focus to the window star. Reload also starts at 0/3 while the lamp's remembered style returns. The stars use static feedback, including with reduced motion.
+
 Click or tap the lamp. Keyboard users can Tab to its native button, then press Enter or Space; its current style is in the accessible button name and focus is visible. The button stays mounted and keeps focus while only the decorative ring is recreated for each action. The ring gently expands and fades once; it is absent on initial load, reload and reset. With reduced motion, CSS hides the ring and disables its animation entirely; the style and save still change. Changing the preference during feedback also stops the cue.
 
 **Room care**, below the play surface, explains the local save and offers **Start a fresh room**. It asks for confirmation before replacing this example's saved choice. **Keep this room** cancels without writing anything. A successful fresh start remembers Honey stripes.
 
-The only storage key used is `buildwithgriebz.cozy-room.baseline.v1`. R2 intentionally keeps that R1 key and version-1 schema: `version`, `roomId`, `objectId` and `lampStyle` (now 0, 1 or 2). Old valid R1 styles 0 and 1 restore without rewriting the record on load. Unknown value 3 remains invalid and protected. The record is limited to 4,096 characters and validated by C# before use. It never opens PocketPlayroom's household storage or clears all browser data.
+The only storage key used is `buildwithgriebz.cozy-room.baseline.v1`. R2/R3 intentionally keep that R1 key and version-1 schema: `version`, `roomId`, `objectId` and `lampStyle` (0, 1 or 2). Star progress is never serialized or written to storage. Old valid R1 styles 0 and 1 restore without rewriting the record on load. Unknown value 3 remains invalid and protected. The record is limited to 4,096 characters and validated by C# before use. It never opens PocketPlayroom's household storage or clears all browser data.
 
 | Stored/browser condition | Behavior |
 |---|---|
@@ -55,16 +57,18 @@ Keep simultaneous baseline/finished previews on **different origins** because th
 | File/project | Responsibility |
 |---|---|
 | `src/CozyRoom.Core/RoomRules.cs` | C# style cycle, save validation and serialization; no browser dependency |
-| `src/CozyRoom.App/App.razor` | Semantic lamp button, state/rendering, persistence notices and confirmed reset |
+| `src/CozyRoom.Core/StarRound.cs` | In-memory unique collection and completion rules, independent of lamp/save state |
+| `src/CozyRoom.App/App.razor` | Native lamp/star controls, round/status rendering, replay focus, persistence notices and confirmed lamp reset |
 | `src/CozyRoom.App/Components/LampArt.razor` | Three original style renderings, including outlined diamonds |
+| `src/CozyRoom.App/Components/StarArt.razor` | Original star shape and non-color collected checkmark |
 | `src/CozyRoom.App/Components/RoomBackdrop.razor` | Original static bedroom art |
 | `src/CozyRoom.App/wwwroot/css/room.css` | Scene framing, input/focus, third palette, brief acknowledgement and reduced-motion override |
 | `src/CozyRoom.App/Services/BrowserRoomStore.cs` | Blazor storage interop boundary |
 | `src/CozyRoom.App/wwwroot/js/room-storage.js` | Small localStorage read/write adapter; no game logic |
 | `tests/CozyRoom.Core.Tests/` | Rules and schema checks |
-| `tests/browser/baseline.mjs` | Extended R2 checks against published output; filename retained from R1 |
+| `tests/browser/baseline.mjs` | 12 lamp/save regression scenarios and 9 R3 game scenarios against published output; filename retained from R1 |
 
-The interaction path is **native button → C# state → SVG rendering → browser storage**. The example intentionally has no dragging, audio, physics, more furniture interactions, checkout or course promotion.
+The lamp path is **native button → C# state → SVG rendering → browser storage**. The star path is **native button → in-memory C# round → star/status rendering**. The example intentionally has no timer, leaderboard, dragging, audio, physics, backend, checkout or course promotion.
 
 ## Browser checks
 
@@ -82,6 +86,8 @@ Reports and screenshots are generated under ignored `artifacts/`. See [VALIDATIO
 ## Checkpoint and distribution boundary
 
 The immutable R1 source baseline is **`40bc75fa779ce3a3a9c4f94a3f6dda18109a3ffc`**. R2 starts exactly from reviewed R1 PR #4 head **`15d24cfa060f8cd0b45084426aba7c2eaebce4c1`**, which adds the manifest and validation record to that source. The finished R2 runtime/test source checkpoint is **`91eab16835aac4cfd80a7f51017ac62f5cc6b9bd`**; both source checkpoints are identified in `checkpoint.json`. The lesson manifest records the self-contained review-tree revisions used for exports. Export only the example subtree, **not the full repository or its history**:
+
+For the star lesson, use R2 standalone start **`15a93acae7e12fea71ea768b9198428f39a5a312`**. The checked R3 runtime/test checkpoint is **`7516e7b29908108a6567b5859fab5faab4d849f8`**. The independently reopened R3 standalone export is **`96d51856825cfd36c758aebb55c3c716a2173451`**. Its app/tests match the runtime checkpoint; the export also includes instructions and run evidence. This following metadata revision pins that immutable export in [checkpoint.json](checkpoint.json) and [VALIDATION.md](VALIDATION.md). The historical R1/R2 references above remain available.
 
 ```powershell
 # From the BuildKit repository root; replace CHECKPOINT_COMMIT with the chosen full SHA.

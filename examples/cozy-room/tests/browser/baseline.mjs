@@ -8,6 +8,7 @@ const saved = style => JSON.stringify({ version: 1, roomId: 'cozy-room', objectI
 const url = 'http://127.0.0.1:5188';
 const channel = process.env.COZY_BROWSER_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined);
 const results = [];
+const gameResults = [];
 const errors = [];
 const externalRequests = [];
 let browser;
@@ -66,6 +67,16 @@ try {
         assert(lamp.width >= 44 && lamp.height >= 44, 'Lamp target must be at least 44px');
         assert(lamp.x >= room.x && lamp.y >= room.y && lamp.x + lamp.width <= room.x + room.width && lamp.y + lamp.height <= room.y + room.height, 'Lamp should stay in the scene');
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), 'No horizontal overflow');
+        const targets = [lamp];
+        for (let star = 0; star < 3; star++) {
+            const box = await page.getByTestId(`star-${star}`).boundingBox();
+            assert(box.width >= 44 && box.height >= 44, 'Star target must be at least 44px');
+            // Leave room for the 3px outline and its 5px offset inside the clipped scene.
+            assert(box.x - 8 >= room.x && box.y - 8 >= room.y && box.x + box.width + 8 <= room.x + room.width && box.y + box.height + 8 <= room.y + room.height, 'Star and focus outline should stay in the scene');
+            for (const other of targets)
+                assert(box.x >= other.x + other.width || other.x >= box.x + box.width || box.y >= other.y + other.height || other.y >= box.y + box.height, 'Play targets should not overlap');
+            targets.push(box);
+        }
     }
 
     async function checkAcknowledgement(page, reduced = false) {
@@ -222,9 +233,148 @@ try {
         results.push('Unavailable storage: play and explicit volatile reset remain usable');
         await context.close();
     }
+
+    async function progress(page, count) {
+        await page.waitForFunction(count => document.querySelector('[data-testid="round-status"]').textContent.startsWith(`${count}/3`), count);
+        const status = page.getByTestId('round-status');
+        assert.equal(await status.getAttribute('role'), 'status');
+        assert.equal(await status.getAttribute('aria-live'), 'polite');
+        assert.equal(await status.getAttribute('aria-atomic'), 'true');
+        assert.equal(await page.getByTestId('replay').count(), count === 3 ? 1 : 0);
+        if (count === 3) assert.match(await status.innerText(), /You found every star/);
+    }
+    async function collectAll(page, input = 'click', order = [0, 1, 2]) {
+        let count = 0;
+        for (const star of order) {
+            const target = page.getByTestId(`star-${star}`);
+            await target[input](); await progress(page, ++count);
+            assert.equal(await target.getAttribute('aria-disabled'), 'true');
+            assert.equal(await target.getAttribute('data-collected'), 'true');
+            assert.match(await target.getAttribute('aria-label'), /star collected/);
+            assert.equal(await target.locator('.star-check').count(), 1, 'A checkmark distinguishes collected stars without color');
+            // Locator actions honor aria-disabled. Real pointer events still reach
+            // these focusable buttons, so verify the application's repeat guard.
+            const box = await target.boundingBox();
+            if (input === 'tap') await page.touchscreen.tap(box.x + box.width / 2, box.y + box.height / 2);
+            else await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+            await progress(page, count);
+        }
+    }
+    async function replay(page, input = 'click') {
+        await page.getByTestId('replay')[input](); await progress(page, 0);
+        await page.waitForFunction(() => document.activeElement === document.querySelector('[data-testid="star-0"]'));
+        for (let star = 0; star < 3; star++) {
+            const target = page.getByTestId(`star-${star}`);
+            assert.equal(await target.getAttribute('aria-disabled'), 'false');
+            assert.equal(await target.getAttribute('data-collected'), 'false');
+            assert.equal(await target.locator('.star-check').count(), 0);
+        }
+    }
+    {
+        const initialSave = saved(2);
+        const { context, page } = await open({ viewport: { width: 1280, height: 900 } }, initialSave);
+        await progress(page, 0);
+        for (const [star, name] of ['window', 'bed', 'rug'].entries())
+            assert.equal(await page.getByTestId(`star-${star}`).getAttribute('aria-label'), `Collect ${name} star`);
+        await collectAll(page, 'click', [2, 0, 1]);
+        assert.equal(await raw(page), initialSave);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), [], 'Collecting does not write a save');
+        await checkLayout(page);
+        await page.screenshot({ path: 'artifacts/screenshots/game-complete.png', fullPage: true });
+        await replay(page);
+        assert.equal(await raw(page), initialSave);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), [], 'Replay does not write a save');
+        await page.getByTestId('star-1').click(); await progress(page, 1);
+        await page.getByTestId('lamp').click(); await style(page, 0);
+        await page.reload(); await style(page, 0); await progress(page, 0);
+        await collectAll(page);
+        await page.reload(); await style(page, 0); await progress(page, 0);
+        await checkIsolation(page);
+        gameResults.push('Mouse: out-of-order unique collection, repeated activation, completion/checkmarks, replay focus, partial/complete reload reset and unchanged lamp persistence');
+        await context.close();
+    }
+    {
+        const { context, page } = await open({ viewport: { width: 1280, height: 900 } });
+        await page.getByTestId('lamp').focus();
+        for (let star = 0; star < 3; star++) {
+            await page.keyboard.press('Tab');
+            const target = page.getByTestId(`star-${star}`);
+            assert(await target.evaluate(el => el === document.activeElement), 'Native Tab order reaches each star');
+            assert.notEqual(await target.evaluate(el => getComputedStyle(el).outlineStyle), 'none');
+            await page.keyboard.press(star === 1 ? 'Space' : 'Enter'); await progress(page, star + 1);
+            assert(await target.evaluate(el => el === document.activeElement), 'Collection retains focus');
+            await page.keyboard.press('Space'); await progress(page, star + 1);
+        }
+        await page.keyboard.press('Tab');
+        assert(await page.getByTestId('replay').evaluate(el => el === document.activeElement));
+        await page.keyboard.press('Enter'); await progress(page, 0);
+        await page.waitForFunction(() => document.activeElement === document.querySelector('[data-testid="star-0"]'));
+        await page.keyboard.press('Enter'); await progress(page, 1);
+        await checkLayout(page);
+        await page.screenshot({ path: 'artifacts/screenshots/game-keyboard.png', fullPage: true });
+        gameResults.push('Keyboard: Tab order, Enter/Space, retained focus after collection, polite atomic status and replay returning focus to first star');
+        await context.close();
+    }
+    for (const [name, viewport] of [['tablet', { width: 1024, height: 768 }], ['narrow', { width: 390, height: 844 }], ['minimum', { width: 280, height: 800 }]]) {
+        const { context, page } = await open({ viewport, hasTouch: true });
+        await collectAll(page, 'tap', [1, 2, 0]);
+        await checkLayout(page);
+        await page.screenshot({ path: `artifacts/screenshots/game-${name}.png`, fullPage: true });
+        await replay(page, 'tap');
+        await page.getByTestId('lamp').tap(); await style(page, 1);
+        await page.reload(); await style(page, 1); await progress(page, 0);
+        await checkIsolation(page);
+        gameResults.push(`${name}: emulated touch unique collection/replay, 44px targets with visible focus space/no overlap, reload reset and lamp regression`);
+        await context.close();
+    }
+    {
+        const { context, page } = await open({ reducedMotion: 'reduce' });
+        await collectAll(page);
+        assert.equal(await page.locator('.star-button').evaluateAll(els => els.flatMap(el => el.getAnimations({ subtree: true })).length), 0);
+        await replay(page);
+        await page.getByTestId('lamp').click(); await style(page, 1); await checkAcknowledgement(page, true);
+        gameResults.push('Reduced motion: collection/completion/replay use static feedback; no star animation, existing lamp cue remains suppressed');
+        await context.close();
+    }
+    {
+        const seed = '{"version":99,"unknown":"keep"}';
+        const { context, page } = await open({}, seed);
+        await collectAll(page); await replay(page);
+        assert.equal(await raw(page), seed);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), []);
+        await page.getByTestId('lamp').click(); await style(page, 1);
+        await page.reload(); await style(page, 0); await progress(page, 0);
+        assert.equal(await raw(page), seed);
+        await checkIsolation(page);
+        gameResults.push('Protected save: star play/replay never writes or replaces an unreadable future lamp save; lamp protection and round reload reset remain intact');
+        await context.close();
+    }
+    {
+        const { context, page } = await open({}, null, 'denied');
+        await collectAll(page); await replay(page);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), []);
+        await page.getByTestId('lamp').click(); await style(page, 1);
+        assert.match(await page.getByTestId('save-status').innerText(), /can't remember/);
+        gameResults.push('Denied storage: star play/replay stays usable without storage calls; lamp play and persistence notice remain intact');
+        await context.close();
+    }
+    {
+        const initialSave = saved(2);
+        const { context, page } = await open({}, initialSave, 'write-fails');
+        await collectAll(page); await replay(page);
+        await page.getByTestId('lamp').click(); await style(page, 0);
+        assert.match(await page.getByTestId('save-status').innerText(), /couldn't save/);
+        await collectAll(page); await replay(page);
+        assert.equal(await raw(page), initialSave);
+        assert.deepEqual(await page.evaluate(() => window.__roomStorageWrites), [key]);
+        await page.reload(); await style(page, 2); await progress(page, 0);
+        await checkIsolation(page);
+        gameResults.push('Write failure: rounds remain playable, only the lamp attempts storage, previous save survives and reload resets the round');
+        await context.close();
+    }
     assert.deepEqual(errors, [], 'No unhandled browser exceptions');
     assert.deepEqual(externalRequests, [], 'No external runtime requests');
-    const report = { slice: 'R2 three-style validation', browser: browser.version(), channel: channel || 'chromium', results, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'PWA/offline reload and timed rehearsal remain untested.'] };
+    const report = { slice: 'R3 three-star game validation', browser: browser.version(), channel: channel || 'chromium', lampRegressionResults: results, gameResults, errors, externalRequests, limitations: ['Touch is emulated; no physical device or human learner test.', 'Polite live-region markup/content were checked; no human screen-reader check.', 'PWA/offline reload and timed rehearsal remain untested.'] };
     await writeFile('artifacts/browser-results.json', JSON.stringify(report, null, 2));
     console.log(JSON.stringify(report, null, 2));
 } finally {

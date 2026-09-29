@@ -11,7 +11,7 @@
         <span class="room-number" aria-hidden="true">01</span>
     </header>
 
-    <section class="room-frame" aria-label="A cozy bedroom with a lamp to personalize">
+    <section class="room-frame" aria-label="A cozy bedroom with a lamp and three stars to find">
         <div class="room-scene" data-testid="room-scene">
             <RoomBackdrop />
             <button class="lamp-button style-@_state.LampStyle" type="button"
@@ -24,7 +24,31 @@
                     <span @key="_acknowledgement" class="style-acknowledgement" aria-hidden="true" data-testid="style-acknowledgement"></span>
                 }
             </button>
+            @for (var index = 0; index < StarRound.StarCount; index++)
+            {
+                var star = index;
+                var collected = _round.IsCollected(star);
+                <button @ref="_starButtons[star]" class="star-button star-@star" type="button"
+                        aria-label="@(collected ? $"{StarName(star)} star collected" : $"Collect {StarName(star).ToLowerInvariant()} star")"
+                        aria-disabled="@(collected ? "true" : "false")"
+                        data-testid="star-@star" data-collected="@(collected ? "true" : "false")"
+                        @onclick="() => CollectStar(star)">
+                    <StarArt Collected="@collected" />
+                </button>
+            }
         </div>
+    </section>
+
+    <section class="game-panel" aria-label="Find three stars">
+        <div>
+            <h2>A little star hunt</h2>
+            <p class="game-instruction">Find the three stars around the room.</p>
+            <p class="round-status" role="status" aria-live="polite" aria-atomic="true" data-testid="round-status">@RoundMessage</p>
+        </div>
+        @if (_round.IsComplete)
+        {
+            <button type="button" class="care-button replay-button" data-testid="replay" @onclick="Replay">Replay</button>
+        }
     </section>
 
     <div class="room-caption">
@@ -39,6 +63,7 @@
             <summary>Room care</summary>
             <div class="care-panel">
                 <p>Tap, click, or focus the lamp and press Enter or Space to change its style.</p>
+                <p>Stars marked with a check have been found. Replay or reload starts a new star hunt; only your lamp choice is saved.</p>
                 <p>This example remembers only this lamp in this browser. Clearing browser data removes it. It doesn't change any other playroom.</p>
                 <button type="button" class="care-button" data-testid="reset-request"
                         disabled="@(!_ready || _busy)" @onclick="RequestReset">Start a fresh room</button>
@@ -57,9 +82,28 @@
 
 @code {
     private RoomState _state = new();
+    private StarRound _round = new();
+    private readonly ElementReference[] _starButtons = new ElementReference[StarRound.StarCount];
+    private bool _focusFirstStar;
     private bool _ready, _busy, _mayWrite, _confirmReset;
     private string _notice = "Opening your room…";
     private long _acknowledgement;
+    private string RoundMessage => _round.IsComplete
+        ? "3/3 stars collected. You found every star. Nicely done."
+        : $"{_round.CollectedCount}/3 stars collected.";
+    private static string StarName(int star) => star switch { 0 => "Window", 1 => "Bed", _ => "Rug" };
+
+    private void CollectStar(int star)
+    {
+        if (_round.IsCollected(star)) return;
+        _round = _round.Collect(star);
+    }
+
+    private void Replay()
+    {
+        _round = new();
+        _focusFirstStar = true;
+    }
     private string StyleName => _state.LampStyle switch
     {
         0 => "Honey stripes",
@@ -69,6 +113,11 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (_focusFirstStar)
+        {
+            _focusFirstStar = false;
+            await _starButtons[0].FocusAsync();
+        }
         if (!firstRender) return;
         var browser = await Store.ReadAsync();
         var save = RoomRules.Read(browser.Json);

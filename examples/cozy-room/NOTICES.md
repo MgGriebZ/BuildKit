@@ -2,7 +2,7 @@
 
 ## Original example material
 
-The Cozy Room C#/Razor, HTML/CSS, storage adapter, tests, room/lamp SVG illustrations and icon were authored for this example. R2's rose diamond shade and CSS acknowledgement are also original material authored inside this subtree. No PocketPlayroom source, private presenter material, personal room names, household saves, logo artwork or downloaded image assets were copied into the sample. PocketPlayroom informed the small-room/lamp teaching concept only. Fonts use the visitor's system font stack; there are no font downloads.
+The Cozy Room C#/Razor, HTML/CSS, storage adapter, tests, room/lamp SVG illustrations and icon were authored for this example. R2's rose diamond shade and CSS acknowledgement, and R3's star/checkmark SVG and round rules, are also original material authored inside this subtree. No PocketPlayroom source, private presenter material, personal room names, household saves, logo artwork or downloaded image assets were copied into the sample. PocketPlayroom informed the small-room/lamp teaching concept only. Fonts use the visitor's system font stack; there are no font downloads.
 
 ## License decision pending
 

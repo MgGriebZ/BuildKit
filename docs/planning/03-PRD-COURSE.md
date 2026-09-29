@@ -1,38 +1,30 @@
-# PRD C: a compact introduction to building with AI
+# PRD C: a concise guide to Chat, Work and Code
 
-Revision 0.6 · September 28, 2026. Standalone guide production is now in scope under [the current product PRD](15-PRD-AI-INTRO-LIVE-BUILD.md). This replaces the earlier requirement to wait for paid session demand.
+Revision 0.7 · September 28, 2026. The guide supports [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and must make sense without the seminar. Working title: AI in Practice: Chat, Work & Code.
 
-## First edition
+## Reading path
 
-An approachable book-like guide that can be read independently, taught through a loose one-hour demonstration, or used during a personal session. Working title: Build with GriebZ: Your First AI Build. A reader should understand enough to try a small idea and judge what the AI produced. Exact price is open; an accessible one-time purchase is the direction, not a $50/$75 commitment or bestseller claim.
-
-## Reading path and chapter acceptance
-
-| Chapter | Core explanation | Reader action / evidence |
+| Chapter | Purpose | Reader result |
 |---|---|---|
-| 1. Meet your AI collaborator | Useful generation, tools, limits; why code has observable checks | Describe one useful request and how to check its answer |
-| 2. Speak the language | Model, product, agent, prompt, context, tokens, credits | Write goal/context/constraints/checks in plain language |
-| 3. From idea to a playable room | Prepared R2 baseline -> live three-star mini-game | Follow actual prompts and a before/after behavior comparison |
-| 4. Check, debug and improve | Diff, tests, browser observation, error message, repair and checkpoints | Diagnose one labeled example; verify or revert a small change |
-| 5. What it costs | Free/paid paths, subscriptions/API/hosting distinctions | Choose a feasible path and name unknown costs |
-| 6. Share it and take the next step | Local preview, optional deployment, transfer to another app | Reopen the artifact and describe one next feature with checks |
+| 1. AI, experience and judgment | Useful/fallible AI, Matt's projects and requirements perspective | Name a useful task and something to check |
+| 2. Chat: tools and useful direction | ChatGPT/Claude, products/models/agents, context and conversation | Improve an everyday request for its audience |
+| 3. Work: notes to a reviewed plan | Fictional professional input, brief/action table and RoadScript bridge | Identify facts, assumptions, unknowns and next actions |
+| 4. Review, correct and improve | Check text, decisions and software; focused correction | Find an invented commitment or unsupported claim |
+| 5. Access, cost and boundaries | Product access, metered usage, hosting and appropriate data | Choose a feasible path with known limits |
+| 6. Code and a next step | Short checked Cozy Room case and transfer to another useful task | Explain one software check or choose a non-code next action |
 
-Optional deeper sections cover tool installation, a complete prompt transcript, model choice, a website change, Azure setup, a glossary and measured-run notes. A recording is optional; it cannot carry explanations missing from the text. Target a concise first edition; do not pad to a page count.
+The existing complete R3 worked example, setup commands and technical prompts remain optional depth. Preserve exact checkpoint and validation facts. Rebuilding the three-star game is not a required reader task. Native Markdown remains the authoring format; buyer HTML/PDF packaging is undecided.
 
-## Required deliverables
+## Required material
 
-Private authoring lives under BuildWithGriebZ `courses/ai-intro/`: index, six Markdown chapters, glossary, model/cost reference, setup routes, exercises with sample checks, and an edition/release checklist. Author native Markdown first; PDF/HTML export or video production is a later packaging choice. The presenter script and prompt cards remain under `seminars/cozy-room/`.
+Private courses/ai-intro/ contains the six core chapters, glossary, viewer/Chat/Work/optional-Code setup routes, exercises, source links and edition checklist. Private seminars/cozy-room/ retains its path for continuity while its index/outline identify the broader session. A new host introduction and professional demonstration connect personal experience to the core.
 
-Public BuildKit retains `examples/cozy-room/` and `lessons/free/cozy-room/`, plus a free introductory takeaway under `lessons/free/ai-intro/`. The takeaway includes the prompt framework, one checkable exercise and links to the source; it must be useful without buying the full guide. No paid text or private records enter public build output.
+Public lessons/free/ai-intro/ gives a useful cross-domain takeaway. lessons/free/cozy-room/ remains the optional technical tutorial. No paid prose, personal calendar entries or workplace notes enter public content. RoadScript references use published examples or original fictional data.
 
-## Independent learning acceptance
+## Independent reading acceptance
 
-A reader without the live session can choose viewer/editor mode, find setup instructions, identify the prepared baseline, follow the recorded feature change, recognize a failed check and reopen the result. Include text alternatives for visual material and copyable commands with their working directory. Distinguish conceptual examples, tested instructions and proposed content.
+A novice can complete a Chat or Work exercise without Matt, a coding account or developer installation. Expected observations and sample answers distinguish known facts from missing decisions. The Code route has separate prerequisites and troubleshooting. Visuals have readable text alternatives; exports include necessary prompts and working links without private GitHub access.
 
-L4 drafts the chapter structure and explanations; R3 provides the checked game and a real prompt-run record; L5 fills the worked example and free guide from that evidence. Do not write a fictional successful transcript while R3 is pending.
+Rehearsal tests the new hour, not the previous game-focused target. A reader can explain Matt's perspective as a viewpoint, distinguish product/model/agent, and describe how to check an output. A successful app build does not establish these outcomes.
 
-## Commercial completion
-
-Before selling: choose exact price/currency/tax presentation, included formats, delivery route, source/prose licenses, support/refund terms and edition-update policy. Test recipient access and delivery failure recovery. A manual or existing delivery service is acceptable; building an LMS is not required. A standalone product and an interactive personal seminar need separate offer descriptions and operations review.
-
-See [cost reference](16-TOOLS-MODELS-AND-COSTS.md), [repository boundaries](12-REPOSITORY-BOUNDARY.md), and [execution handoff](14-EXECUTION-HANDOFF.md). No purchase flow or full manuscript is claimed complete by this PRD.
+Before sale, decide price/currency, formats, delivery, rights, support/refund and edition updates; test recipient access and failures. L6 supplies targeted reader/visual polish; P1 prepares delivery after reader/rehearsal evidence. No price or paid release is approved by this revision.

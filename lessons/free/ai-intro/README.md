@@ -1,32 +1,31 @@
-# Your first AI build: a free field guide
+# AI in practice: a free field guide
 
-AI tools can help turn a clear idea into a useful draft or a working code change. They can also misunderstand the request, invent details, or produce code that fails. Treat the result as a proposal: explain the goal, inspect the change, run it, and check the behavior you care about.
+AI can help you understand something, organize work and change software. Start with a useful outcome, give relevant context, and review what comes back.
 
-## A prompt you can reuse
+## Three ways to use the same habit
 
-Give the tool four things:
+| Lens | Try | Check |
+|---|---|---|
+| Chat | Turn a rough question into a useful explanation or draft | Does it fit your audience and the facts you supplied? |
+| Work | Turn meeting notes into a short brief and action table | Did it invent owners, dates, commitments or certainty? |
+| Code | Make one small change to an app | Does the changed behavior work, and does existing behavior still work? |
 
-1. **Context:** What are you working on, and what already works?
-2. **Goal:** What visible change should happen?
-3. **Boundaries:** What must stay the same? What files or tools are in scope?
-4. **Checks:** What will you run or observe to decide whether it worked?
+These uses overlap. You can benefit without coding. ChatGPT and Claude are assistant products; the model and available tools affect what a product can do. An agent can use tools to work across steps. Our Chat / Work / Code labels describe uses, not required purchases or a universal model ranking. See the dated [tool map](../../../docs/planning/16-TOOLS-MODELS-AND-COSTS.md).
 
-Ask it to inspect first and explain a small plan. After it edits, read the diff, run the checks, and try the feature yourself. If a check fails, share the exact relevant error and ask for one focused diagnosis or repair. Keep a known-good copy so you can recover.
+## A request you can reuse
 
-## Try it with the Cozy Room
+Give context, a goal, boundaries and checks. For example: "Use these fictional notes to draft a short update for a colleague. Preserve the facts. Separate missing decisions from agreed actions. Do not invent dates or owners. Show what I should verify before using it."
 
-The [free Cozy Room tutorial](../cozy-room/README.md) follows a checked example from its three-style lamp to a small star-collecting game. It includes exact source checkpoints, a reusable exercise prompt, local setup commands, observed checks, and the limits of that evidence. You can read the lesson without installing anything. Running or editing the Blazor source requires the .NET SDK; the tutorial explains the optional local preview and browser checks.
+Fictional practice notes: requests arrive by email; a two-week pilot is proposed; access must be checked first; launch date, budget and individual owners are undecided.
 
-**Small practice task:** In the Cozy Room, collect one star twice. What should the progress display do? Try the behavior, inspect the relevant code or tests, and explain how you know whether a repeat counted. The checked reference keeps each star at one collection and announces progress; a fresh AI-generated change still needs its own checks.
+**Check:** A useful answer preserves the proposed status and leaves missing commitments explicit. A polished statement that the pilot launches next Monday is unsupported. Ask for a focused correction and review again.
 
-## Keep the costs distinct
+## Matt's examples
 
-Watching, reading, and running this finished local sample do not call an AI model. A free or paid AI product may have access limits; API use can have separate metered charges. Hosting is a separate service and is optional for this local lesson. Exact costs and account access depend on the provider, plan, and task, so check current terms instead of assuming a subscription buys a fixed number of builds.
+Matt uses MgGriebZ.com as a daily calendar and RoadScript for regular work. His view is that understanding requirements and communicating them clearly makes AI agents more useful. The [RoadScript case](../../../docs/planning/17-ROADSCRIPT-CASE-STUDY.md) shows professional product iteration. The [Cozy Room tutorial](../cozy-room/README.md) is optional Code practice with recorded checks and source checkpoints.
 
-For dated provider/model examples and official pricing links, see the public [tools, models and costs reference](../../../docs/planning/16-TOOLS-MODELS-AND-COSTS.md); recheck it before publication.
+## Choose an accessible next step
 
-## What this does and does not show
+Read or watch without buying AI/cloud tools. For an AI attempt, use suitable available access and appropriate data. Tool subscriptions, metered AI usage and hosting are different costs; the completed Cozy Room makes no model calls while you play.
 
-The Cozy Room is a small, checkable browser app—not proof that AI always writes correct code or that any app can be finished in an hour. Its recorded automated checks ran locally in a specific environment. They do not replace human accessibility review, screen-reader or physical-device testing, or an adult's independent repeat. The original app's redistribution license is still pending; this lesson does not grant permission to relicense or republish its source.
-
-This free introduction is useful on its own. It is not the private full guide or presenter script, and no purchase or account is needed to read it.
+Pick one everyday or professional task. State what would make the output useful, what context is missing and how you would check it. Exact product features and terms can change; use the dated references and your account information. Physical-device/screen-reader and human learner checks for the course remain pending. The sample source's reuse license is still an owner decision.

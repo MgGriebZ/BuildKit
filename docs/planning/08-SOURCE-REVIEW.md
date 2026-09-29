@@ -2,6 +2,10 @@
 
 Reviewed September 27, 2026. A bounded source review by the planner and two Luna workers, not an exhaustive audit or a runtime certification. Private references remained read-only; no private code or personal content was imported into BuildKit. The owner's descriptions of daily use are first-person context, distinct from independently observed software behavior.
 
+## September 28 professional-use follow-up
+
+The owner confirmed daily calendar use of MgGriebZ.com and regular work use of RoadScript, plus shaco/PocketPlayroom as brief examples. His requirements/communication perspective is first-person opinion; no formal credentials or quantified impact were supplied. Latest RoadScript master remains 53aaf6d52186057b2bea24387981a0070c7e67b6. A bounded read of recent September 25–26 commits, README and relevant source supports the [professional case](17-ROADSCRIPT-CASE-STUDY.md). This is not a new runtime/deployment verification. Reference repositories remained read-only.
+
 ## Local source inventory
 
 BuildKit planning branch: `planning/business-launch`, based on `ad9de17`. The earlier access test pushed and removed a temporary empty-commit branch. That establishes GitHub push access to BuildKit, not Azure, Stripe, email, school or social access.

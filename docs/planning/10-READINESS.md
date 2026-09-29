@@ -1,37 +1,29 @@
 # Readiness and outstanding work
 
-Revision 0.6 · September 28, 2026.
+Revision 0.7 · September 28, 2026.
 
-## What is ready
+## Evidence available
 
-Public R1/R2 app and L2 beginner palette guide are merged through PRs #3–#7. Recorded R2 results: 25 rule cases and 12 browser scenarios; R1: 22/10. The original example is independent of private PocketPlayroom source. These results do not cover the proposed three-star feature or revised course.
+R1/R2/L2 are merged. R3 is implemented and checked in open public #9: 40 rule cases, 21 browser scenarios and a fresh standalone reopening. L4 drafted the private guide; L5 synchronized the checked reference in open public #10/private #5. This revision aligns the requirements and drafts to an educational Chat / Work / Code hour.
 
-Requirements now support a standalone AI introduction, live feature building, realistic debugging and transparent costs. Private presenter material is being revised from L3; the manuscript and new feature remain future work.
+Matt has confirmed his project use and requirements/communication viewpoint. RoadScript's latest public commit/source review supports a professional case; no new RoadScript runtime test or live-site check is claimed.
 
-## Next work and owner decisions
+## Next gates
 
-| Item | Next action | Blocks |
-|---|---|---|
-| Revised content | L4 drafts private chapters and presenter materials | Reviewable first edition |
-| Meaningful live demonstration | R3 builds/checks the three-star mini-game and records a real prompt run | Advertising that particular working feature |
-| Evidence synchronization | L5 updates public free guide and private text from actual results | Independent follow-along |
-| Adult rehearsal | H1 observes timing, understanding, failure recovery and independent reading | Claiming a tested lesson |
-| Azure capacity | D1 read-only selected-subscription inventory; choose local/existing/new host | A specific hosting/deployment promise, not local teaching |
-| Guide price and formats | Owner reviews proposed $19 first edition and decides exact price/contents | Paid product copy/checkout |
-| Delivery and terms | Choose recipient delivery, support/refund/update scope and test access | First product sale |
-| Source/prose rights | Choose original sample reuse license and paid guide terms separately | Promoting reusable downloads and paid distribution |
-| Seller/payment/tax | Verify actual seller and classify standalone guide/recording/live instruction separately | Taking payments for the chosen offer |
-| Personal sessions | Confirm price, bookable windows, scope and support; old $75 remains a proposal | Personal booking |
-| Community event | Host/audience/date/equipment/access needs | Event scheduling, not content drafting |
+| Item | Next evidence or choice |
+|---|---|
+| New teaching flow | H1 timed adult rehearsal: story, terminology, Chat, Work, short Code and closing |
+| Reader usefulness | Independent novice completes a Chat/Work task; optional Code setup checked separately |
+| Demonstration polish | L6 prepares annotated examples, fictional professional output/checks and readable presentation assets |
+| Accessibility | Real-device and screen-reader review, plus readability of distributed formats |
+| Repository release | Review stacked public/private PRs in dependency order; preserve pinned checkpoint history |
+| Tool facts | Recheck product availability and provider/hosting terms before teaching/publication |
+| Source/prose rights | Decide original code/art reuse and guide/recording rights |
+| Guide sale | Decide title, format, price, delivery, support/refund/updates and test recipient path |
+| Seller/payment/tax | Confirm actual seller and setup for selected offers |
+| First class / personal help | Choose host and event details; separately define any personal-session offer |
+| Optional hosting | D1 read-only account/target check and manual workflow preparation |
 
-## Release evidence
+A live demonstration, an independent reader result and automated app checks are different evidence. The new outline has not been rehearsed. A public Cozy Room URL, paid edition, successful buyer delivery and new Azure capacity are not established.
 
-R3 requires game behavior and regression checks, a clean export, pinned revisions and explicit human/device gaps. L4/L5 require useful reader instructions, accessible visuals/text alternatives and dated tool facts. A live run must distinguish preparation, successful output, repairs and unavailable usage.
-
-A public demo URL, source license, Azure access/capacity, completed adult rehearsal and successful product delivery are not established. Do not mark them complete from planning, old tests or GitHub access.
-
-## Deferred
-
-LMS/login/progress system, paid subscription to our course, large recording pipeline, runtime AI in the game, API/database, leaderboard, a second complete app track, and PocketPlayroom production integration. The compact standalone guide is now in scope and no longer deferred.
-
-See [14](14-EXECUTION-HANDOFF.md) for precise execution goals and [15](15-PRD-AI-INTRO-LIVE-BUILD.md) for the full acceptance contract.
+LMS/accounts, runtime AI in the room, a second complete app track, RoadScript source changes and PocketPlayroom integration remain outside the immediate scope. Use [14](14-EXECUTION-HANDOFF.md) for bounded next goals.

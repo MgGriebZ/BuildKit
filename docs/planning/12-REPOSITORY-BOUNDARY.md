@@ -1,6 +1,8 @@
 # Public requirements and private teaching material
 
-Revision 0.6 · September 28, 2026. The owner created `MgGriebZ/BuildWithGriebZ` and selected it for private authoring. Access was verified as private/admin. BuildKit remains the public requirements and example repository. No repository visibility was changed.
+Revision 0.7 · September 28, 2026. The owner created `MgGriebZ/BuildWithGriebZ` and selected it for private authoring. Access was verified as private/admin. BuildKit remains the public requirements and example repository. No repository visibility was changed.
+
+The broader Chat / Work / Code hour uses RoadScript as a read-only professional case and MgGriebZ.com as an owner-confirmed daily-use story. Only cleared public project views or fictional work/calendar data belong in teaching. The private presenter directory retains its cozy-room name for path continuity; its current outline covers the broader introduction.
 
 ## Selected layout
 

@@ -1,10 +1,10 @@
 # PRD R: polish a PocketPlayroom-inspired Cozy Room
 
-Revision 0.6 · September 28, 2026. R1/R2 below are implemented historical requirements. The current live lesson follows [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and the proposed R3 extension at the end of this file. R3 is not yet implemented.
+Revision 0.7 · September 28, 2026. R1/R2/R3 are implemented reference checkpoints. The current educational hour follows [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md); Cozy Room is its short Code case, with the full build retained as an optional lab.
 
 ## Product decision
 
-The first seminar teaches adults to refine a small, working room using AI-assisted development. PocketPlayroom is the real product context. The independent follow-along product is **Cozy Room**, an original bedroom-inspired example with one lamp to personalize. The room's promise is belonging: make a small choice and return to find it remembered.
+The optional Code lab teaches adults to refine a small, working room using AI-assisted development. PocketPlayroom is the real product context. The independent follow-along product is **Cozy Room**, an original bedroom-inspired example with one lamp to personalize. The room's promise is belonging: make a small choice and return to find it remembered.
 
 Use Blazor WebAssembly, C#, HTML/CSS and SVG. PocketPlayroom already uses this stack; this continues its architecture. Its inspected source targets .NET 9. The new standalone example targets .NET 10, with SDK 10.0.302 observed locally. A full PocketPlayroom upgrade is separate work. Exact commands and package versions must be recorded by the implementation slice after a successful build.
 
@@ -81,7 +81,7 @@ Use original example code/art. Record provenance and required third-party notice
 | Teaching | Guide matches actual files/revisions; presenter completes a timed rehearsal and another adult can repeat the change or explain it |
 | Device evidence | Record tested browser/device/viewport; physical touch device and learner observations remain explicit gaps until performed |
 
-These are future implementation gates. This PRD is source-inspected and document-checked only. No build, runtime test, household-device test or seminar rehearsal has been performed as part of requirements preparation.
+These requirements originated as implementation gates. R1/R2/R3 now have recorded automated evidence; R3 records 40 rule cases and 21 browser scenarios at its exact checkpoint. This documentation revision performs no new runtime validation. Human device, screen-reader and revised-hour rehearsal checks remain pending; see [readiness](10-READINESS.md).
 
 ## Later public release and upstream improvement
 
@@ -91,7 +91,7 @@ Then consider one upstream room improvement backed by the lesson/rehearsal resul
 
 ## R3: three-star mini-game for the live AI demonstration
 
-Status: proposed, not implemented. Start with the existing R2 lamp and original room. Follow [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) and [R3 handoff](14-EXECUTION-HANDOFF.md#goal-r3--sol).
+Status: implemented at runtime/test revision `7516e7b29908108a6567b5859fab5faab4d849f8`, with checked app export `96d51856825cfd36c758aebb55c3c716a2173451`. The requirements below document the existing R2-to-R3 change and optional extended lab. Follow [PRD 15](15-PRD-AI-INTRO-LIVE-BUILD.md) for current timing and [handoff](14-EXECUTION-HANDOFF.md) for remaining work.
 
 Add three native star buttons with distinct accessible names and usable pointer targets. Collection is unique per star; progress goes from 0/3 to 3/3, with a polite status announcement. Completed round shows a calm message and Replay. Replay returns all three stars and clears only round progress. Reload also starts a new round; preserve the existing lamp save and all existing storage failure protections.
 
